@@ -8,14 +8,6 @@ import useProblems from "../hooks/useProblems";
 import Link from "@mui/material/Link";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
-interface division {
-  name: string;
-  problems: any;
-}
-interface problemTrack {
-  Striver: string[];
-}
-
 const columns: GridColDef[] = [
   { field: "id", headerName: "S. No", width: 80 },
   { field: "name", headerName: "Problem Name", width: 400 },
@@ -63,6 +55,19 @@ const columns: GridColDef[] = [
     sortable: false,
   },
 ];
+
+interface division {
+  name: string;
+  problems: any;
+}
+interface problemTrack {
+  Striver: number[];
+  Babbar: number[];
+  Blind75: number[];
+  Grind75: number[];
+  Gfg: number[];
+  ArshGoyal: number[];
+}
 
 const StriverSheet = () => {
   const { sJSON, problemTrack, setProblemTrack } = useProblems();
@@ -121,7 +126,7 @@ const StriverSheet = () => {
                 onSelectionModelChange={(newSelection) => {
                   setProblemTrack({
                     ...problemTrack,
-                    problems: newSelection,
+                    Striver: newSelection,
                   });
                 }}
                 sx={{

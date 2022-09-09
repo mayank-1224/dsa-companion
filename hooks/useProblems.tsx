@@ -9,7 +9,8 @@ interface newObj {
   Gfg: number[];
   ArshGoyal: number[];
 }
-interface problemTrack {
+
+interface problemTrackInterface {
   Striver: number[];
   Babbar: number[];
   Blind75: number[];
@@ -81,7 +82,7 @@ const useProblems = () => {
     problemSetLoading: problemSetLoading,
     setProblemSetLoading: setProblemSetLoading,
     sJSON,
-    problemTrack: problemTrack as problemTrack,
+    problemTrack: problemTrack as problemTrackInterface,
     setProblemTrack: setProblemTrack,
   };
 };
