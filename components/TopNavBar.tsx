@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
+import Router from "next/router";
 
 const TopNavBar = () => {
   return (
@@ -24,7 +25,7 @@ const TopNavBar = () => {
         }}
       >
         <Link
-          href="#"
+          href="/"
           underline="hover"
           color="black"
           sx={{

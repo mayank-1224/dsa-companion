@@ -94,7 +94,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 7,
           "name": "Rotate Matrix",
           "leetCodeLink": "https://leetcode.com/problems/rotate-image/",
           "gfgLink": "",
@@ -102,7 +102,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 8,
           "name": "Merge Overlapping Subintervals",
           "leetCodeLink": "https://leetcode.com/problems/merge-intervals/",
           "gfgLink": "",
@@ -110,7 +110,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 9,
           "name": "Merge two Sorted Arrays with O(1) Space",
           "leetCodeLink": "https://leetcode.com/problems/merge-sorted-array/",
           "gfgLink": "",
@@ -118,7 +118,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 10,
           "name": "Find Duplicate in an Array of n + 1 Integers",
           "leetCodeLink": "https://leetcode.com/problems/find-the-duplicate-number/",
           "gfgLink": "",
@@ -126,7 +126,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 11,
           "name": "Repeated and Missing Number",
           "leetCodeLink": "",
           "intBitLink": "https://www.interviewbit.com/problems/repeat-and-missing-number-array/",
@@ -135,7 +135,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 12,
           "name": "Inversion of Array (Pre req: Merge Sort)",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -149,7 +149,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 13,
           "name": "Search in a 2-D Matrix",
           "leetCodeLink": "https://leetcode.com/problems/search-a-2d-matrix/",
           "gfgLink": "",
@@ -157,7 +157,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 14,
           "name": "pow(x, n)",
           "leetCodeLink": "https://leetcode.com/problems/powx-n/",
           "gfgLink": "",
@@ -165,7 +165,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 15,
           "name": "Majority Element (> n/2)",
           "leetCodeLink": "https://leetcode.com/problems/majority-element/",
           "gfgLink": "",
@@ -173,7 +173,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 16,
           "name": "Majority Element (> n/3)",
           "leetCodeLink": "https://leetcode.com/problems/majority-element-ii/",
           "gfgLink": "",
@@ -181,7 +181,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 17,
           "name": "Grid Unique Paths",
           "leetCodeLink": "https://leetcode.com/problems/unique-paths/",
           "gfgLink": "",
@@ -189,7 +189,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 18,
           "name": "Reverse Pairs",
           "leetCodeLink": "https://leetcode.com/problems/reverse-pairs/",
           "gfgLink": "",
@@ -203,7 +203,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 19,
           "name": "Two Sum",
           "leetCodeLink": "https://leetcode.com/problems/two-sum/",
           "gfgLink": "",
@@ -211,7 +211,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 20,
           "name": "Four Sum",
           "leetCodeLink": "https://leetcode.com/problems/4sum/",
           "gfgLink": "",
@@ -219,7 +219,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 21,
           "name": "Longest Consecutive Sequence",
           "leetCodeLink": "https://leetcode.com/problems/longest-consecutive-sequence/",
           "gfgLink": "",
@@ -227,7 +227,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 22,
           "name": "Largest Subarray with 0 sum",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1",
@@ -235,7 +235,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 23,
           "name": "Count number of Subarrays with given XOR K",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -244,7 +244,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 24,
           "name": "Longest Substring without repeating characters",
           "leetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
           "gfgLink": "",
@@ -258,7 +258,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 25,
           "name": "Reverse a Linked List",
           "leetCodeLink": "https://leetcode.com/problems/reverse-linked-list/",
           "gfgLink": "",
@@ -266,7 +266,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 26,
           "name": "Find Middle of Linked List",
           "leetCodeLink": "https://leetcode.com/problems/middle-of-the-linked-list/",
           "gfgLink": "",
@@ -274,7 +274,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 27,
           "name": "Merge 2 sorted Linked List",
           "leetCodeLink": "https://leetcode.com/problems/merge-two-sorted-lists/",
           "gfgLink": "",
@@ -282,7 +282,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 28,
           "name": "Remove n-th node from the back of Linked List",
           "leetCodeLink": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
           "gfgLink": "",
@@ -290,7 +290,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 29,
           "name": "Add 2 numbers as a Linked List",
           "leetCodeLink": "https://leetcode.com/problems/add-two-numbers/",
           "gfgLink": "",
@@ -298,7 +298,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 30,
           "name": "Delete a given node",
           "leetCodeLink": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
           "gfgLink": "",
@@ -312,7 +312,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 31,
           "name": "Intersection of Two Linked Lists",
           "leetCodeLink": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
           "gfgLink": "",
@@ -320,7 +320,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 32,
           "name": "Linked List Cycle",
           "leetCodeLink": "https://leetcode.com/problems/linked-list-cycle/",
           "gfgLink": "",
@@ -328,7 +328,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 33,
           "name": "Reverse Nodes in k-Group",
           "leetCodeLink": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
           "gfgLink": "",
@@ -336,7 +336,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 4,
+          "id": 34,
           "name": "Palindrome Linked List",
           "leetCodeLink": "https://leetcode.com/problems/palindrome-linked-list/",
           "gfgLink": "",
@@ -344,7 +344,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 35,
           "name": "Linked List Cycle II",
           "leetCodeLink": "https://leetcode.com/problems/linked-list-cycle-ii/",
           "gfgLink": "",
@@ -352,7 +352,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 36,
           "name": "Flattening a Linked List",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1",
@@ -366,7 +366,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 37,
           "name": "Rotate List",
           "leetCodeLink": "https://leetcode.com/problems/rotate-list/description/",
           "gfgLink": "",
@@ -374,7 +374,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 38,
           "name": "Copy List with Random Pointer",
           "leetCodeLink": "https://leetcode.com/problems/copy-list-with-random-pointer/",
           "gfgLink": "",
@@ -382,7 +382,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 39,
           "name": "3sum",
           "leetCodeLink": "https://leetcode.com/problems/3sum/",
           "gfgLink": "",
@@ -390,7 +390,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 40,
           "name": "Trapping Rain Water",
           "leetCodeLink": "https://leetcode.com/problems/trapping-rain-water/",
           "gfgLink": "",
@@ -398,7 +398,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 5,
+          "id": 41,
           "name": "Remove Duplicates from Sorted Array",
           "leetCodeLink": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
           "gfgLink": "",
@@ -406,7 +406,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 42,
           "name": "Max Consecutive Ones",
           "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones/",
           "gfgLink": "",
@@ -420,7 +420,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 43,
           "name": "N meetings in one room",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1",
@@ -428,7 +428,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 44,
           "name": "Minimum Platforms",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#",
@@ -436,7 +436,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 45,
           "name": "Job Sequencing Problem",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#",
@@ -444,7 +444,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 46,
           "name": "Fractional Knapsack",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
@@ -452,7 +452,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 47,
           "name": "Find minimum number of coins that make a given value",
           "leetCodeLink": "",
           "gfgLink": "https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/",
@@ -460,7 +460,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 48,
           "name": "N meetings in one room",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1",
@@ -474,7 +474,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 49,
           "name": "Subset Sums",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/subset-sums2234/1",
@@ -482,7 +482,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 50,
           "name": "Subsets II",
           "leetCodeLink": "https://leetcode.com/problems/subsets-ii/",
           "gfgLink": "",
@@ -490,7 +490,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 51,
           "name": "Combination Sum",
           "leetCodeLink": "https://leetcode.com/problems/combination-sum/",
           "gfgLink": "",
@@ -498,7 +498,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 52,
           "name": "Combination Sum II",
           "leetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
           "gfgLink": "",
@@ -506,7 +506,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 53,
           "name": "Palindrome Partitioning",
           "leetCodeLink": "https://leetcode.com/problems/palindrome-partitioning/",
           "gfgLink": "",
@@ -514,7 +514,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 54,
           "name": "Permutation Sequence",
           "leetCodeLink": "https://leetcode.com/problems/permutation-sequence/",
           "gfgLink": "",
@@ -528,7 +528,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 55,
           "name": "Permutations",
           "leetCodeLink": "https://leetcode.com/problems/permutations/",
           "gfgLink": "",
@@ -536,7 +536,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 56,
           "name": "N-Queens",
           "leetCodeLink": "https://leetcode.com/problems/n-queens/",
           "gfgLink": "",
@@ -544,7 +544,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 3,
+          "id": 57,
           "name": "Sudoku Solver",
           "leetCodeLink": "https://leetcode.com/problems/sudoku-solver/",
           "gfgLink": "",
@@ -552,7 +552,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 4,
+          "id": 58,
           "name": "M-Coloring Problem",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1#",
@@ -560,7 +560,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 59,
           "name": "Rat in a Maze Problem - Is",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1",
@@ -568,7 +568,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 60,
           "name": "Word Break II ",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -582,7 +582,7 @@
       "problemCount": 8,
       "problems": [
         {
-          "id": 1,
+          "id": 61,
           "name": "Nth Root Of M ",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -590,7 +590,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 62,
           "name": "Matrix Median",
           "leetCodeLink": "https://www.interviewbit.com/problems/matrix-median/",
           "gfgLink": "",
@@ -598,7 +598,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 63,
           "name": "Single Element in a Sorted Array",
           "leetCodeLink": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
           "gfgLink": "",
@@ -606,7 +606,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 64,
           "name": "Search in Rotated Sorted Array",
           "leetCodeLink": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
           "gfgLink": "",
@@ -614,7 +614,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 65,
           "name": "Median of Two Sorted Arrays",
           "leetCodeLink": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
           "gfgLink": "",
@@ -622,7 +622,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 6,
+          "id": 66,
           "name": "K-th element of two sorted Arrays",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1",
@@ -630,7 +630,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 67,
           "name": "Allocate Books",
           "leetCodeLink": "https://www.interviewbit.com/problems/allocate-books/",
           "gfgLink": "",
@@ -638,7 +638,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 8,
+          "id": 68,
           "name": "Aggressive cows",
           "leetCodeLink": "https://www.spoj.com/problems/AGGRCOW/",
           "gfgLink": "",
@@ -652,7 +652,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 69,
           "name": "Min Heap",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -660,7 +660,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 70,
           "name": "Kth Largest Element in an Array",
           "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
           "gfgLink": "",
@@ -668,7 +668,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 71,
           "name": "Maximum Sum Combinations",
           "leetCodeLink": "https://www.interviewbit.com/problems/maximum-sum-combinations/",
           "gfgLink": "",
@@ -676,7 +676,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 72,
           "name": "Find Median from Data Stream",
           "leetCodeLink": "https://leetcode.com/problems/find-median-from-data-stream/",
           "gfgLink": "",
@@ -684,7 +684,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 5,
+          "id": 73,
           "name": "Merge K Sorted Arrays",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -692,7 +692,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 74,
           "name": "Top K Frequent Elements",
           "leetCodeLink": "https://leetcode.com/problems/top-k-frequent-elements/",
           "gfgLink": "",
@@ -706,7 +706,7 @@
       "problemCount": 7,
       "problems": [
         {
-          "id": 1,
+          "id": 75,
           "name": "Maximum XOR With an Element From Array ",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -714,7 +714,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 2,
+          "id": 76,
           "name": "Implement a Queue",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -722,7 +722,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 77,
           "name": "Implement Stack using Queues",
           "leetCodeLink": "https://leetcode.com/problems/implement-stack-using-queues/",
           "gfgLink": "",
@@ -730,7 +730,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 78,
           "name": "Implement Queue using Stacks",
           "leetCodeLink": "https://leetcode.com/problems/implement-queue-using-stacks/",
           "gfgLink": "",
@@ -738,7 +738,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 79,
           "name": "Valid Parentheses",
           "leetCodeLink": "https://leetcode.com/problems/valid-parentheses/",
           "gfgLink": "",
@@ -746,7 +746,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 80,
           "name": "Next Greater Element II",
           "leetCodeLink": "https://leetcode.com/problems/next-greater-element-ii/description/",
           "gfgLink": "",
@@ -754,7 +754,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 81,
           "name": "Sort a Stack",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -768,7 +768,7 @@
       "problemCount": 10,
       "problems": [
         {
-          "id": 1,
+          "id": 82,
           "name": "Nearest Smaller Element",
           "leetCodeLink": "https://www.interviewbit.com/problems/nearest-smaller-element/",
           "gfgLink": "",
@@ -776,7 +776,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 83,
           "name": "LRU Cache",
           "leetCodeLink": "https://leetcode.com/problems/lru-cache/",
           "gfgLink": "",
@@ -784,7 +784,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 84,
           "name": "LFU Cache",
           "leetCodeLink": "https://leetcode.com/problems/lfu-cache/",
           "gfgLink": "",
@@ -792,7 +792,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 4,
+          "id": 85,
           "name": "Largest Rectangle in Histogram",
           "leetCodeLink": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
           "gfgLink": "",
@@ -800,7 +800,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 5,
+          "id": 86,
           "name": "Sliding Window Maximum",
           "leetCodeLink": "https://leetcode.com/problems/sliding-window-maximum/",
           "gfgLink": "",
@@ -808,7 +808,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 6,
+          "id": 87,
           "name": "Min Stack",
           "leetCodeLink": "https://leetcode.com/problems/min-stack/",
           "gfgLink": "",
@@ -816,7 +816,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 88,
           "name": "Rotting Oranges",
           "leetCodeLink": "https://leetcode.com/problems/rotting-oranges/",
           "gfgLink": "",
@@ -824,7 +824,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 8,
+          "id": 89,
           "name": "Online Stock Span",
           "leetCodeLink": "https://leetcode.com/problems/online-stock-span/",
           "gfgLink": "",
@@ -832,7 +832,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 9,
+          "id": 90,
           "name": "Maximum of minimum for every window size",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -840,7 +840,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 10,
+          "id": 91,
           "name": "The Celebrity Problem",
           "leetCodeLink": "",
           "gfgLink": "https://www.geeksforgeeks.org/the-celebrity-problem/",
@@ -854,7 +854,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 92,
           "name": "Reverse Words in a String",
           "leetCodeLink": "https://leetcode.com/problems/reverse-words-in-a-string/",
           "gfgLink": "",
@@ -862,7 +862,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 93,
           "name": "Longest Palindromic Substring",
           "leetCodeLink": "https://leetcode.com/problems/longest-palindromic-substring/",
           "gfgLink": "",
@@ -870,7 +870,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 94,
           "name": "Roman to Integer",
           "leetCodeLink": "https://leetcode.com/problems/roman-to-integer/",
           "gfgLink": "",
@@ -878,7 +878,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 95,
           "name": "String to Integer (atoi)",
           "leetCodeLink": "https://leetcode.com/problems/string-to-integer-atoi/",
           "gfgLink": "",
@@ -886,7 +886,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 96,
           "name": "Longest Common Prefix",
           "leetCodeLink": "https://leetcode.com/problems/longest-common-prefix/",
           "gfgLink": "",
@@ -894,7 +894,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 97,
           "name": "Rabin-Karp algorithm",
           "leetCodeLink": "https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation",
           "gfgLink": "",
@@ -908,7 +908,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 98,
           "name": "Z-Function",
           "leetCodeLink": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
           "gfgLink": "",
@@ -916,7 +916,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 99,
           "name": "Find Pattern in String - KMP Algorithm",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -924,7 +924,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 100,
           "name": "Minimum Characters required to make a String Palindromic",
           "leetCodeLink": "https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/",
           "gfgLink": "",
@@ -932,7 +932,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 101,
           "name": "Valid Anagram",
           "leetCodeLink": "https://leetcode.com/problems/valid-anagram/",
           "gfgLink": "",
@@ -940,7 +940,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 102,
           "name": "Count and Say",
           "leetCodeLink": "https://leetcode.com/problems/count-and-say/",
           "gfgLink": "",
@@ -948,7 +948,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 103,
           "name": "Compare Version Numbers",
           "leetCodeLink": "https://leetcode.com/problems/compare-version-numbers/",
           "gfgLink": "",
@@ -962,7 +962,7 @@
       "problemCount": 12,
       "problems": [
         {
-          "id": 1,
+          "id": 104,
           "name": "Inorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
           "gfgLink": "",
@@ -970,7 +970,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 2,
+          "id": 105,
           "name": "Preorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
           "gfgLink": "",
@@ -978,7 +978,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 106,
           "name": "Postorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
           "gfgLink": "",
@@ -986,7 +986,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 107,
           "name": "Morris Inorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
           "gfgLink": "",
@@ -994,7 +994,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 108,
           "name": "Morris Preorder Traversal",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1002,7 +1002,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 109,
           "name": "Left View of Binary Tree",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
@@ -1010,7 +1010,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 7,
+          "id": 110,
           "name": "Bottom View of Binary Tree",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
@@ -1018,7 +1018,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 8,
+          "id": 111,
           "name": "Top View of Binary Tree",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
@@ -1026,7 +1026,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 9,
+          "id": 112,
           "name": "Preorder, Inorder, Postorder in a Single Traversal",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1034,7 +1034,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 10,
+          "id": 113,
           "name": "Vertical Order Traversal of a Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
           "gfgLink": "",
@@ -1042,7 +1042,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 11,
+          "id": 114,
           "name": "Path to Given Node",
           "leetCodeLink": "https://www.interviewbit.com/problems/path-to-given-node/",
           "gfgLink": "",
@@ -1050,7 +1050,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 12,
+          "id": 115,
           "name": "Maximum Width of Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
           "gfgLink": "",
@@ -1064,7 +1064,7 @@
       "problemCount": 8,
       "problems": [
         {
-          "id": 1,
+          "id": 116,
           "name": "Binary Tree Level Order Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
           "gfgLink": "",
@@ -1072,7 +1072,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 117,
           "name": "Maximum Depth of Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
           "gfgLink": "",
@@ -1080,7 +1080,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 118,
           "name": "Diameter of Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/diameter-of-binary-tree/",
           "gfgLink": "",
@@ -1088,7 +1088,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 119,
           "name": "Balanced Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
           "gfgLink": "",
@@ -1096,7 +1096,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 120,
           "name": "Lowest Common Ancestor of a Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
           "gfgLink": "",
@@ -1104,7 +1104,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 121,
           "name": "Same Tree",
           "leetCodeLink": "https://leetcode.com/problems/same-tree/",
           "gfgLink": "",
@@ -1112,7 +1112,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 7,
+          "id": 122,
           "name": "Binary Tree Zigzag Level Order Traversal",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
           "gfgLink": "",
@@ -1120,7 +1120,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 8,
+          "id": 123,
           "name": "Boundary of a Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/boundary-of-binary-tree/",
           "gfgLink": "",
@@ -1134,7 +1134,7 @@
       "problemCount": 7,
       "problems": [
         {
-          "id": 1,
+          "id": 124,
           "name": "Binary Tree Maximum Path Sum",
           "leetCodeLink": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
           "gfgLink": "",
@@ -1142,7 +1142,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 2,
+          "id": 125,
           "name": "Construct Binary Tree from Preorder and Inorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
           "gfgLink": "",
@@ -1150,7 +1150,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 126,
           "name": "Construct Binary Tree from Inorder and Postorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
           "gfgLink": "",
@@ -1158,7 +1158,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 127,
           "name": "Symmetric Tree",
           "leetCodeLink": "https://leetcode.com/problems/symmetric-tree/",
           "gfgLink": "",
@@ -1166,7 +1166,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 128,
           "name": "Flatten Binary Tree to Linked List",
           "leetCodeLink": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
           "gfgLink": "",
@@ -1174,7 +1174,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 129,
           "name": "Mirror Tree",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/mirror-tree/1",
@@ -1182,7 +1182,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 7,
+          "id": 130,
           "name": "Children Sum PropertyChildren Sum Property",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1196,7 +1196,7 @@
       "problemCount": 7,
       "problems": [
         {
-          "id": 1,
+          "id": 131,
           "name": "Populating Next Right Pointers in Each Node",
           "leetCodeLink": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node/",
           "gfgLink": "",
@@ -1204,7 +1204,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 132,
           "name": "Search in a Binary Search Tree",
           "leetCodeLink": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
           "gfgLink": "",
@@ -1212,7 +1212,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 133,
           "name": "Convert Sorted Array to Binary Search Tree",
           "leetCodeLink": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
           "gfgLink": "",
@@ -1220,7 +1220,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 134,
           "name": "Construct Binary Search Tree from Preorder Traversal",
           "leetCodeLink": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
           "gfgLink": "",
@@ -1228,7 +1228,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 135,
           "name": "Validate Binary Search Tree",
           "leetCodeLink": "https://leetcode.com/problems/validate-binary-search-tree/",
           "gfgLink": "",
@@ -1236,7 +1236,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 136,
           "name": "Lowest Common Ancestor of a Binary Search Tree",
           "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
           "gfgLink": "",
@@ -1244,7 +1244,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 137,
           "name": "Predecessor and Successor",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/predecessor-and-successMedium",
@@ -1258,7 +1258,7 @@
       "problemCount": 8,
       "problems": [
         {
-          "id": 1,
+          "id": 138,
           "name": "Floor in BST ",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1266,7 +1266,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 139,
           "name": "Ceil from BST",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1274,7 +1274,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 140,
           "name": "Kth Smallest Element in a BST",
           "leetCodeLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
           "gfgLink": "",
@@ -1282,7 +1282,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 141,
           "name": "Kth largest element in BST",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1",
@@ -1290,7 +1290,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 5,
+          "id": 142,
           "name": "Two Sum IV - Input is a BST",
           "leetCodeLink": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
           "gfgLink": "",
@@ -1298,7 +1298,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 143,
           "name": "Binary Search Tree Iterator",
           "leetCodeLink": "https://leetcode.com/problems/binary-search-tree-iterator/",
           "gfgLink": "",
@@ -1306,7 +1306,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 144,
           "name": "Maximum Sum BST in Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/",
           "gfgLink": "",
@@ -1314,7 +1314,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 8,
+          "id": 145,
           "name": "Serialize and Deserialize Binary Tree",
           "leetCodeLink": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
           "gfgLink": "",
@@ -1328,7 +1328,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 146,
           "name": "Flatten Binary Tree to Linked List",
           "leetCodeLink": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
           "gfgLink": "",
@@ -1336,7 +1336,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 147,
           "name": "Find Median from Data Stream",
           "leetCodeLink": "https://leetcode.com/problems/find-median-from-data-stream/",
           "gfgLink": "",
@@ -1344,7 +1344,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 3,
+          "id": 148,
           "name": "Kth Largest Element in a Stream",
           "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
           "gfgLink": "",
@@ -1352,7 +1352,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 149,
           "name": "Distinct Numbers in Window",
           "leetCodeLink": "https://www.interviewbit.com/problems/distinct-numbers-in-window/",
           "gfgLink": "",
@@ -1360,7 +1360,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 150,
           "name": "Kth Largest Element in an Array",
           "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
           "gfgLink": "",
@@ -1368,7 +1368,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 151,
           "name": "Flood Fill",
           "leetCodeLink": "https://leetcode.com/problems/flood-fill/",
           "gfgLink": "",
@@ -1382,7 +1382,7 @@
       "problemCount": 12,
       "problems": [
         {
-          "id": 1,
+          "id": 152,
           "name": "Clone Graph",
           "leetCodeLink": "https://leetcode.com/problems/clone-graph/",
           "gfgLink": "",
@@ -1390,7 +1390,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 153,
           "name": "DFS of Graph",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1",
@@ -1398,7 +1398,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 3,
+          "id": 154,
           "name": "BFS of graph",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1",
@@ -1406,7 +1406,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 4,
+          "id": 155,
           "name": "Detect Cycle in Undirected Graph using BFS",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1414,7 +1414,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 156,
           "name": "Detect Cycle in Undirected Graph using DFS",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1422,7 +1422,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 157,
           "name": "Detect Cycle in a Directed Graph using DFS",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1430,7 +1430,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 158,
           "name": "Detect Cycle in a Directed Graph using BFS",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1438,7 +1438,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 8,
+          "id": 159,
           "name": "Topological Sort BFS",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
@@ -1446,7 +1446,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 9,
+          "id": 160,
           "name": "Topological Sort DFS",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
@@ -1454,7 +1454,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 10,
+          "id": 161,
           "name": "Number of Islands",
           "leetCodeLink": "https://leetcode.com/problems/number-of-islands/",
           "gfgLink": "",
@@ -1462,7 +1462,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 11,
+          "id": 162,
           "name": "Is Graph Bipartite? BFS",
           "leetCodeLink": "https://leetcode.com/problems/is-graph-bipartite/",
           "gfgLink": "",
@@ -1470,7 +1470,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 12,
+          "id": 163,
           "name": "Is Graph Bipartite? DFS",
           "leetCodeLink": "https://leetcode.com/problems/is-graph-bipartite/",
           "gfgLink": "",
@@ -1484,7 +1484,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 164,
           "name": "Strongly Connected Component(using KosaRaju’s algo)",
           "leetCodeLink": "https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/discuss/766485/kosaraju-algorithm-on",
           "gfgLink": "",
@@ -1492,7 +1492,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 165,
           "name": "Implementing Dijkstra Algorithm",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
@@ -1500,7 +1500,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 166,
           "name": "Distance from the Source (Bellman-Ford Algorithm)",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/0?fbclid=IwAR2_lL0T84DnciLyzMTQuVTMBOi82nTWNLuXjUgahnrtBgkphKiYk6xcyJU",
@@ -1508,7 +1508,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 167,
           "name": "Floyd Warshall",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1",
@@ -1516,7 +1516,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 168,
           "name": "Minimum Spanning Tree using Prims",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
@@ -1524,7 +1524,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 169,
           "name": "Minimum Spanning Tree using Kruskals",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
@@ -1538,7 +1538,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 170,
           "name": "Maximum Product Subarray",
           "leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/",
           "gfgLink": "",
@@ -1546,7 +1546,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 171,
           "name": "Longest Increasing Subsequence",
           "leetCodeLink": "https://leetcode.com/problems/longest-increasing-subsequence/",
           "gfgLink": "",
@@ -1554,7 +1554,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 172,
           "name": "Longest Common Subsequence",
           "leetCodeLink": "https://leetcode.com/problems/longest-common-subsequence/",
           "gfgLink": "",
@@ -1562,7 +1562,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 173,
           "name": "Ones and Zeroes",
           "leetCodeLink": "https://leetcode.com/problems/ones-and-zeroes/",
           "gfgLink": "",
@@ -1570,7 +1570,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 174,
           "name": "Edit Distance",
           "leetCodeLink": "https://leetcode.com/problems/edit-distance/",
           "gfgLink": "",
@@ -1578,7 +1578,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 6,
+          "id": 175,
           "name": "Maximum sum increasing subsequence",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1",
@@ -1586,7 +1586,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 176,
           "name": "Matrix Chain Multiplication",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1",
@@ -1600,7 +1600,7 @@
       "problemCount": 6,
       "problems": [
         {
-          "id": 1,
+          "id": 177,
           "name": "Minimum Path Sum",
           "leetCodeLink": "https://leetcode.com/problems/minimum-path-sum/",
           "gfgLink": "",
@@ -1608,7 +1608,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 178,
           "name": "Coin Change",
           "leetCodeLink": "https://leetcode.com/problems/coin-change/",
           "gfgLink": "",
@@ -1616,7 +1616,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 179,
           "name": "Partition Equal Subset Sum",
           "leetCodeLink": "https://leetcode.com/problems/partition-equal-subset-sum/",
           "gfgLink": "",
@@ -1624,7 +1624,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 4,
+          "id": 180,
           "name": "Minimum Cost to Cut a Stick",
           "leetCodeLink": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
           "gfgLink": "",
@@ -1632,7 +1632,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 5,
+          "id": 181,
           "name": "Egg Dropping Puzzle",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1",
@@ -1640,7 +1640,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 6,
+          "id": 182,
           "name": "Word Break",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/word-break1352/1",
@@ -1648,7 +1648,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 183,
           "name": "Palindromic Partitioning",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1",
@@ -1656,7 +1656,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 8,
+          "id": 184,
           "name": "Job Sequencing Problem",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
@@ -1670,7 +1670,7 @@
       "problemCount": 7,
       "problems": [
         {
-          "id": 1,
+          "id": 185,
           "name": "Implement Trie (Prefix Tree)",
           "leetCodeLink": "https://leetcode.com/problems/implement-trie-prefix-tree/",
           "gfgLink": "",
@@ -1678,7 +1678,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 2,
+          "id": 186,
           "name": "Implement Trie ll",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1686,7 +1686,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 3,
+          "id": 187,
           "name": "Complete String",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1694,7 +1694,7 @@
           "difficulty": "Hard"
         },
         {
-          "id": 4,
+          "id": 188,
           "name": "Count Distinct Substrings",
           "leetCodeLink": "",
           "gfgLink": "",
@@ -1702,7 +1702,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 5,
+          "id": 189,
           "name": "Power Set",
           "leetCodeLink": "",
           "gfgLink": "https://practice.geeksforgeeks.org/problems/power-set4302/1#",
@@ -1710,7 +1710,7 @@
           "difficulty": "Easy"
         },
         {
-          "id": 6,
+          "id": 190,
           "name": "Maximum XOR of Two Numbers in an Array",
           "leetCodeLink": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
           "gfgLink": "",
@@ -1718,7 +1718,7 @@
           "difficulty": "Medium"
         },
         {
-          "id": 7,
+          "id": 191,
           "name": "Maximum XOR With an Element From Array",
           "leetCodeLink": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
           "gfgLink": "",
