@@ -31,12 +31,12 @@ const useProblems = () => {
         ArshGoyal: [],
       };
       localStorage.setItem("problemTrack", JSON.stringify(newObj));
-      var proTrack = JSON.parse(localStorage.getItem("problemTrack"));
+      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
       // console.log(problemTrack);
       console.log("im here");
       setProblemTrack(proTrack);
     } else {
-      var proTrack = JSON.parse(localStorage.getItem("problemTrack"));
+      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
       setProblemTrack(proTrack);
       // console.log(problemTrack);
     }
