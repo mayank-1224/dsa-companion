@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
@@ -6,6 +7,14 @@ import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import Link from "@mui/material/Link";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+
+interface division {
+  name: string;
+  problems: any;
+}
+interface problemTrack {
+  Striver: string[];
+}
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "S. No", width: 80 },
@@ -54,11 +63,6 @@ const columns: GridColDef[] = [
     sortable: false,
   },
 ];
-
-interface division {
-  name: string;
-  problems: any;
-}
 
 const StriverSheet = () => {
   const { sJSON, problemTrack, setProblemTrack } = useProblems();
@@ -117,7 +121,7 @@ const StriverSheet = () => {
                 onSelectionModelChange={(newSelection) => {
                   setProblemTrack({
                     ...problemTrack,
-                    Striver: newSelection,
+                    problems: newSelection,
                   });
                 }}
                 sx={{

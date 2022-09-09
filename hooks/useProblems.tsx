@@ -9,6 +9,14 @@ interface newObj {
   Gfg: number[];
   ArshGoyal: number[];
 }
+interface problemTrack {
+  Striver: number[];
+  Babbar: number[];
+  Blind75: number[];
+  Grind75: number[];
+  Gfg: number[];
+  ArshGoyal: number[];
+}
 
 const useProblems = () => {
   const [clickName, setClickName] = useState("");
@@ -73,7 +81,7 @@ const useProblems = () => {
     problemSetLoading: problemSetLoading,
     setProblemSetLoading: setProblemSetLoading,
     sJSON,
-    problemTrack: problemTrack,
+    problemTrack: problemTrack as problemTrack,
     setProblemTrack: setProblemTrack,
   };
 };
