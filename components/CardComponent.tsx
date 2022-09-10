@@ -46,7 +46,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 const CardComponent = (data: CardData) => {
   const [expanded, setExpanded] = useState(false);
-  const { setProblemSet, setClickName } = useProblems();
+  const { setClickName } = useProblems();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
