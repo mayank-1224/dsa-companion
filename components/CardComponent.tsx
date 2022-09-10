@@ -21,12 +21,13 @@ interface ExpandMoreProps extends IconButtonProps {
 }
 
 interface Object {
+  id: number;
   titleName: string;
   subtitle: string;
   imgLink: string;
   summary: string;
   moreData: string;
-  pageLink: string;
+  problemCount: number;
 }
 
 interface CardData {
@@ -46,7 +47,8 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 const CardComponent = (data: CardData) => {
   const [expanded, setExpanded] = useState(false);
-  const { setClickName } = useProblems();
+  const [heart, setHeart] = useState(false);
+  const { setClickName, sheetProgress } = useProblems();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -55,11 +57,11 @@ const CardComponent = (data: CardData) => {
   return (
     <Card sx={{ maxWidth: 345, marginTop: "5px" }}>
       <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
         title={data.data.titleName}
         subheader={data.data.subtitle}
       />
@@ -68,7 +70,7 @@ const CardComponent = (data: CardData) => {
         height="270px"
         width="500px"
         image={data.data.imgLink}
-        alt="Paella dish"
+        alt={data.data.titleName}
         onClick={() => {
           setClickName(data.data.titleName);
         }}
@@ -81,7 +83,20 @@ const CardComponent = (data: CardData) => {
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          {heart ? (
+            <FavoriteIcon
+              sx={{ color: "red" }}
+              onClick={() => {
+                setHeart(!heart);
+              }}
+            />
+          ) : (
+            <FavoriteIcon
+              onClick={() => {
+                setHeart(!heart);
+              }}
+            />
+          )}
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
@@ -97,7 +112,10 @@ const CardComponent = (data: CardData) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{data.data.moreData}</Typography>
+          <Typography paragraph>
+            Your Progress: {sheetProgress[data.data.id - 1]} /{" "}
+            {data.data.problemCount}
+          </Typography>
         </CardContent>
       </Collapse>
     </Card>

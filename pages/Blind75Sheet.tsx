@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import Link from "@mui/material/Link";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import bJSON from "../hooks/BlindJSON.json";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "S. No", width: 80 },
@@ -32,7 +33,7 @@ interface division {
 }
 
 const Blind75Sheet = () => {
-  const { bJSON, problemTrack, setProblemTrack } = useProblems();
+  const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
   const allDivisions = bJSON.divisions;
   return (
     <>

@@ -1,15 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Router from "next/router";
 
-interface newObj {
-  Striver: number[];
-  Babbar: number[];
-  Blind75: number[];
-  Grind75: number[];
-  Gfg: number[];
-  ArshGoyal: number[];
-}
-
 interface problemTrackInterface {
   Striver: number[];
   Babbar: number[];
@@ -21,15 +12,14 @@ interface problemTrackInterface {
 
 const useProblems = () => {
   const [clickName, setClickName] = useState(""); // name of the clicked sheet
-  const [problemSetLoading, setProblemSetLoading] = useState(true); // loading state of the problem set
-  const [problemTrack, setProblemTrack] = useState({}); // problem track of the user from local storage
-  const sJSON = require("./StriverJSON.json"); // Striver JSON file
-  const bJSON = require("./BlindJSON.json"); // Blind75 JSON file
+  const [problemTrack, setProblemTrack] = useState<any>({}); // problem track of the user from local storage
+  const [sheetProgress, setSheetProgress] = useState<number[]>([]); // progress of the sheet
+  const [dialogueOpen, setDialogueOpen] = useState(false); // open or close the dialogue
 
   // setting initial problem track in local storage
   useEffect(() => {
     if (localStorage.getItem("problemTrack") === null) {
-      let newObj: newObj = {
+      let newObj: problemTrackInterface = {
         Striver: [],
         Babbar: [],
         Blind75: [],
@@ -39,19 +29,39 @@ const useProblems = () => {
       };
       localStorage.setItem("problemTrack", JSON.stringify(newObj));
       var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
+      setSheetProgress([0, 0, 0, 0, 0, 0]);
+      console.log("setting for 1st time");
+
       setProblemTrack(proTrack);
     } else {
       var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
+      console.log("local storage alredy exists");
       setProblemTrack(proTrack);
+      setSheetProgress([
+        proTrack.Striver.length,
+        proTrack.Babbar.length,
+        proTrack.Blind75.length,
+        proTrack.Grind75.length,
+        proTrack.Gfg.length,
+        proTrack.ArshGoyal.length,
+      ]);
     }
   }, []);
 
   // updating problem track in local storage
   useEffect(() => {
     if (Object.keys(problemTrack).length !== 0) {
-      console.log("Updating local storage history");
       localStorage.setItem("problemTrack", JSON.stringify(problemTrack));
-    }
+      setSheetProgress([
+        problemTrack.Striver.length,
+        problemTrack.Babbar.length,
+        problemTrack.Blind75.length,
+        problemTrack.Grind75.length,
+        problemTrack.Gfg.length,
+        problemTrack.ArshGoyal.length,
+      ]);
+      console.log("updating local storage");
+    } else console.log("unnecessary update");
   }, [problemTrack]);
 
   //Pushing the required page according to the card clicked
@@ -74,12 +84,11 @@ const useProblems = () => {
   return {
     clickName,
     setClickName,
-    problemSetLoading: problemSetLoading,
-    setProblemSetLoading: setProblemSetLoading,
-    sJSON,
-    bJSON,
     problemTrack: problemTrack as problemTrackInterface,
     setProblemTrack: setProblemTrack,
+    sheetProgress,
+    dialogueOpen,
+    setDialogueOpen,
   };
 };
 
