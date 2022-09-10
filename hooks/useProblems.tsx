@@ -20,15 +20,13 @@ interface problemTrackInterface {
 }
 
 const useProblems = () => {
-  const [clickName, setClickName] = useState("");
-  const [problemSet, setProblemSet] = useState();
-  const [problemSetLoading, setProblemSetLoading] = useState(true);
-  const [problemTrack, setProblemTrack] = useState({});
-  const [cnt, setCnt] = useState(0);
-  const [updateTrack, setUpdateTrack] = useState(false);
-  const sJSON = require("./StriverJSON.json");
-  const initialRender = useRef(true);
+  const [clickName, setClickName] = useState(""); // name of the clicked sheet
+  const [problemSetLoading, setProblemSetLoading] = useState(true); // loading state of the problem set
+  const [problemTrack, setProblemTrack] = useState({}); // problem track of the user from local storage
+  const sJSON = require("./StriverJSON.json"); // Striver JSON file
+  const bJSON = require("./BlindJSON.json"); // Blind75 JSON file
 
+  // setting initial problem track in local storage
   useEffect(() => {
     if (localStorage.getItem("problemTrack") === null) {
       let newObj: newObj = {
@@ -41,23 +39,22 @@ const useProblems = () => {
       };
       localStorage.setItem("problemTrack", JSON.stringify(newObj));
       var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
-      // console.log(problemTrack);
-      console.log("im here");
       setProblemTrack(proTrack);
     } else {
       var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
       setProblemTrack(proTrack);
-      // console.log(problemTrack);
     }
   }, []);
 
+  // updating problem track in local storage
   useEffect(() => {
     if (Object.keys(problemTrack).length !== 0) {
+      console.log("Updating local storage history");
       localStorage.setItem("problemTrack", JSON.stringify(problemTrack));
     }
   }, [problemTrack]);
 
-  //page display logic
+  //Pushing the required page according to the card clicked
   useEffect(() => {
     if (clickName === "Striver SDE Sheet") {
       Router.push("/StriverSheet");
@@ -77,11 +74,10 @@ const useProblems = () => {
   return {
     clickName,
     setClickName,
-    problemSet: problemSet,
-    setProblemSet: setProblemSet,
     problemSetLoading: problemSetLoading,
     setProblemSetLoading: setProblemSetLoading,
     sJSON,
+    bJSON,
     problemTrack: problemTrack as problemTrackInterface,
     setProblemTrack: setProblemTrack,
   };

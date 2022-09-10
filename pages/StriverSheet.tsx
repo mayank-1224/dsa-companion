@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
@@ -60,15 +59,6 @@ interface division {
   name: string;
   problems: any;
 }
-interface problemTrack {
-  Striver: number[];
-  Babbar: number[];
-  Blind75: number[];
-  Grind75: number[];
-  Gfg: number[];
-  ArshGoyal: number[];
-}
-
 const StriverSheet = () => {
   const { sJSON, problemTrack, setProblemTrack } = useProblems();
   const allDivisions = sJSON.allDivisions;
