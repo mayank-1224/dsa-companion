@@ -68,19 +68,23 @@ const StriverSheet = () => {
     //Outer-most container
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: "#f84f39",
+        width: "100vw",
+        height: "100%",
+        padding: "0 20vw",
+        //   display: "flex",
+        //   justifyContent: "center",
+        //   alignItems: "center",
       }}
     >
       <TopNavBar />
-
       {/* Main container */}
       <Box
         sx={{
-          width: "60vw",
-          backgroundColor: "#1d2226",
+          // width: "60vw",
+          backgroundColor: "#fafafd",
           padding: "1rem",
+          borderRadius: "1rem",
         }}
       >
         {/*Page Heading*/}
@@ -101,6 +105,8 @@ const StriverSheet = () => {
               variant="h1"
               sx={{
                 fontSize: "4rem",
+                fontFamily: "Kollektif",
+                fontWeight: "800",
               }}
             >
               {sJSON.name}
@@ -108,7 +114,9 @@ const StriverSheet = () => {
             <Typography
               variant="h2"
               sx={{
+                fontFamily: "Kollektif",
                 fontSize: "2.5rem",
+                fontWeight: "600",
               }}
             >
               Number of Topics: {sJSON.topicCount}
@@ -116,10 +124,12 @@ const StriverSheet = () => {
             <Typography
               variant="h2"
               sx={{
+                fontFamily: "Kollektif",
                 fontSize: "2.5rem",
+                fontWeight: "600",
               }}
             >
-              {sheetProgress[0]} /{sJSON.problemCount} problems solved
+              {sheetProgress[0]} / {sJSON.problemCount} problems solved
             </Typography>
           </Box>
           <Button
@@ -161,6 +171,8 @@ const StriverSheet = () => {
                     padding: "0.2rem 0.5rem",
                     backgroundColor: "#be2535",
                     borderRadius: "1rem",
+                    fontFamily: "Kollektif",
+                    fontWeight: "600",
                   }}
                 >
                   {division.name}
@@ -183,7 +195,7 @@ const StriverSheet = () => {
                     });
                   }}
                   sx={{
-                    color: "white",
+                    color: "black",
                     fontSize: "1rem",
                     border: "none",
                     "& .MuiDataGrid-checkboxInput": {
