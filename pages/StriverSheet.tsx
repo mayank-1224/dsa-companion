@@ -8,6 +8,7 @@ import Link from "@mui/material/Link";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
 import sJSON from "../hooks/StriverJSON.json";
+import SideBar from "../components/SideBar";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "S. No", width: 80 },
@@ -66,143 +67,170 @@ const StriverSheet = () => {
   const allDivisions = sJSON.allDivisions;
   return (
     //Outer-most container
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <TopNavBar />
-
-      {/* Main container */}
+    <>
+      <SideBar />
       <Box
         sx={{
-          width: "60vw",
-          backgroundColor: "#1d2226",
-          padding: "1rem",
+          backgroundColor: "#f84f39",
+          width: "100vw",
+          height: "100%",
+          padding: "0 20vw",
+          //   display: "flex",
+          //   justifyContent: "center",
+          //   alignItems: "center",
         }}
       >
-        {/*Page Heading*/}
+        <TopNavBar />
+        {/* Main container */}
         <Box
           sx={{
-            color: "white",
-            backgroundColor: "#be2535",
-            marginBottom: "1rem",
-            padding: "0.5rem",
+            // width: "60vw",
+            backgroundColor: "#fafafd",
+            padding: "1rem",
             borderRadius: "1rem",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
           }}
         >
-          <Box>
-            <Typography
-              variant="h1"
-              sx={{
-                fontSize: "4rem",
-              }}
-            >
-              {sJSON.name}
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                fontSize: "2.5rem",
-              }}
-            >
-              Number of Topics: {sJSON.topicCount}
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                fontSize: "2.5rem",
-              }}
-            >
-              {sheetProgress[0]} /{sJSON.problemCount} problems solved
-            </Typography>
-          </Box>
-          <Button
-            variant="contained"
+          {/*Page Heading*/}
+          <Box
             sx={{
-              color: "#be2535",
-              backgroundColor: "white",
+              color: "white",
+              backgroundColor: "#be2535",
+              marginBottom: "1rem",
               padding: "0.5rem",
-              width: "10rem",
-              height: "2rem",
-              alignSelf: "flex-end",
-            }}
-            onClick={() => {
-              setProblemTrack({
-                ...problemTrack,
-                Striver: [],
-              });
+              borderRadius: "1rem",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
             }}
           >
-            Clear Progress
-          </Button>
-        </Box>
-
-        {/*Problem Table begins*/}
-        <Box>
-          {allDivisions.map((division: division) => {
-            return (
-              <Box
+            <Box>
+              <Typography
+                variant="h1"
                 sx={{
-                  marginBottom: "2%",
+                  fontSize: "4rem",
+                  fontFamily: "Kollektif",
+                  fontWeight: "800",
                 }}
               >
-                <Typography
-                  variant="h2"
+                {sJSON.name}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontFamily: "Kollektif",
+                  fontSize: "2.5rem",
+                  fontWeight: "600",
+                }}
+              >
+                Number of Topics: {sJSON.topicCount}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontFamily: "Kollektif",
+                  fontSize: "2.5rem",
+                  fontWeight: "600",
+                }}
+              >
+                {sheetProgress[0]} / {sJSON.problemCount} problems solved
+              </Typography>
+            </Box>
+            <Button
+              variant="contained"
+              sx={{
+                color: "#be2535",
+                backgroundColor: "white",
+                padding: "0.5rem",
+                width: "10rem",
+                height: "2rem",
+                alignSelf: "flex-end",
+                ":hover": {
+                  backgroundColor: "black",
+                  color: "white",
+                },
+              }}
+              onClick={() => {
+                setProblemTrack({
+                  ...problemTrack,
+                  Striver: [],
+                });
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "Kollektif",
+                  fontSize: "1rem",
+                  fontWeight: "600",
+                }}
+              >
+                Clear Progress
+              </Typography>
+            </Button>
+          </Box>
+
+          {/*Problem Table begins*/}
+          <Box>
+            {allDivisions.map((division: division) => {
+              return (
+                <Box
                   sx={{
-                    fontSize: "2.5rem",
-                    color: "white",
-                    marginBottom: "0.2rem",
-                    padding: "0.2rem 0.5rem",
-                    backgroundColor: "#be2535",
-                    borderRadius: "1rem",
+                    marginBottom: "2%",
                   }}
                 >
-                  {division.name}
-                </Typography>
-                <DataGrid
-                  rows={division.problems}
-                  columns={columns}
-                  pageSize={12}
-                  rowsPerPageOptions={[5]}
-                  checkboxSelection
-                  autoHeight
-                  autoPageSize
-                  hideFooter
-                  disableColumnMenu
-                  selectionModel={problemTrack.Striver}
-                  onSelectionModelChange={(newSelection) => {
-                    setProblemTrack({
-                      ...problemTrack,
-                      Striver: newSelection,
-                    });
-                  }}
-                  sx={{
-                    color: "white",
-                    fontSize: "1rem",
-                    border: "none",
-                    "& .MuiDataGrid-checkboxInput": {
-                      color: "#be2535",
-                    },
-                    "& .MuiDataGrid-sortIcon": {
-                      color: "#be2535",
-                    },
-                    "& .MuiDataGrid-cellCheckbox": {
-                      color: "#be2535",
-                    },
-                  }}
-                />
-              </Box>
-            );
-          })}
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      fontSize: "2.5rem",
+                      color: "white",
+                      marginBottom: "0.2rem",
+                      padding: "0.2rem 0.5rem",
+                      backgroundColor: "#be2535",
+                      borderRadius: "1rem",
+                      fontFamily: "Kollektif",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {division.name}
+                  </Typography>
+                  <DataGrid
+                    rows={division.problems}
+                    columns={columns}
+                    pageSize={12}
+                    rowsPerPageOptions={[5]}
+                    checkboxSelection
+                    autoHeight
+                    autoPageSize
+                    hideFooter
+                    disableColumnMenu
+                    selectionModel={problemTrack.Striver}
+                    onSelectionModelChange={(newSelection) => {
+                      setProblemTrack({
+                        ...problemTrack,
+                        Striver: newSelection,
+                      });
+                    }}
+                    sx={{
+                      color: "black",
+                      fontSize: "1rem",
+                      border: "none",
+                      "& .MuiDataGrid-checkboxInput": {
+                        color: "#be2535",
+                      },
+                      "& .MuiDataGrid-sortIcon": {
+                        color: "#be2535",
+                      },
+                      "& .MuiDataGrid-cellCheckbox": {
+                        color: "#be2535",
+                      },
+                    }}
+                  />
+                </Box>
+              );
+            })}
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 

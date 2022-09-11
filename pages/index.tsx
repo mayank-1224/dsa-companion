@@ -1,19 +1,33 @@
 import type { NextPage } from "next";
 import TopNavBar from "../components/TopNavBar";
 import AvailableCards from "../components/AvailableCards";
+import WelcomePage from "../components/WelcomePage";
+import SideBar from "../components/SideBar";
 import { Box } from "@mui/material";
 
 const Home: NextPage = () => {
   return (
-    <Box>
-      <TopNavBar />
+    <Box
+      sx={{
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <SideBar />
       <Box
         sx={{
-          //border: "1px solid red",
-          margin: "2vh 20vw",
+          padding: "0 20vw",
         }}
       >
-        <AvailableCards />
+        <TopNavBar />
+        <Box
+          sx={{
+            width: "100%",
+            height: "92vh",
+          }}
+        >
+          <WelcomePage />
+        </Box>
       </Box>
     </Box>
   );

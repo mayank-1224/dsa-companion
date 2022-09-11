@@ -1,62 +1,64 @@
-import { Stack } from "@mui/material";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Router from "next/router";
 
 const TopNavBar = () => {
+  require("typeface-poppins");
   return (
-    <Stack
+    <Box
       sx={{
+        // border: "1px solid black",
+        width: "100%",
+        height: "8%",
+        display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        backgroundColor: "orange",
-        overflow: "hidden",
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        height: "4.5rem",
-        zIndex: 1,
+        alignItems: "center",
       }}
     >
-      <Box
+      <Typography
+        variant="h1"
         sx={{
-          display: "flex",
-          alignItems: "center",
+          fontFamily: "Kollektif",
+          fontSize: "3.5rem",
+          fontWeight: "800",
+          letterSpacing: "-3px",
+          color: "white",
+          "&:hover": {
+            cursor: "pointer",
+          },
+        }}
+        onClick={() => {
+          Router.push("/");
         }}
       >
-        <Link
-          href="/"
-          underline="hover"
-          color="black"
+        DSA Companion
+      </Typography>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "white",
+          borderRadius: "3rem",
+          ":hover": {
+            backgroundColor: "black",
+          },
+        }}
+      >
+        <Typography
+          variant="h6"
           sx={{
-            fontSize: "2.5rem",
-            marginLeft: "2rem",
+            fontFamily: "Kollektif",
+            fontSize: "1.5rem",
+            fontWeight: "800",
+            letterSpacing: "1px",
+            color: "#f84f39",
           }}
         >
-          {"DSA Companion"}
-        </Link>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-          flexDirection: "row",
-          width: "20rem",
-          marginRight: "3rem",
-        }}
-      >
-        <Link href="#" underline="hover" color="black">
-          {"Contact"}
-        </Link>
-        <Link href="#" underline="hover" color="black">
-          {"About Us"}
-        </Link>
-        <Link href="#" underline="hover" color="black">
-          {"LogIn"}
-        </Link>
-      </Box>
-    </Stack>
+          Log In
+        </Typography>
+      </Button>
+    </Box>
   );
 };
 
