@@ -1,9 +1,6 @@
-import { Stack } from "@mui/material";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Kollektif from "../public/fonts/Kollektif.ttf";
 import Router from "next/router";
 
 const TopNavBar = () => {
@@ -28,6 +25,12 @@ const TopNavBar = () => {
           fontWeight: "800",
           letterSpacing: "-3px",
           color: "white",
+          "&:hover": {
+            cursor: "pointer",
+          },
+        }}
+        onClick={() => {
+          Router.push("/");
         }}
       >
         DSA Companion

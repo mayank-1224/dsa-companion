@@ -1,6 +1,7 @@
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
+import Router from "next/router";
 
 const WelcomePage = () => {
   return (
@@ -82,6 +83,7 @@ const WelcomePage = () => {
               backgroundColor: "black",
             },
           }}
+          onClick={() => Router.push("/SDEsheets")}
         >
           <Typography
             variant="h6"
@@ -94,7 +96,7 @@ const WelcomePage = () => {
               lineHeight: "0.8",
             }}
           >
-            SDE Sheets are live now. Go Check!
+            SDE Sheets are now live. Go Check!
           </Typography>
         </Button>
       </Box>
