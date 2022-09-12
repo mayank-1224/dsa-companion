@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import { Icon, SvgIcon } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import MoreTimeIcon from "@mui/icons-material/MoreTime";
@@ -33,7 +34,11 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <HomeIcon className="navIcon" />
+              <HomeIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">Home</span>
             </a>
           </li>
@@ -44,7 +49,11 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <ListAltIcon className="navIcon" />
+              <ListAltIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">SDE Sheets</span>
             </a>
           </li>
@@ -55,7 +64,11 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <MoreTimeIcon className="navIcon" />
+              <MoreTimeIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">Contest Tracker</span>
             </a>
           </li>
@@ -66,7 +79,11 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <SettingsSuggestIcon className="navIcon" />
+              <SettingsSuggestIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">System Design</span>
             </a>
           </li>
@@ -77,7 +94,11 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <StorageIcon className="navIcon" />
+              <StorageIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">SQL</span>
             </a>
           </li>
@@ -88,19 +109,31 @@ const SideBar = () => {
             }}
           >
             <a className="has-subnav">
-              <AltRouteIcon className="navIcon" />
+              <AltRouteIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">Others</span>
             </a>
           </li>
           <li className="NavListItem">
             <a className="has-subnav">
-              <SupportAgentIcon className="navIcon" />
+              <SupportAgentIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">Support</span>
             </a>
           </li>
           <li className="NavListItem">
             <a className="has-subnav">
-              <DraftsIcon className="navIcon" />
+              <DraftsIcon
+                className="navIcon"
+                fontSize="large"
+                sx={{ width: "70px !important", height: "40px !important" }}
+              />
               <span className="nav-text">Contact</span>
             </a>
           </li>
