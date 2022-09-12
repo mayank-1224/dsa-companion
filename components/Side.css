@@ -1,18 +1,12 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-.fa2x {
-  font-size: 2em;
-}
 .navIcon {
   position: relative;
   display: table-cell;
-  width: 70px;
-  height: 40px;
   text-align: center;
   vertical-align: middle;
   color: black;
-  font-size: large;
 }
 
 .main-menu:hover,
