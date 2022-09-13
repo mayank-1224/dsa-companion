@@ -9,12 +9,11 @@ const TopNavBar = () => {
     <Box
       sx={{
         // border: "1px solid black",
-        width: "100%",
-        height: "8%",
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        paddingTop: "0.7rem",
       }}
     >
       <Typography
@@ -25,6 +24,8 @@ const TopNavBar = () => {
           fontWeight: "800",
           letterSpacing: "-3px",
           color: "white",
+          textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+
           "&:hover": {
             cursor: "pointer",
           },
@@ -40,6 +41,7 @@ const TopNavBar = () => {
         sx={{
           backgroundColor: "white",
           borderRadius: "3rem",
+          boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
           ":hover": {
             backgroundColor: "black",
           },

@@ -8,17 +8,13 @@ const WelcomePage = () => {
     <Box
       sx={{
         // border: "1px solid blue",
-        width: "100%",
         height: "92%",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        paddingBottom: "10%",
       }}
     >
       <Box
         sx={{
-          //   border: "1px solid blue",
+          // border: "1px solid blue",
           width: "100%",
           display: "flex",
           flexDirection: "row",
@@ -35,6 +31,7 @@ const WelcomePage = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "black",
+              textShadow: "3px 2px 3px rgba(0,0,0,0.5)",
             }}
           >
             Welcome to 'YOUR'
@@ -49,6 +46,7 @@ const WelcomePage = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "white",
+              textShadow: "5px 4px 5px rgba(0,0,0,0.5)",
             }}
           >
             DSA
@@ -63,6 +61,7 @@ const WelcomePage = () => {
               letterSpacing: "-3px",
               color: "white",
               lineHeight: "0.8",
+              textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
             }}
           >
             COMPANION
@@ -78,7 +77,7 @@ const WelcomePage = () => {
             borderBottomLeftRadius: "3rem",
             borderBottomRightRadius: "17rem",
             borderTopRightRadius: "17rem",
-            WebkitBoxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+            boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
             ":hover": {
               backgroundColor: "black",
             },
@@ -94,6 +93,7 @@ const WelcomePage = () => {
               letterSpacing: "1px",
               color: "#f84f39",
               lineHeight: "0.8",
+              textShadow: "2px 1px 2px rgba(0,0,0,0.5)",
             }}
           >
             SDE Sheets are now live. Go Check!

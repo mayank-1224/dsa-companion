@@ -4,8 +4,13 @@
       "id": 1,
       "titleName": "Striver SDE Sheet",
       "subtitle": "191 Curated Problems",
-      "summary": "Sheet for the sole purpose of quick revision and preparation in less time focusing on top coding interview problems",
-      "moreData": "More Data",
+      "summary": "Sheet for the sole purpose of quick revision focused on top coding interview problems.",
+      "Links": {
+        "link1": "https://takeuforward.org/",
+        "link1info": "takeUforward Website",
+        "link2": "https://www.youtube.com/c/takeUforward",
+        "link2info": "takeUforward YouTube"
+      },
       "imgLink": "https://i.postimg.cc/6qCXQ577/tuf.png",
       "problemCount": 191
     },
@@ -14,7 +19,12 @@
       "titleName": "Love Babbar SDE Sheet",
       "subtitle": "450 Curated Problems",
       "summary": "A sheet that covers almost every concept of Data Structures and Algorithms.",
-      "moreData": "More Data",
+      "Links": {
+        "link1": "https://www.thecodehelp.in/",
+        "link1info": "CodeHelp  Website",
+        "link2": "https://www.thecodehelp.in/",
+        "link2info": "CodeHelp YouTube"
+      },
       "imgLink": "https://i.postimg.cc/G3T3Nbpn/love.jpg",
       "problemCount": 450
     },
@@ -22,26 +32,41 @@
       "id": 3,
       "titleName": "Blind 75",
       "subtitle": "75 Curated Problems",
-      "summary": "A list of the most important 75 questions on LeetCode. Many other LeetCode questions are a mash of the techniques from these individual questions.",
-      "moreData": "More Data",
+      "summary": "A list of the most important 75 questions on LeetCode.",
+      "Links": {
+        "link1": "https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU",
+        "link1info": "Original blind75",
+        "link2": "https://www.teamblind.com/",
+        "link2info": "teamblind website"
+      },
       "imgLink": "https://i.postimg.cc/Yq4r5Mqw/blind.png",
       "problemCount": 75
     },
     {
       "id": 4,
-      "titleName": "Grind 75",
-      "subtitle": "75 Curated Problems",
-      "summary": "Grind 75 is a better version of Blind 75 which goes beyond 75 questions. You can customize the available time you have, difficulty, topics, etc.",
-      "moreData": "More Data",
-      "imgLink": "https://i.postimg.cc/0Q542dwn/grind.png",
-      "problemCount": 75
+      "titleName": "Grind 169",
+      "subtitle": "169 Curated Problems",
+      "summary": "Grind 169 is a better version of Blind 75 which goes beyond 75 questions.",
+      "Links": {
+        "link1": "https://www.techinterviewhandbook.org/grind75",
+        "link1info": " Original grind75",
+        "link2": "https://www.techinterviewhandbook.org/",
+        "link2info": "TechnicalInterviewHandbook Website"
+      },
+      "imgLink": "https://i.postimg.cc/SsRzxG6v/grind169.png",
+      "problemCount": 169
     },
     {
       "id": 5,
       "titleName": "GeeksForGeeks Sheet",
       "subtitle": "Covers all the segments round-wise",
-      "summary": "This Sheet is a list of the most important topics or the most popular questions that are asked in the Software Development Engineer Interviews.",
-      "moreData": "More Data",
+      "summary": "This Sheet is a list of the most important topics asked in SDE Interviews.",
+      "Links": {
+        "link1": "https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/",
+        "link1info": "Original GeeksForGeeks Sheet",
+        "link2": "https://www.geeksforgeeks.org/",
+        "link2info": "GeeksForGeeks Website"
+      },
       "imgLink": "https://i.postimg.cc/vm3Pjw6H/gfg.png",
       "problemCount": 200
     },
@@ -49,8 +74,13 @@
       "id": 6,
       "titleName": "Arsh Goyal Sheet",
       "subtitle": "280 Curated Problems",
-      "summary": "Curated list of previous year and most frequently asked problems from Data Structures and Algorithms.",
-      "moreData": "More Data",
+      "summary": "Curated list of previous year and most frequently asked DSA problems.",
+      "Links": {
+        "link1": "https://www.codekickstart.org/",
+        "link1info": "CodeKickStart Website",
+        "link2": "https://www.youtube.com/c/ArshGoyal",
+        "link2info": "Arsh Goyal YouTube"
+      },
       "imgLink": "https://i.postimg.cc/MKTJ6xSR/arsh.png",
       "problemCount": 280
     }

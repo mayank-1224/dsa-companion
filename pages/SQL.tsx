@@ -3,7 +3,7 @@ import TopNavBar from "../components/TopNavBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-const EverythingDSA = () => {
+const SQL = () => {
   return (
     <Box>
       <SideBar />
@@ -15,7 +15,7 @@ const EverythingDSA = () => {
         <TopNavBar />
         <Box
           sx={{
-            marginTop: "17rem",
+            marginTop: "18rem",
           }}
         >
           <Typography
@@ -28,7 +28,7 @@ const EverythingDSA = () => {
               color: "white",
             }}
           >
-            Arsh Goyal Sheet
+            All about SQL
           </Typography>
           <Typography
             variant="h2"
@@ -48,4 +48,4 @@ const EverythingDSA = () => {
   );
 };
 
-export default EverythingDSA;
+export default SQL;

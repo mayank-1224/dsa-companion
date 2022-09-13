@@ -15,7 +15,7 @@ const EverythingDSA = () => {
         <TopNavBar />
         <Box
           sx={{
-            marginTop: "17rem",
+            marginTop: "12rem",
           }}
         >
           <Typography
@@ -28,7 +28,7 @@ const EverythingDSA = () => {
               color: "white",
             }}
           >
-            Arsh Goyal Sheet
+            The only 'ROADMAP'
           </Typography>
           <Typography
             variant="h2"

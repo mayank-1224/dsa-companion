@@ -90,7 +90,7 @@ const SideBar = () => {
           <li
             className="NavListItem"
             onClick={() => {
-              Router.push("/sql");
+              Router.push("/SQL");
             }}
           >
             <a className="has-subnav">
@@ -105,7 +105,7 @@ const SideBar = () => {
           <li
             className="NavListItem"
             onClick={() => {
-              Router.push("/Others");
+              Router.push("/EverythingDSA");
             }}
           >
             <a className="has-subnav">
@@ -114,7 +114,7 @@ const SideBar = () => {
                 fontSize="large"
                 sx={{ width: "70px !important", height: "40px !important" }}
               />
-              <span className="nav-text">Others</span>
+              <span className="nav-text">Everything DSA</span>
             </a>
           </li>
           <li className="NavListItem">
