@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
-import lbJSON from "../hooks/BabbarJSON.json";
+import GrindJSON from "../hooks/GrindJSON.json";
 import SideBar from "../components/SideBar";
 import Button from "@mui/material/Button";
 import Collapsible from "react-collapsible";
@@ -15,7 +15,7 @@ interface division {
   problems: any;
 }
 
-const BabbarSheet = () => {
+const Grind169Sheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
     useProblems();
   const columns: GridColDef[] = [
@@ -23,35 +23,28 @@ const BabbarSheet = () => {
     { field: "name", headerName: "Problem Name", width: 400 },
     { field: "difficulty", headerName: "Difficulty", width: 150 },
     {
-      field: "link1",
-      headerName: "Link 1",
+      field: "link",
+      headerName: "Link",
       width: 170,
       renderCell: (cellValues) => {
         if (cellValues.value != "")
           return (
             <Link href={`${cellValues.value}`} target={"_blank"}>
-              GeeksForGeeks
-            </Link>
-          );
-      },
-      sortable: false,
-    },
-    {
-      field: "link2",
-      headerName: "Link 2",
-      width: 170,
-      renderCell: (cellValues) => {
-        if (cellValues.value != "")
-          return (
-            <Link href={`${cellValues.value}`} target={"_blank"}>
-              Coding Ninjas
+              LeetCode
             </Link>
           );
       },
       sortable: false,
     },
   ];
-  // console.log(sheetProgress);
+  var vall = 1;
+  const loll = GrindJSON;
+  loll.divisions.map((item) => {
+    item.problems.map((problem) => {
+      problem.id = vall++;
+    });
+  });
+  console.log(loll);
 
   return (
     <>
@@ -72,7 +65,7 @@ const BabbarSheet = () => {
           {/* {Sheet Title and other Info} */}
           <Box
             sx={{
-              backgroundColor: "#154c79",
+              backgroundColor: "#8a7ce8",
               marginBottom: "1rem",
               padding: "0.5rem",
               borderRadius: "1rem",
@@ -90,7 +83,7 @@ const BabbarSheet = () => {
                   fontWeight: "800",
                 }}
               >
-                {lbJSON.name}
+                {GrindJSON.name}
               </Typography>
               <Typography
                 variant="h2"
@@ -100,14 +93,14 @@ const BabbarSheet = () => {
                   fontWeight: "600",
                 }}
               >
-                Number of Topics: {lbJSON.topicCount} <br />
-                {sheetProgress[1]} / {lbJSON.problemCount} problems solved
+                Number of Topics: {GrindJSON.topicCount} <br />
+                {sheetProgress[3]} / {GrindJSON.problemCount} problems solved
               </Typography>
             </Box>
             <Button
               variant="contained"
               sx={{
-                color: "#154c79",
+                color: "#8a7ce8",
                 backgroundColor: "white",
                 padding: "0.5rem",
                 width: "10rem",
@@ -121,7 +114,7 @@ const BabbarSheet = () => {
               onClick={() => {
                 setProblemTrack({
                   ...problemTrack,
-                  Babbar: [],
+                  Grind169: [],
                 });
               }}
             >
@@ -136,13 +129,13 @@ const BabbarSheet = () => {
               </Typography>
             </Button>
           </Box>
-          {/* <CollapsibleTable division={lbJSON.divisions} /> */}
+          {/* <CollapsibleTable division={GrindJSON.divisions} /> */}
           <Box>
-            {lbJSON.divisions.map((division: any) => {
+            {GrindJSON.divisions.map((division: any) => {
               return (
                 <Box
                   sx={{
-                    backgroundColor: "#154c79",
+                    backgroundColor: "#8a7ce8",
                     padding: "0.5rem",
                     borderRadius: "1rem",
                     fontSize: "2.5rem",
@@ -158,7 +151,7 @@ const BabbarSheet = () => {
                       cursor: "pointer",
                     }}
                     transitionTime={250}
-                    open={false}
+                    open={true}
                   >
                     <Box
                       sx={{
@@ -171,19 +164,18 @@ const BabbarSheet = () => {
                         <DataGrid
                           rows={division.problems}
                           columns={columns}
-                          pageSize={10}
+                          pageSize={12}
                           rowsPerPageOptions={[5]}
                           checkboxSelection
                           autoHeight
                           autoPageSize
-                          // hideFooter
-                          hideFooterSelectedRowCount
+                          hideFooter
                           disableColumnMenu
-                          selectionModel={problemTrack.Babbar}
+                          selectionModel={problemTrack.Grind169}
                           onSelectionModelChange={(newSelection) => {
                             setProblemTrack({
                               ...problemTrack,
-                              Babbar: newSelection,
+                              Grind169: newSelection,
                             });
                           }}
                           sx={{
@@ -191,13 +183,13 @@ const BabbarSheet = () => {
                             fontSize: "1rem",
                             border: "none",
                             "& .MuiDataGrid-checkboxInput": {
-                              color: "#154c79",
+                              color: "#8a7ce8",
                             },
                             "& .MuiDataGrid-sortIcon": {
-                              color: "#154c79",
+                              color: "#8a7ce8",
                             },
                             "& .MuiDataGrid-cellCheckbox": {
-                              color: "#154c79",
+                              color: "#8a7ce8",
                             },
                           }}
                         />
@@ -214,4 +206,4 @@ const BabbarSheet = () => {
   );
 };
 
-export default BabbarSheet;
+export default Grind169Sheet;

@@ -15,6 +15,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Box from "@mui/material/Box";
 import useProblems from "../hooks/useProblems";
+import Link from "@mui/material/Link";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -26,7 +28,12 @@ interface Object {
   subtitle: string;
   imgLink: string;
   summary: string;
-  moreData: string;
+  Links: {
+    link1: string;
+    link1info: string;
+    link2: string;
+    link2info: string;
+  };
   problemCount: number;
 }
 
@@ -34,36 +41,57 @@ interface CardData {
   data: Object;
 }
 
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-  marginLeft: "auto",
-  transition: theme.transitions.create("transform", {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+// const ExpandMore = styled((props: ExpandMoreProps) => {
+//   const { expand, ...other } = props;
+//   return <IconButton {...other} />;
+// })(({ theme, expand }) => ({
+//   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+//   marginLeft: "auto",
+//   transition: theme.transitions.create("transform", {
+//     duration: theme.transitions.duration.shortest,
+//   }),
+// }));
 
 const CardComponent = (data: CardData) => {
-  const [expanded, setExpanded] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
   const [heart, setHeart] = useState(false);
   const { setClickName, sheetProgress } = useProblems();
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
+  // };
 
   return (
-    <Card sx={{ maxWidth: 345, marginTop: "5px" }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        marginTop: "5px",
+        boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
+        borderRadius: "10px",
+      }}
+    >
       <CardHeader
-        // action={
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // }
         title={data.data.titleName}
-        subheader={data.data.subtitle}
+        //sheetProgress[data.data.id - 1]} /{" "}{data.data.problemCount
+
+        subheader={
+          sheetProgress[data.data.id - 1] +
+          " / " +
+          data.data.problemCount +
+          " solved"
+        }
+        sx={{
+          "& .MuiCardHeader-title": {
+            fontFamily: "Poppins",
+            fontSize: "1.5rem",
+            fontWeight: "500",
+          },
+          ".MuiCardHeader-subheader": {
+            fontFamily: "Poppins",
+            fontSize: "1.1rem",
+            fontWeight: "500",
+          },
+        }}
       />
       <CardMedia
         component="img"
@@ -77,11 +105,38 @@ const CardComponent = (data: CardData) => {
         sx={{ cursor: "pointer" }}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          sx={{
+            fontFamily: "Poppins",
+          }}
+          variant="body2"
+        >
           {data.data.summary}
         </Typography>
+        <Typography fontWeight={600}>Credits: </Typography>
+        <Typography fontFamily="Poppins" variant="body2">
+          <Link href={data.data.Links.link1} underline="none" target={"_blank"}>
+            {data.data.Links.link1info}
+            <OpenInNewIcon
+              sx={{
+                width: "1rem",
+                height: "1rem",
+              }}
+            />
+          </Link>{" "}
+          <br />
+          <Link href={data.data.Links.link2} underline="none" target={"_blank"}>
+            {data.data.Links.link2info}
+            <OpenInNewIcon
+              sx={{
+                width: "1rem",
+                height: "1rem",
+              }}
+            />
+          </Link>
+        </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           {heart ? (
             <FavoriteIcon
@@ -117,7 +172,7 @@ const CardComponent = (data: CardData) => {
             {data.data.problemCount}
           </Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 };

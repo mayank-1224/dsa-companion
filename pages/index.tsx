@@ -7,12 +7,7 @@ import { Box } from "@mui/material";
 
 const Home: NextPage = () => {
   return (
-    <Box
-      sx={{
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <Box>
       <SideBar />
       <Box
         sx={{
