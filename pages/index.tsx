@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import TopNavBar from "../components/TopNavBar";
-import AvailableCards from "../components/AvailableCards";
 import WelcomePage from "../components/WelcomePage";
 import SideBar from "../components/SideBar";
 import { Box } from "@mui/material";
