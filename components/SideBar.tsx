@@ -24,6 +24,7 @@ const SideBar = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
+          maxWidth: "20vw",
         }}
       >
         <ul>
