@@ -1,19 +1,25 @@
-import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
-import GrindJSON from "../hooks/GrindJSON.json";
 import SideBar from "../components/SideBar";
-import Button from "@mui/material/Button";
 import Collapsible from "react-collapsible";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
 import { useState } from "react";
 
-interface division {
-  name: string;
-  problems: any;
-}
+import GrindJSON from "../hooks/GrindJSON.json";
+
+import {
+  SYouterBox,
+  SYheaderStack,
+  SYheaderText,
+  SYsubheaderText,
+  SYbutton,
+  SYbuttonText,
+  SYcollapsibleStack,
+  SYdataGrid,
+} from "../components/StyledComponents";
 
 const Grind169Sheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
@@ -45,7 +51,7 @@ const Grind169Sheet = () => {
     });
   });
   console.log(loll);
-
+  // #8a7ce8
   return (
     <>
       <SideBar />
@@ -55,152 +61,84 @@ const Grind169Sheet = () => {
         }}
       >
         <TopNavBar />
-        <Box
-          sx={{
-            backgroundColor: "#fafafd",
-            padding: "1rem",
-            borderRadius: "1rem",
-          }}
-        >
-          {/* {Sheet Title and other Info} */}
-          <Box
+        <SYouterBox>
+          <SYheaderStack
             sx={{
               backgroundColor: "#8a7ce8",
-              marginBottom: "1rem",
-              padding: "0.5rem",
-              borderRadius: "1rem",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
             }}
           >
             <Box>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: "4rem",
-                  fontFamily: "Kollektif",
-                  fontWeight: "800",
-                }}
-              >
-                {GrindJSON.name}
-              </Typography>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontFamily: "Kollektif",
-                  fontSize: "2.5rem",
-                  fontWeight: "600",
-                }}
-              >
+              <SYheaderText variant="h1">{GrindJSON.name}</SYheaderText>
+              <SYsubheaderText variant="h2">
                 Number of Topics: {GrindJSON.topicCount} <br />
                 {sheetProgress[3]} / {GrindJSON.problemCount} problems solved
-              </Typography>
+              </SYsubheaderText>
             </Box>
-            <Button
+            <SYbutton
               variant="contained"
-              sx={{
-                color: "#8a7ce8",
-                backgroundColor: "white",
-                padding: "0.5rem",
-                width: "10rem",
-                height: "2rem",
-                alignSelf: "flex-end",
-                ":hover": {
-                  backgroundColor: "black",
-                  color: "white",
-                },
-              }}
               onClick={() => {
                 setProblemTrack({
                   ...problemTrack,
                   Grind169: [],
                 });
               }}
+              sx={{
+                color: "#8a7ce8",
+              }}
             >
-              <Typography
-                sx={{
-                  fontFamily: "Kollektif",
-                  fontSize: "1rem",
-                  fontWeight: "600",
-                }}
-              >
-                Clear Progress
-              </Typography>
-            </Button>
-          </Box>
+              <SYbuttonText>Clear Progress</SYbuttonText>
+            </SYbutton>
+          </SYheaderStack>
           {/* <CollapsibleTable division={GrindJSON.divisions} /> */}
           <Box>
             {GrindJSON.divisions.map((division: any) => {
               return (
-                <Box
+                <SYcollapsibleStack
                   sx={{
                     backgroundColor: "#8a7ce8",
-                    padding: "0.5rem",
-                    borderRadius: "1rem",
-                    fontSize: "2.5rem",
-                    fontFamily: "Kollektif",
-                    fontWeight: "800",
-                    color: "white",
-                    marginBottom: "1rem",
                   }}
                 >
                   <Collapsible
                     trigger={division.name}
-                    triggerStyle={{
-                      cursor: "pointer",
-                    }}
                     transitionTime={250}
                     open={true}
+                    triggerStyle={{
+                      cursor: "pointer",
+                      textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+                    }}
                   >
-                    <Box
+                    <Paper
                       sx={{
                         backgroundColor: "white",
                         borderRadius: "1rem",
                       }}
                     >
                       {/* <TableComponent data={division.problems} /> */}
-                      <div style={{ width: "100%" }}>
-                        <DataGrid
-                          rows={division.problems}
-                          columns={columns}
-                          pageSize={12}
-                          rowsPerPageOptions={[5]}
-                          checkboxSelection
-                          autoHeight
-                          autoPageSize
-                          hideFooter
-                          disableColumnMenu
-                          selectionModel={problemTrack.Grind169}
-                          onSelectionModelChange={(newSelection) => {
-                            setProblemTrack({
-                              ...problemTrack,
-                              Grind169: newSelection,
-                            });
-                          }}
-                          sx={{
-                            color: "black",
-                            fontSize: "1rem",
-                            border: "none",
-                            "& .MuiDataGrid-checkboxInput": {
-                              color: "#8a7ce8",
-                            },
-                            "& .MuiDataGrid-sortIcon": {
-                              color: "#8a7ce8",
-                            },
-                            "& .MuiDataGrid-cellCheckbox": {
-                              color: "#8a7ce8",
-                            },
-                          }}
-                        />
-                      </div>
-                    </Box>
+                      <SYdataGrid
+                        rows={division.problems}
+                        columns={columns}
+                        pageSize={12}
+                        rowsPerPageOptions={[5]}
+                        checkboxSelection
+                        autoHeight
+                        autoPageSize
+                        hideFooter
+                        disableColumnMenu
+                        selectionModel={problemTrack.Grind169}
+                        onSelectionModelChange={(newSelection) => {
+                          setProblemTrack({
+                            ...problemTrack,
+                            Grind169: newSelection,
+                          });
+                        }}
+                      />
+                    </Paper>
                   </Collapsible>
-                </Box>
+                </SYcollapsibleStack>
               );
             })}
           </Box>
-        </Box>
+        </SYouterBox>
       </Box>
     </>
   );

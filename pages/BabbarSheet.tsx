@@ -1,19 +1,23 @@
-import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
-import lbJSON from "../hooks/BabbarJSON.json";
 import SideBar from "../components/SideBar";
-import Button from "@mui/material/Button";
 import Collapsible from "react-collapsible";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
-import { useState } from "react";
+import Paper from "@mui/material/Paper";
+import lbJSON from "../hooks/BabbarJSON.json";
 
-interface division {
-  name: string;
-  problems: any;
-}
+import {
+  SYouterBox,
+  SYheaderStack,
+  SYheaderText,
+  SYsubheaderText,
+  SYbutton,
+  SYbuttonText,
+  SYcollapsibleStack,
+  SYdataGrid,
+} from "../components/StyledComponents";
 
 const BabbarSheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
@@ -52,7 +56,7 @@ const BabbarSheet = () => {
     },
   ];
   // console.log(sheetProgress);
-
+  // #154c79
   return (
     <>
       <SideBar />
@@ -62,153 +66,84 @@ const BabbarSheet = () => {
         }}
       >
         <TopNavBar />
-        <Box
-          sx={{
-            backgroundColor: "#fafafd",
-            padding: "1rem",
-            borderRadius: "1rem",
-          }}
-        >
-          {/* {Sheet Title and other Info} */}
-          <Box
+        <SYouterBox>
+          <SYheaderStack
             sx={{
               backgroundColor: "#154c79",
-              marginBottom: "1rem",
-              padding: "0.5rem",
-              borderRadius: "1rem",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
             }}
           >
             <Box>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: "4rem",
-                  fontFamily: "Kollektif",
-                  fontWeight: "800",
-                }}
-              >
-                {lbJSON.name}
-              </Typography>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontFamily: "Kollektif",
-                  fontSize: "2.5rem",
-                  fontWeight: "600",
-                }}
-              >
+              <SYheaderText variant="h1">{lbJSON.name}</SYheaderText>
+              <SYsubheaderText variant="h2">
                 Number of Topics: {lbJSON.topicCount} <br />
                 {sheetProgress[1]} / {lbJSON.problemCount} problems solved
-              </Typography>
+              </SYsubheaderText>
             </Box>
-            <Button
+            <SYbutton
               variant="contained"
-              sx={{
-                color: "#154c79",
-                backgroundColor: "white",
-                padding: "0.5rem",
-                width: "10rem",
-                height: "2rem",
-                alignSelf: "flex-end",
-                ":hover": {
-                  backgroundColor: "black",
-                  color: "white",
-                },
-              }}
               onClick={() => {
                 setProblemTrack({
                   ...problemTrack,
                   Babbar: [],
                 });
               }}
+              sx={{
+                color: "#154c79",
+              }}
             >
-              <Typography
-                sx={{
-                  fontFamily: "Kollektif",
-                  fontSize: "1rem",
-                  fontWeight: "600",
-                }}
-              >
-                Clear Progress
-              </Typography>
-            </Button>
-          </Box>
+              <SYbuttonText>Clear Progress</SYbuttonText>
+            </SYbutton>
+          </SYheaderStack>
           {/* <CollapsibleTable division={lbJSON.divisions} /> */}
           <Box>
             {lbJSON.divisions.map((division: any) => {
               return (
-                <Box
+                <SYcollapsibleStack
                   sx={{
                     backgroundColor: "#154c79",
-                    padding: "0.5rem",
-                    borderRadius: "1rem",
-                    fontSize: "2.5rem",
-                    fontFamily: "Kollektif",
-                    fontWeight: "800",
-                    color: "white",
-                    marginBottom: "1rem",
                   }}
                 >
                   <Collapsible
                     trigger={division.name}
-                    triggerStyle={{
-                      cursor: "pointer",
-                    }}
                     transitionTime={250}
                     open={false}
+                    triggerStyle={{
+                      cursor: "pointer",
+                      textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+                    }}
                   >
-                    <Box
+                    <Paper
                       sx={{
                         backgroundColor: "white",
                         borderRadius: "1rem",
                       }}
                     >
                       {/* <TableComponent data={division.problems} /> */}
-                      <div style={{ width: "100%" }}>
-                        <DataGrid
-                          rows={division.problems}
-                          columns={columns}
-                          pageSize={10}
-                          rowsPerPageOptions={[5]}
-                          checkboxSelection
-                          autoHeight
-                          autoPageSize
-                          // hideFooter
-                          hideFooterSelectedRowCount
-                          disableColumnMenu
-                          selectionModel={problemTrack.Babbar}
-                          onSelectionModelChange={(newSelection) => {
-                            setProblemTrack({
-                              ...problemTrack,
-                              Babbar: newSelection,
-                            });
-                          }}
-                          sx={{
-                            color: "black",
-                            fontSize: "1rem",
-                            border: "none",
-                            "& .MuiDataGrid-checkboxInput": {
-                              color: "#154c79",
-                            },
-                            "& .MuiDataGrid-sortIcon": {
-                              color: "#154c79",
-                            },
-                            "& .MuiDataGrid-cellCheckbox": {
-                              color: "#154c79",
-                            },
-                          }}
-                        />
-                      </div>
-                    </Box>
+                      <SYdataGrid
+                        rows={division.problems}
+                        columns={columns}
+                        pageSize={12}
+                        rowsPerPageOptions={[5]}
+                        checkboxSelection
+                        autoHeight
+                        autoPageSize
+                        hideFooter
+                        disableColumnMenu
+                        selectionModel={problemTrack.Babbar}
+                        onSelectionModelChange={(newSelection) => {
+                          setProblemTrack({
+                            ...problemTrack,
+                            Babbar: newSelection,
+                          });
+                        }}
+                      />
+                    </Paper>
                   </Collapsible>
-                </Box>
+                </SYcollapsibleStack>
               );
             })}
           </Box>
-        </Box>
+        </SYouterBox>
       </Box>
     </>
   );

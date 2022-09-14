@@ -18,20 +18,27 @@ const WelcomePage = () => {
           width: "100%",
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems: "center",
         }}
       >
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            // border: "1px solid blue",
+          }}
+        >
           <Typography
             variant="h2"
             sx={{
               fontFamily: "Kollektif",
-              fontSize: "4rem",
+              fontSize: "3vw",
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "black",
-              textShadow: "3px 2px 3px rgba(0,0,0,0.5)",
             }}
           >
             Welcome to 'YOUR'
@@ -39,7 +46,6 @@ const WelcomePage = () => {
           <Typography
             variant="h1"
             sx={{
-              // border: "1px solid black",
               lineHeight: "0.8",
               fontFamily: "Kollektif",
               fontSize: "18rem",
@@ -67,38 +73,79 @@ const WelcomePage = () => {
             COMPANION
           </Typography>
         </Box>
-        <Button
-          variant="contained"
+        <Box
           sx={{
-            backgroundColor: "white",
-            height: "5rem",
-            padding: "0 1rem",
-            borderTopLeftRadius: "3rem",
-            borderBottomLeftRadius: "3rem",
-            borderBottomRightRadius: "17rem",
-            borderTopRightRadius: "17rem",
-            boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
-            ":hover": {
-              backgroundColor: "black",
-            },
+            // border: "1px solid black",
+            display: "flex",
+            flexDirection: "column",
           }}
-          onClick={() => Router.push("/SDEsheets")}
         >
-          <Typography
-            variant="h6"
+          <Button
+            variant="contained"
             sx={{
-              fontFamily: "Kollektif",
-              fontSize: "1.5rem",
-              fontWeight: "800",
-              letterSpacing: "1px",
-              color: "#f84f39",
-              lineHeight: "0.8",
-              textShadow: "2px 1px 2px rgba(0,0,0,0.5)",
+              backgroundColor: "white",
+              height: "5rem",
+              padding: "0 1rem",
+              borderTopLeftRadius: "3rem",
+              borderBottomLeftRadius: "3rem",
+              borderBottomRightRadius: "17rem",
+              borderTopRightRadius: "17rem",
+              boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
+              ":hover": {
+                backgroundColor: "black",
+              },
             }}
+            onClick={() => Router.push("/SDEsheets")}
           >
-            SDE Sheets are now live. Go Check!
-          </Typography>
-        </Button>
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: "Kollektif",
+                fontSize: "1.5rem",
+                fontWeight: "800",
+                letterSpacing: "1px",
+                color: "#f84f39",
+                lineHeight: "0.8",
+                textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
+              }}
+            >
+              SDE Sheets are now live. Go Check!
+            </Typography>
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "white",
+              height: "5rem",
+              padding: "0 1rem",
+              marginTop: "1rem",
+              borderTopLeftRadius: "3rem",
+              borderBottomLeftRadius: "3rem",
+              borderBottomRightRadius: "17rem",
+              borderTopRightRadius: "17rem",
+              boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
+              ":hover": {
+                backgroundColor: "black",
+              },
+            }}
+            onClick={() => Router.push("/ContestTracker")}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: "Kollektif",
+                fontSize: "1.5rem",
+                fontWeight: "800",
+                letterSpacing: "1px",
+                color: "#f84f39",
+                lineHeight: "0.8",
+                textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
+              }}
+            >
+              Contest Tracker is now live. Go Check!
+            </Typography>
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
