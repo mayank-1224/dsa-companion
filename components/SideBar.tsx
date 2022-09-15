@@ -144,7 +144,6 @@ const SideBar = () => {
           position: "sticky",
           top: "0",
           height: "50px",
-          display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
           backgroundColor: "white",
