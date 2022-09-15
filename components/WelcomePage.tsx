@@ -37,8 +37,9 @@ const WelcomePage = () => {
               fontFamily: "Kollektif",
               fontSize: "3vw",
               fontWeight: "800",
-              letterSpacing: "-3px",
+              // letterSpacing: "3px",
               color: "black",
+              textShadow: "2px 1px 1px rgba(0,0,0,0.5)",
             }}
           >
             Welcome to 'YOUR'
@@ -104,7 +105,7 @@ const WelcomePage = () => {
                 fontSize: "1.5rem",
                 fontWeight: "800",
                 letterSpacing: "1px",
-                color: "#f84f39",
+                color: "#7a54a7",
                 lineHeight: "0.8",
                 textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
               }}
@@ -133,11 +134,12 @@ const WelcomePage = () => {
             <Typography
               variant="h6"
               sx={{
-                fontFamily: "Kollektif",
+                fontFamily: "Poppins",
                 fontSize: "1.5rem",
-                fontWeight: "800",
-                letterSpacing: "1px",
-                color: "#f84f39",
+                fontWeight: "500",
+                // letterSpacing: "1px",
+                textTransform: "none",
+                color: "#7a54a7",
                 lineHeight: "0.8",
                 textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
               }}

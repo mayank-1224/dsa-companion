@@ -153,6 +153,7 @@ const BabbarSheet = () => {
                           rowsPerPageOptions={[5]}
                           checkboxSelection
                           autoHeight
+                          hideFooterSelectedRowCount
                           autoPageSize
                           disableColumnMenu
                           selectionModel={problemTrack.Babbar}

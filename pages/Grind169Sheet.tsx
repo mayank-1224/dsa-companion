@@ -140,6 +140,7 @@ const Grind169Sheet = () => {
                           rowsPerPageOptions={[5]}
                           checkboxSelection
                           autoHeight
+                          hideFooterSelectedRowCount
                           autoPageSize
                           disableColumnMenu
                           selectionModel={problemTrack.Grind169}

@@ -107,8 +107,8 @@ nav li {
   margin: 20px 0;
   padding: 0;
 }
-/* 
-.main-menu li:hover > a,
+
+/* .main-menu li:hover > a,
 nav.main-menu li.active > a,
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
@@ -118,7 +118,7 @@ nav.main-menu li.active > a,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
 .dashboard-page nav.dashboard-menu ul li.active a {
   color: white;
-  background-color: #f84f39;
+  background-color: #8764b1;
 } */
 
 .area {
@@ -139,7 +139,8 @@ nav.main-menu li.active > a,
 }
 
 .has-subnav:hover {
-  background-color: #f84f39;
+  background-color: #a186c2;
+  /* background-color: #f84f39; */
   color: white;
   cursor: pointer;
   box-shadow: 7px 7px 11px -7px rgba(0, 0, 0, 0.75);
