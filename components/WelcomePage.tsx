@@ -2,154 +2,82 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Router from "next/router";
+import TopNavBar from "../components/TopNavBar";
+import {
+  SYmainBox,
+  SYinnerBox,
+  SYtitleStack,
+  SYalertText,
+  SYtitleText,
+  SYalertButton,
+} from "./StyledComponents";
 
 const WelcomePage = () => {
   return (
-    <Box
-      sx={{
-        // border: "1px solid blue",
-        height: "92%",
-        display: "flex",
-      }}
-    >
-      <Box
-        sx={{
-          // border: "1px solid blue",
-          width: "100%",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            // border: "1px solid blue",
-          }}
-        >
-          <Typography
+    <SYmainBox>
+      {/* <TopNavBar /> */}
+      <SYinnerBox>
+        <SYtitleStack>
+          <SYtitleText
             variant="h2"
             sx={{
-              fontFamily: "Kollektif",
-              fontSize: "3vw",
-              fontWeight: "800",
-              // letterSpacing: "3px",
               color: "black",
               textShadow: "2px 1px 1px rgba(0,0,0,0.5)",
+              fontSize: "4rem",
+              "@media (max-width: 700px)": {
+                fontSize: "2rem",
+              },
             }}
           >
             Welcome to 'YOUR'
-          </Typography>
-          <Typography
+          </SYtitleText>
+          <SYtitleText
             variant="h1"
             sx={{
               lineHeight: "0.8",
-              fontFamily: "Kollektif",
               fontSize: "18rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
-              color: "white",
               textShadow: "5px 4px 5px rgba(0,0,0,0.5)",
+              "@media (max-width: 700px)": {
+                fontSize: "15vh",
+              },
             }}
           >
             DSA
-          </Typography>
-          <Typography
+          </SYtitleText>
+          <SYtitleText
             variant="h1"
             sx={{
-              // border: "1px solid black",
-              fontFamily: "Kollektif",
               fontSize: "6.3rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
-              color: "white",
               lineHeight: "0.8",
               textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+              "@media (max-width: 700px)": {
+                fontSize: "3rem",
+              },
             }}
           >
             COMPANION
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            // border: "1px solid black",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Button
+          </SYtitleText>
+        </SYtitleStack>
+        <SYtitleStack>
+          <SYalertButton
             variant="contained"
-            sx={{
-              backgroundColor: "white",
-              height: "5rem",
-              padding: "0 1rem",
-              borderTopLeftRadius: "3rem",
-              borderBottomLeftRadius: "3rem",
-              borderBottomRightRadius: "17rem",
-              borderTopRightRadius: "17rem",
-              boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
-              ":hover": {
-                backgroundColor: "black",
-              },
-            }}
             onClick={() => Router.push("/SDEsheets")}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: "Kollektif",
-                fontSize: "1.5rem",
-                fontWeight: "800",
-                letterSpacing: "1px",
-                color: "#7a54a7",
-                lineHeight: "0.8",
-                textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
-              }}
-            >
+            <SYalertText variant="h6">
               SDE Sheets are now live. Go Check!
-            </Typography>
-          </Button>
-          <Button
+            </SYalertText>
+          </SYalertButton>
+          <SYalertButton
             variant="contained"
-            sx={{
-              backgroundColor: "white",
-              height: "5rem",
-              padding: "0 1rem",
-              marginTop: "1rem",
-              borderTopLeftRadius: "3rem",
-              borderBottomLeftRadius: "3rem",
-              borderBottomRightRadius: "17rem",
-              borderTopRightRadius: "17rem",
-              boxShadow: "7px 8px 15px -5px rgba(0,0,0,0.65)",
-              ":hover": {
-                backgroundColor: "black",
-              },
-            }}
             onClick={() => Router.push("/ContestTracker")}
           >
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: "Poppins",
-                fontSize: "1.5rem",
-                fontWeight: "500",
-                // letterSpacing: "1px",
-                textTransform: "none",
-                color: "#7a54a7",
-                lineHeight: "0.8",
-                textShadow: "1px 1px 1px rgba(0,0,0,0.7)",
-              }}
-            >
+            <SYalertText variant="h6">
               Contest Tracker is now live. Go Check!
-            </Typography>
-          </Button>
-        </Box>
-      </Box>
-    </Box>
+            </SYalertText>
+          </SYalertButton>
+        </SYtitleStack>
+      </SYinnerBox>
+    </SYmainBox>
   );
 };
 

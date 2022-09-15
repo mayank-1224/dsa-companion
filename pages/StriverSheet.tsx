@@ -10,6 +10,7 @@ import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import { ThemeProvider } from "@mui/material";
+import { StriverDataGridTheme } from "../components/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -19,7 +20,6 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-  StriverDataGridTheme,
 } from "../components/StyledComponents";
 
 const columns: GridColDef[] = [

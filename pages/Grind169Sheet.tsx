@@ -8,7 +8,7 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import GrindJSON from "../hooks/GrindJSON.json";
 import { ThemeProvider } from "@mui/material";
-
+import { Grind169DataGridTheme } from "../components/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -18,7 +18,6 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-  Grind169DataGridTheme,
 } from "../components/StyledComponents";
 
 const Grind169Sheet = () => {

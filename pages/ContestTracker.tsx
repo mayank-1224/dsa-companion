@@ -1,12 +1,8 @@
 import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
 import date from "date-and-time";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/system";
 import contestJSON from "../hooks/contestJSON.json";
 import atcoder from "../public/icons/atcoder.png";
 import codechef from "../public/icons/codechef.png";
@@ -24,95 +20,18 @@ import topCoder from "../public/icons/topcoder.png";
 import yukiCoder from "../public/icons/yuriCoder.png";
 import Image from "next/image";
 import Link from "@mui/material/Link";
-import { log } from "console";
 
-const SYmainContainer = styled(Box)({
-  backgroundColor: "#fafafd",
-  padding: "1rem",
-  marginTop: "1rem",
-  borderRadius: "1rem",
-  boxShadow: "0px -1px 10px 1px rgba(0,0,0,0.6)",
-});
-
-const SYheaderBox = styled(Box)({
-  backgroundColor: "#a72e54",
-  marginBottom: "1rem",
-  padding: "0.5rem",
-  borderRadius: "1rem",
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  boxShadow: "0px 0px 10px 1px rgba(0,0,0,0.6)",
-});
-
-const SYheaderText = styled(Typography)({
-  fontFamily: "Kollektif",
-  fontSize: "5rem",
-  fontWeight: "800",
-  letterSpacing: "-3px",
-  color: "white",
-  textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
-});
-
-const SYlistBox = styled(Box)({
-  backgroundColor: "#a72e54",
-  padding: "0.5rem",
-  borderRadius: "1rem",
-  fontSize: "2.5rem",
-  fontFamily: "Kollektif",
-  fontWeight: "800",
-  color: "white",
-  marginBottom: "1rem",
-  boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
-});
-
-const SYstack = styled(Stack)({
-  backgroundColor: "#fafafd",
-  margin: "0.5rem 0rem",
-  color: "black",
-  flexDirection: "row",
-  alignItems: "center",
-  width: "100%",
-  padding: "0.5vh",
-  borderRadius: "0.5rem",
-  boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
-  height: "4.5rem",
-  "&:hover": {
-    backgroundColor: "#f0cad6",
-  },
-});
-
-const SYstackText = styled(Typography)({
-  color: "black",
-  fontSize: "1.1rem",
-  margin: "0rem 0.5rem",
-  fontFamily: "Poppins",
-});
-
-const SYcontestName = styled(Link)({
-  color: "black",
-  fontSize: "1.1rem",
-  margin: "0rem 0.5rem",
-  fontFamily: "Poppins",
-  fontWeight: "500",
-});
-
-const SYstackTextB = styled(SYstackText)({
-  fontWeight: "600",
-});
-
-const SYbutton = styled(Button)({
-  backgroundColor: "#a72e54",
-  color: "white",
-  fontFamily: "Poppins",
-  fontWeight: "600",
-  fontSize: "1.1rem",
-  "&:hover": {
-    backgroundColor: "#f0cad6",
-    color: "#a72e54",
-    border: "1px solid #a72e54",
-  },
-});
+import {
+  SYmainContainer,
+  SYheaderBox,
+  SYheaderText,
+  SYlistBox,
+  SYstack,
+  SYstackText,
+  SYcontestName,
+  SYstackTextB,
+  SYbutton,
+} from "../styles/StyledComponents/ContestTrackerCSS";
 
 const ContestTracker = () => {
   const handleDate = (dateItem: string) => {
