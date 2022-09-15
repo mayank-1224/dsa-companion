@@ -8,6 +8,8 @@ import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
+import { createTheme, ThemeProvider } from "@mui/material";
+
 import {
   SYouterBox,
   SYheaderStack,
@@ -17,19 +19,35 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
+  Blind75DataGridTheme,
 } from "../components/StyledComponents";
 
 const Blind75Sheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
     useProblems();
   const columns: GridColDef[] = [
-    { field: "id", headerName: "S. No", width: 80 },
-    { field: "name", headerName: "Problem Name", width: 400 },
-    { field: "difficulty", headerName: "Difficulty", width: 150 },
+    {
+      field: "id",
+      headerName: "S. No",
+      maxWidth: 80,
+      align: "center",
+      flex: 1,
+      headerAlign: "center",
+    },
+    { field: "name", headerName: "Problem Name", flex: 1, minWidth: 400 },
+    {
+      field: "difficulty",
+      headerName: "Difficulty",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+    },
     {
       field: "link",
       headerName: "Link",
-      width: 170,
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
       renderCell: (cellValues) => {
         if (cellValues.value != "")
           return (
@@ -105,24 +123,32 @@ const Blind75Sheet = () => {
                       }}
                     >
                       {/* <TableComponent data={division.problems} /> */}
-                      <SYdataGrid
-                        rows={division.problems}
-                        columns={columns}
-                        pageSize={12}
-                        rowsPerPageOptions={[5]}
-                        checkboxSelection
-                        autoHeight
-                        autoPageSize
-                        hideFooter
-                        disableColumnMenu
-                        selectionModel={problemTrack.Blind75}
-                        onSelectionModelChange={(newSelection) => {
-                          setProblemTrack({
-                            ...problemTrack,
-                            Blind75: newSelection,
-                          });
-                        }}
-                      />
+                      <ThemeProvider theme={Blind75DataGridTheme}>
+                        <SYdataGrid
+                          rows={division.problems}
+                          columns={columns}
+                          pageSize={12}
+                          rowsPerPageOptions={[5]}
+                          checkboxSelection
+                          autoHeight
+                          autoPageSize
+                          hideFooter
+                          disableColumnMenu
+                          disableColumnSelector
+                          selectionModel={problemTrack.Blind75}
+                          onSelectionModelChange={(newSelection) => {
+                            setProblemTrack({
+                              ...problemTrack,
+                              Blind75: newSelection,
+                            });
+                          }}
+                          sx={{
+                            "& .MuiTableRow-root.Mui-selected": {
+                              border: "2px solid #a72e54",
+                            },
+                          }}
+                        />
+                      </ThemeProvider>
                     </Paper>
                   </Collapsible>
                 </SYcollapsibleStack>
