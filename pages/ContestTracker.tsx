@@ -78,7 +78,7 @@ const SYstack = styled(Stack)({
   boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
   height: "4.5rem",
   "&:hover": {
-    backgroundColor: "#d56789",
+    backgroundColor: "#f0cad6",
   },
 });
 
@@ -108,8 +108,9 @@ const SYbutton = styled(Button)({
   fontWeight: "600",
   fontSize: "1.1rem",
   "&:hover": {
-    backgroundColor: "white",
+    backgroundColor: "#f0cad6",
     color: "#a72e54",
+    border: "1px solid #a72e54",
   },
 });
 

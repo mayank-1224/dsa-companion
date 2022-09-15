@@ -6,9 +6,8 @@ import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import { useState } from "react";
-
 import GrindJSON from "../hooks/GrindJSON.json";
+import { ThemeProvider } from "@mui/material";
 
 import {
   SYouterBox,
@@ -19,19 +18,38 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
+  Grind169DataGridTheme,
 } from "../components/StyledComponents";
 
 const Grind169Sheet = () => {
-  const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
-    useProblems();
+  const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
   const columns: GridColDef[] = [
-    { field: "id", headerName: "S. No", width: 80 },
-    { field: "name", headerName: "Problem Name", width: 400 },
-    { field: "difficulty", headerName: "Difficulty", width: 150 },
+    {
+      field: "id",
+      headerName: "S. No",
+      flex: 1,
+      maxWidth: 80,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "name",
+      headerName: "Problem Name",
+      flex: 1,
+    },
+    {
+      field: "difficulty",
+      headerName: "Difficulty",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+    },
     {
       field: "link",
       headerName: "Link",
-      width: 170,
+      flex: 1,
+      headerAlign: "center",
+      align: "center",
       renderCell: (cellValues) => {
         if (cellValues.value != "")
           return (
@@ -51,7 +69,7 @@ const Grind169Sheet = () => {
     });
   });
   console.log(loll);
-  // #8a7ce8
+  // #7766e4
   return (
     <>
       <SideBar />
@@ -64,7 +82,7 @@ const Grind169Sheet = () => {
         <SYouterBox>
           <SYheaderStack
             sx={{
-              backgroundColor: "#8a7ce8",
+              backgroundColor: "#7766e4",
             }}
           >
             <Box>
@@ -83,7 +101,7 @@ const Grind169Sheet = () => {
                 });
               }}
               sx={{
-                color: "#8a7ce8",
+                color: "#7766e4",
               }}
             >
               <SYbuttonText>Clear Progress</SYbuttonText>
@@ -95,7 +113,7 @@ const Grind169Sheet = () => {
               return (
                 <SYcollapsibleStack
                   sx={{
-                    backgroundColor: "#8a7ce8",
+                    backgroundColor: "#7766e4",
                   }}
                 >
                   <Collapsible
@@ -114,24 +132,25 @@ const Grind169Sheet = () => {
                       }}
                     >
                       {/* <TableComponent data={division.problems} /> */}
-                      <SYdataGrid
-                        rows={division.problems}
-                        columns={columns}
-                        pageSize={12}
-                        rowsPerPageOptions={[5]}
-                        checkboxSelection
-                        autoHeight
-                        autoPageSize
-                        hideFooter
-                        disableColumnMenu
-                        selectionModel={problemTrack.Grind169}
-                        onSelectionModelChange={(newSelection) => {
-                          setProblemTrack({
-                            ...problemTrack,
-                            Grind169: newSelection,
-                          });
-                        }}
-                      />
+                      <ThemeProvider theme={Grind169DataGridTheme}>
+                        <SYdataGrid
+                          rows={division.problems}
+                          columns={columns}
+                          pageSize={10}
+                          rowsPerPageOptions={[5]}
+                          checkboxSelection
+                          autoHeight
+                          autoPageSize
+                          disableColumnMenu
+                          selectionModel={problemTrack.Grind169}
+                          onSelectionModelChange={(newSelection) => {
+                            setProblemTrack({
+                              ...problemTrack,
+                              Grind169: newSelection,
+                            });
+                          }}
+                        />
+                      </ThemeProvider>
                     </Paper>
                   </Collapsible>
                 </SYcollapsibleStack>

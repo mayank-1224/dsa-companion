@@ -7,6 +7,7 @@ import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import lbJSON from "../hooks/BabbarJSON.json";
+import { ThemeProvider } from "@mui/material";
 
 import {
   SYouterBox,
@@ -17,18 +18,41 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
+  BabbarDataGridTheme,
 } from "../components/StyledComponents";
 
 const BabbarSheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
     useProblems();
   const columns: GridColDef[] = [
-    { field: "id", headerName: "S. No", width: 80 },
-    { field: "name", headerName: "Problem Name", width: 400 },
-    { field: "difficulty", headerName: "Difficulty", width: 150 },
+    {
+      field: "id",
+      headerName: "S. No",
+      maxWidth: 80,
+      align: "center",
+      flex: 1,
+      headerAlign: "center",
+    },
+    {
+      field: "name",
+      headerName: "Problem Name",
+      flex: 1,
+      minWidth: 400,
+    },
+    {
+      field: "difficulty",
+      headerName: "Difficulty",
+      width: 150,
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
+    },
     {
       field: "link1",
       headerName: "Link 1",
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
       width: 170,
       renderCell: (cellValues) => {
         if (cellValues.value != "")
@@ -43,7 +67,9 @@ const BabbarSheet = () => {
     {
       field: "link2",
       headerName: "Link 2",
-      width: 170,
+      flex: 1,
+      align: "center",
+      headerAlign: "center",
       renderCell: (cellValues) => {
         if (cellValues.value != "")
           return (
@@ -119,24 +145,25 @@ const BabbarSheet = () => {
                       }}
                     >
                       {/* <TableComponent data={division.problems} /> */}
-                      <SYdataGrid
-                        rows={division.problems}
-                        columns={columns}
-                        pageSize={12}
-                        rowsPerPageOptions={[5]}
-                        checkboxSelection
-                        autoHeight
-                        autoPageSize
-                        hideFooter
-                        disableColumnMenu
-                        selectionModel={problemTrack.Babbar}
-                        onSelectionModelChange={(newSelection) => {
-                          setProblemTrack({
-                            ...problemTrack,
-                            Babbar: newSelection,
-                          });
-                        }}
-                      />
+                      <ThemeProvider theme={BabbarDataGridTheme}>
+                        <SYdataGrid
+                          rows={division.problems}
+                          columns={columns}
+                          pageSize={10}
+                          rowsPerPageOptions={[5]}
+                          checkboxSelection
+                          autoHeight
+                          autoPageSize
+                          disableColumnMenu
+                          selectionModel={problemTrack.Babbar}
+                          onSelectionModelChange={(newSelection) => {
+                            setProblemTrack({
+                              ...problemTrack,
+                              Babbar: newSelection,
+                            });
+                          }}
+                        />
+                      </ThemeProvider>
                     </Paper>
                   </Collapsible>
                 </SYcollapsibleStack>

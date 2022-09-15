@@ -1,5 +1,6 @@
 import { Box, Stack, Typography, Button, styled } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
+import { createTheme, ThemeProvider } from "@mui/material";
 
 export const SYouterBox = styled(Box)({
   backgroundColor: "#fafafd",
@@ -66,6 +67,7 @@ export const SYdataGrid = styled(DataGrid)({
   color: "black",
   fontSize: "1rem",
   border: "none",
+  alignContent: "space-around",
   "& .MuiDataGrid-checkboxInput": {
     color: "#a72e54",
   },
@@ -74,5 +76,160 @@ export const SYdataGrid = styled(DataGrid)({
   },
   "& .MuiDataGrid-cellCheckbox": {
     color: "#a72e54",
+  },
+  "& .MuiDataGrid-cell": {
+    fontFamily: "Poppins",
+    fontSize: "1.rem",
+    fontWeight: "500",
+    // border: "1px solid black",
+  },
+  "& .MuiDataGrid-columnHeader": {
+    fontFamily: "Poppins",
+    fontSize: "1.1rem",
+    fontWeight: "500",
+  },
+  "& .MuiDataGrid-columnHeaders": {
+    // backgroundColor: "#ebb6c6",
+  },
+  // "& .MuiDataGrid-row": {
+  //   backgroundColor: "#fdfdfd",
+  //   "&:hover": {
+  //     backgroundColor: "#a72e54",
+  //     color: "white",
+  //   },
+  // },
+});
+
+export const StriverDataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#eea8af",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#eea8af",
+            "&:hover": {
+              backgroundColor: "#eea8af",
+            },
+          },
+        },
+      },
+    },
+  },
+});
+
+export const BabbarDataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#b5d7f2",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#b5d7f2",
+            "&:hover": {
+              backgroundColor: "#b5d7f2",
+            },
+          },
+        },
+      },
+    },
+  },
+});
+export const Blind75DataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#f0cad6",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#f0cad6",
+            "&:hover": {
+              backgroundColor: "#f0cad6",
+            },
+          },
+        },
+      },
+    },
+  },
+});
+export const Grind169DataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#d7d2f7",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#d7d2f7",
+            "&:hover": {
+              backgroundColor: "#d7d2f7",
+            },
+          },
+        },
+      },
+    },
+  },
+});
+export const GfGDataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#f0cad6",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#f0cad6",
+            "&:hover": {
+              backgroundColor: "#f0cad6",
+            },
+          },
+        },
+      },
+    },
+  },
+});
+export const ArshDataGridTheme = createTheme({
+  components: {
+    //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+    MuiDataGrid: {
+      styleOverrides: {
+        row: {
+          "&:hover": {
+            backgroundColor: "#f0cad6",
+            cursor: "pointer",
+          },
+
+          "&.Mui-selected": {
+            backgroundColor: "#f0cad6",
+            "&:hover": {
+              backgroundColor: "#f0cad6",
+            },
+          },
+        },
+      },
+    },
   },
 });
