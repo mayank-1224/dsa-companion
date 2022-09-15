@@ -8,7 +8,7 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import lbJSON from "../hooks/BabbarJSON.json";
 import { ThemeProvider } from "@mui/material";
-
+import { BabbarDataGridTheme } from "../components/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -18,7 +18,6 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-  BabbarDataGridTheme,
 } from "../components/StyledComponents";
 
 const BabbarSheet = () => {

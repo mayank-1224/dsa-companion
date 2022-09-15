@@ -8,8 +8,8 @@ import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import { createTheme, ThemeProvider } from "@mui/material";
-
+import { ThemeProvider } from "@mui/material";
+import { Blind75DataGridTheme } from "../components/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -19,7 +19,6 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-  Blind75DataGridTheme,
 } from "../components/StyledComponents";
 
 const Blind75Sheet = () => {

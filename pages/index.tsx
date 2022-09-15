@@ -5,24 +5,13 @@ import SideBar from "../components/SideBar";
 import { Box } from "@mui/material";
 
 const Home: NextPage = () => {
+  require("typeface-poppins");
+
   return (
     <Box>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
-        <Box
-          sx={{
-            width: "100%",
-            height: "92vh",
-          }}
-        >
-          <WelcomePage />
-        </Box>
-      </Box>
+      <WelcomePage />
     </Box>
   );
 };
