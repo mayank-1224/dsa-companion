@@ -66,18 +66,18 @@ nav ul {
   box-shadow: 7px 7px 11px -7px rgba(0, 0, 0, 0.75);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .sideBar {
-    display: none;
+    display: none !important;
   }
   .topBar {
-    display: flex;
+    display: flex !important;
   }
 
   .topIcon {
     color: black;
-    width: 33px !important;
-    height: 35px !important;
+    width: 33px;
+    height: 35px;
   }
 }
 

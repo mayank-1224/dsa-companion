@@ -122,6 +122,7 @@ export const SYalertText = styled(Typography)({
   fontFamily: "Poppins",
   fontWeight: "500",
   fontSize: "1.5rem",
+  // fontSize: "3vh",
   textTransform: "none",
   color: "#7a54a7",
   lineHeight: "0.8",
