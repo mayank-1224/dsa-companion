@@ -11,7 +11,7 @@ export const NavContainer = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
   paddingTop: "0.7rem",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     padding: "0.1rem 0.2rem",
   },
 });
@@ -26,7 +26,7 @@ export const NavText = styled(Typography)({
   "&:hover": {
     cursor: "pointer",
   },
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     fontSize: "2.5rem",
   },
 });
@@ -38,7 +38,7 @@ export const LoginButton = styled(Button)({
   ":hover": {
     backgroundColor: "black",
   },
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     width: "4rem",
     height: "2rem",
     padding: "0.1rem",
@@ -52,7 +52,7 @@ export const LoginText = styled(Typography)({
   letterSpacing: "1px",
   color: "#7a54a7",
   textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     fontSize: "0.8rem",
   },
 });
@@ -64,7 +64,7 @@ export const SYmainBox = styled(Stack)({
   // border: "4px solid black",
   height: "100vh",
   padding: "0 20vw",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     padding: "0",
   },
 });
@@ -75,7 +75,7 @@ export const SYinnerBox = styled(Box)({
   display: "flex",
   paddingBottom: "8rem",
   justifyContent: "space-around",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -107,7 +107,7 @@ export const SYalertButton = styled(Button)({
   ":hover": {
     backgroundColor: "black",
   },
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     height: "3rem",
     margin: "0.5rem",
     padding: "0 0.5rem",
@@ -127,7 +127,7 @@ export const SYalertText = styled(Typography)({
   color: "#7a54a7",
   lineHeight: "0.8",
   textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
-  "@media (max-width: 600px)": {
+  "@media (max-width: 700px)": {
     fontSize: "1rem",
   },
 });

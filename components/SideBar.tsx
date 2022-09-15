@@ -144,7 +144,6 @@ const SideBar = () => {
           position: "sticky",
           top: "0",
           height: "50px",
-          display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
           backgroundColor: "white",
@@ -152,7 +151,7 @@ const SideBar = () => {
       >
         <Button
           onClick={() => {
-            Router.push("/ContestTracker");
+            Router.push("/SDEsheets");
           }}
         >
           <ListAltIcon className="topIcon" />
@@ -166,7 +165,7 @@ const SideBar = () => {
         </Button>
         <Button
           onClick={() => {
-            Router.push("/SQL");
+            Router.push("/SystemDesign");
           }}
         >
           <SettingsSuggestIcon className="topIcon" />

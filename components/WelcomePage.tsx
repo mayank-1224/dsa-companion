@@ -24,7 +24,7 @@ const WelcomePage = () => {
               color: "black",
               textShadow: "2px 1px 1px rgba(0,0,0,0.5)",
               fontSize: "4rem",
-              "@media (max-width: 600px)": {
+              "@media (max-width: 700px)": {
                 fontSize: "2rem",
               },
             }}
@@ -37,7 +37,7 @@ const WelcomePage = () => {
               lineHeight: "0.8",
               fontSize: "18rem",
               textShadow: "5px 4px 5px rgba(0,0,0,0.5)",
-              "@media (max-width: 600px)": {
+              "@media (max-width: 700px)": {
                 fontSize: "15vh",
               },
             }}
@@ -50,7 +50,7 @@ const WelcomePage = () => {
               fontSize: "6.3rem",
               lineHeight: "0.8",
               textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
-              "@media (max-width: 600px)": {
+              "@media (max-width: 700px)": {
                 fontSize: "3rem",
               },
             }}

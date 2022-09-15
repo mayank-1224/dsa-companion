@@ -31,7 +31,7 @@ import {
   SYcontestName,
   SYstackTextB,
   SYbutton,
-} from "../styles/StyledComponents/ContestTracker";
+} from "../styles/StyledComponents/ContestTrackerCSS";
 
 const ContestTracker = () => {
   const handleDate = (dateItem: string) => {
