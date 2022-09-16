@@ -2,6 +2,7 @@ import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import SideBar from "../components/SideBar";
+import Footer from "../components/Footer";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
@@ -171,6 +172,7 @@ const BabbarSheet = () => {
           </Box>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };

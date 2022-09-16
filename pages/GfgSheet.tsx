@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import TopNavBar from "../components/TopNavBar";
 import SideBar from "../components/SideBar";
+import Footer from "../components/Footer";
 import {
   SYmainContainer,
   SYouterBox,
@@ -29,6 +30,7 @@ const GfgSheet = () => {
           </SYheaderStack>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };

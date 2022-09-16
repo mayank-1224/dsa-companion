@@ -1,21 +1,28 @@
 import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
+import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 const SystemDesign = () => {
   return (
-    <Box>
+    <>
+      <TopNavBar />
       <SideBar />
       <Box
         sx={{
           padding: "0 20vw",
+          "@media (max-width: 700px)": {
+            padding: "0 5vw",
+          },
         }}
       >
-        <TopNavBar />
         <Box
           sx={{
             marginTop: "18rem",
+            "@media (max-width: 700px)": {
+              marginTop: "10rem",
+            },
           }}
         >
           <Typography
@@ -26,6 +33,9 @@ const SystemDesign = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "white",
+              "@media (max-width: 700px)": {
+                fontSize: "5rem",
+              },
             }}
           >
             System Design
@@ -38,13 +48,17 @@ const SystemDesign = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "black",
+              "@media (max-width: 700px)": {
+                fontSize: "3rem",
+              },
             }}
           >
             Coming Soon!
           </Typography>
         </Box>
       </Box>
-    </Box>
+      <Footer />
+    </>
   );
 };
 

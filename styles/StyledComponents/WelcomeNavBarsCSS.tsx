@@ -83,6 +83,9 @@ export const SYtitleStack = styled(Stack)({
   // border: "1px solid blue",
   display: "flex",
   justifyContent: "center",
+  "@media (max-width: 700px)": {
+    alignItems: "center",
+  },
 });
 
 export const SYtitleText = styled(Typography)({

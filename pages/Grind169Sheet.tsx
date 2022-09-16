@@ -1,4 +1,5 @@
 import TopNavBar from "../components/TopNavBar";
+import Footer from "../components/Footer";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import SideBar from "../components/SideBar";
@@ -159,6 +160,7 @@ const Grind169Sheet = () => {
           </Box>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };

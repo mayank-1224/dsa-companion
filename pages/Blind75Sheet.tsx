@@ -1,4 +1,4 @@
-import Typography from "@mui/material/Typography";
+import Footer from "../components/Footer";
 import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
@@ -161,6 +161,7 @@ const Blind75Sheet = () => {
           </Box>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };

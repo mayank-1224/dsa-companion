@@ -1,5 +1,6 @@
 import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
+import Footer from "../components/Footer";
 import Box from "@mui/material/Box";
 import date from "date-and-time";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
@@ -19,7 +20,6 @@ import newton from "../public/icons/newtonSchool.jpg";
 import topCoder from "../public/icons/topcoder.png";
 import yukiCoder from "../public/icons/yuriCoder.png";
 import Image from "next/image";
-import Link from "@mui/material/Link";
 
 import {
   SYmainContainer,
@@ -283,6 +283,7 @@ const ContestTracker = () => {
           </SYlistBox>
         </SYmainContainer>
       </Box>
+      <Footer />
     </>
   );
 };

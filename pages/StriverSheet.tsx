@@ -22,6 +22,7 @@ import {
   SYcollapsibleStack,
   SYdataGrid,
 } from "../styles/StyledComponents/StyledComponents";
+import Footer from "../components/Footer";
 
 const columns: GridColDef[] = [
   {
@@ -188,6 +189,7 @@ const StriverSheet = () => {
           </Box>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };

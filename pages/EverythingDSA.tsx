@@ -2,17 +2,21 @@ import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Footer from "../components/Footer";
 
 const EverythingDSA = () => {
   return (
-    <Box>
+    <>
+      <TopNavBar />
       <SideBar />
       <Box
         sx={{
           padding: "0 20vw",
+          "@media (max-width: 700px)": {
+            padding: "2vw",
+          },
         }}
       >
-        <TopNavBar />
         <Box
           sx={{
             marginTop: "12rem",
@@ -26,6 +30,9 @@ const EverythingDSA = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "white",
+              "@media (max-width: 700px)": {
+                fontSize: "4.5rem",
+              },
             }}
           >
             The only 'ROADMAP'
@@ -38,13 +45,17 @@ const EverythingDSA = () => {
               fontWeight: "800",
               letterSpacing: "-3px",
               color: "black",
+              "@media (max-width: 700px)": {
+                fontSize: "3rem",
+              },
             }}
           >
             Coming Soon!
           </Typography>
         </Box>
       </Box>
-    </Box>
+      <Footer />
+    </>
   );
 };
 

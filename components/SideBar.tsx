@@ -20,6 +20,7 @@ const SideBar = () => {
         sx={{
           position: "fixed",
           top: "0",
+          // border: "4px solid red",
         }}
       >
         <nav className="main-menu">

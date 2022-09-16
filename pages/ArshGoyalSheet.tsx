@@ -1,6 +1,6 @@
-import { Typography } from "@mui/material";
 import TopNavBar from "../components/TopNavBar";
 import SideBar from "../components/SideBar";
+import Footer from "../components/Footer";
 import {
   SYmainContainer,
   SYouterBox,
@@ -29,6 +29,7 @@ const ArshGoyalSheet = () => {
           </SYheaderStack>
         </SYouterBox>
       </SYmainContainer>
+      <Footer />
     </>
   );
 };
