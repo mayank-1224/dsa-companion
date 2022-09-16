@@ -1,14 +1,21 @@
 import CardComponent from "../components/CardComponent";
 import cardData from "../hooks/CardDataJSON.json";
-import Box from "@mui/material/Box";
 import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
-import Typography from "@mui/material/Typography";
+import Footer from "../components/Footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import {
+  MainBox,
+  InnerBox,
+  SYtitleText,
+  SYsubText,
+} from "../styles/StyledComponents/SDEsheetsCSS";
+
 const SDEsheets = () => {
+  console.log(cardData);
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -18,64 +25,46 @@ const SDEsheets = () => {
     autoplaySpeed: 2000,
     pauseOnHover: false,
     swipe: true,
+
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          // speed: 1000,
+          // autoplaySpeed: 1000,
+        },
+      },
+    ],
   };
+  require("typeface-poppins");
 
   return (
-    <Box>
+    <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
-        <Box
+      <MainBox>
+        <InnerBox
           sx={{
-            // border: "1px solid black",
-            height: "92vh",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            paddingBottom: "8vh",
           }}
         >
-          <Box sx={{}}>
-            <Typography
-              variant="h2"
-              sx={{
-                fontFamily: "Kollektif",
-                fontWeight: "bold",
-                fontSize: "6.5rem",
-                color: "white",
-                letterSpacing: "-3px",
-                textShadow: "5px 4px 5px rgba(0,0,0,0.5)",
-              }}
-            >
-              All your DSA sheets
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                fontFamily: "Kollektif",
-                fontWeight: "bold",
-                fontSize: "5rem",
-                color: "black",
-                textShadow: "3px 2px 3px rgba(0,0,0,0.5)",
-              }}
-            >
-              in 'ONE' place!
-            </Typography>
-          </Box>
-          <Box>
-            <Slider {...sliderSettings}>
-              {cardData.cardData.map((data) => (
-                <CardComponent data={data} />
-              ))}
-            </Slider>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
+          <SYtitleText variant="h2">All your DSA sheets</SYtitleText>
+          <SYsubText variant="h2">in 'ONE' place!</SYsubText>
+        </InnerBox>
+        <InnerBox>
+          <Slider {...sliderSettings}>
+            {cardData.cardData.map((data) => (
+              <CardComponent data={data} />
+            ))}
+          </Slider>
+        </InnerBox>
+      </MainBox>
+      <Footer />
+    </>
   );
 };
 

@@ -10,8 +10,9 @@ import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import { ThemeProvider } from "@mui/material";
-import { StriverDataGridTheme } from "../components/StyledDataGrid";
+import { StriverDataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
+  SYmainContainer,
   SYouterBox,
   SYheaderStack,
   SYheaderText,
@@ -20,7 +21,8 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-} from "../components/StyledComponents";
+} from "../styles/StyledComponents/StyledComponents";
+import Footer from "../components/Footer";
 
 const columns: GridColDef[] = [
   {
@@ -35,11 +37,12 @@ const columns: GridColDef[] = [
     field: "name",
     headerName: "Problem Name",
     flex: 1,
-    minWidth: 400,
+    minWidth: 150,
   },
   {
     field: "difficulty",
     headerName: "Difficulty",
+    minWidth: 100,
     flex: 1,
     align: "center",
     headerAlign: "center",
@@ -47,6 +50,7 @@ const columns: GridColDef[] = [
   {
     field: "leetCodeLink",
     headerName: "LeetCode Link",
+    minWidth: 100,
     flex: 1,
     align: "center",
     headerAlign: "center",
@@ -63,6 +67,7 @@ const columns: GridColDef[] = [
   {
     field: "gfgLink",
     headerName: "GfG Link",
+    minWidth: 100,
     flex: 1,
     align: "center",
     headerAlign: "center",
@@ -79,6 +84,7 @@ const columns: GridColDef[] = [
   {
     field: "cnLink",
     headerName: "Coding Ninjas Link",
+    minWidth: 100,
     flex: 1,
     align: "center",
     headerAlign: "center",
@@ -95,16 +101,13 @@ const columns: GridColDef[] = [
 ];
 
 const StriverSheet = () => {
+  require("typeface-poppins");
   const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
   return (
     <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
+      <SYmainContainer>
         <SYouterBox>
           <SYheaderStack
             sx={{
@@ -185,7 +188,8 @@ const StriverSheet = () => {
             })}
           </Box>
         </SYouterBox>
-      </Box>
+      </SYmainContainer>
+      <Footer />
     </>
   );
 };

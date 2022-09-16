@@ -6,6 +6,9 @@ export const SYmainContainer = styled(Box)({
   marginTop: "1rem",
   borderRadius: "1rem",
   boxShadow: "0px -1px 10px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    padding: "0.5rem",
+  },
 });
 
 export const SYheaderBox = styled(Box)({
@@ -17,6 +20,10 @@ export const SYheaderBox = styled(Box)({
   flexDirection: "row",
   justifyContent: "space-between",
   boxShadow: "0px 0px 10px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    padding: "0.2rem",
+    justifyContent: "center",
+  },
 });
 
 export const SYheaderText = styled(Typography)({
@@ -26,6 +33,9 @@ export const SYheaderText = styled(Typography)({
   letterSpacing: "-3px",
   color: "white",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+  "@media (max-width: 700px)": {
+    fontSize: "3rem",
+  },
 });
 
 export const SYlistBox = styled(Box)({
@@ -38,6 +48,9 @@ export const SYlistBox = styled(Box)({
   color: "white",
   marginBottom: "1rem",
   boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
+  "@media (max-width: 700px)": {
+    padding: "0.4rem",
+  },
 });
 
 export const SYstack = styled(Stack)({
@@ -54,6 +67,25 @@ export const SYstack = styled(Stack)({
   "&:hover": {
     backgroundColor: "#f0cad6",
   },
+  "@media (max-width: 700px)": {
+    padding: "0.2rem",
+    height: "4.5rem",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+});
+
+export const SYimage = styled(Box)({
+  width: "48px",
+  height: "40px",
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  "@media (max-width: 700px)": {
+    width: "34px",
+    height: "30px",
+  },
 });
 
 export const SYstackText = styled(Typography)({
@@ -61,6 +93,9 @@ export const SYstackText = styled(Typography)({
   fontSize: "1.1rem",
   margin: "0rem 0.5rem",
   fontFamily: "Poppins",
+  "@media (max-width: 700px)": {
+    fontSize: "0.8rem",
+  },
 });
 
 export const SYcontestName = styled(Link)({
@@ -69,6 +104,9 @@ export const SYcontestName = styled(Link)({
   margin: "0rem 0.5rem",
   fontFamily: "Poppins",
   fontWeight: "500",
+  "@media (max-width: 700px)": {
+    fontSize: "0.88rem",
+  },
 });
 
 export const SYstackTextB = styled(SYstackText)({
@@ -78,9 +116,6 @@ export const SYstackTextB = styled(SYstackText)({
 export const SYbutton = styled(Button)({
   backgroundColor: "#a72e54",
   color: "white",
-  fontFamily: "Poppins",
-  fontWeight: "600",
-  fontSize: "1.1rem",
   "&:hover": {
     backgroundColor: "#f0cad6",
     color: "#a72e54",

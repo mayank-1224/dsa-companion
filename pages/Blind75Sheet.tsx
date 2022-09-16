@@ -1,4 +1,4 @@
-import Typography from "@mui/material/Typography";
+import Footer from "../components/Footer";
 import TopNavBar from "../components/TopNavBar";
 import { Box } from "@mui/material";
 import useProblems from "../hooks/useProblems";
@@ -9,8 +9,9 @@ import { GridColDef } from "@mui/x-data-grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import { ThemeProvider } from "@mui/material";
-import { Blind75DataGridTheme } from "../components/StyledDataGrid";
+import { Blind75DataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
+  SYmainContainer,
   SYouterBox,
   SYheaderStack,
   SYheaderText,
@@ -19,24 +20,31 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-} from "../components/StyledComponents";
+} from "../styles/StyledComponents/StyledComponents";
 
 const Blind75Sheet = () => {
+  require("typeface-poppins");
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
     useProblems();
   const columns: GridColDef[] = [
     {
       field: "id",
       headerName: "S. No",
-      maxWidth: 80,
-      align: "center",
       flex: 1,
+      maxWidth: 40,
+      align: "center",
       headerAlign: "center",
     },
-    { field: "name", headerName: "Problem Name", flex: 1, minWidth: 400 },
+    {
+      field: "name",
+      headerName: "Problem Name",
+      flex: 1,
+      minWidth: 200,
+    },
     {
       field: "difficulty",
       headerName: "Difficulty",
+      minWidth: 100,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -44,6 +52,7 @@ const Blind75Sheet = () => {
     {
       field: "link",
       headerName: "Link",
+      minWidth: 100,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -62,13 +71,9 @@ const Blind75Sheet = () => {
   // #a72e54;
   return (
     <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
+      <SYmainContainer>
         <SYouterBox>
           <SYheaderStack
             sx={{
@@ -155,7 +160,8 @@ const Blind75Sheet = () => {
             })}
           </Box>
         </SYouterBox>
-      </Box>
+      </SYmainContainer>
+      <Footer />
     </>
   );
 };
