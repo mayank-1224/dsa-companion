@@ -10,7 +10,7 @@ import {
   SYalertText,
   SYtitleText,
   SYalertButton,
-} from "./StyledComponents";
+} from "../styles/StyledComponents/WelcomeNavBarsCSS";
 
 const WelcomePage = () => {
   return (

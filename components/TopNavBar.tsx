@@ -8,7 +8,7 @@ import {
   NavText,
   LoginButton,
   LoginText,
-} from "./StyledComponents";
+} from "../styles/StyledComponents/WelcomeNavBarsCSS";
 
 const TopNavBar = () => {
   return (

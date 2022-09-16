@@ -18,6 +18,13 @@ import useProblems from "../hooks/useProblems";
 import Link from "@mui/material/Link";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
+import {
+  SYcard,
+  SYcardHeader,
+  SYcardContent,
+  CardText,
+} from "../styles/StyledComponents/SDEsheetsCSS";
+
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
 }
@@ -28,6 +35,7 @@ interface Object {
   subtitle: string;
   imgLink: string;
   summary: string;
+  credits: string;
   Links: {
     link1: string;
     link1info: string;
@@ -62,36 +70,15 @@ const CardComponent = (data: CardData) => {
   // };
 
   return (
-    <Card
-      sx={{
-        maxWidth: 345,
-        marginTop: "5px",
-        boxShadow: "7px 8px 14px -8px rgba(0,0,0,0.89)",
-        borderRadius: "10px",
-      }}
-    >
-      <CardHeader
+    <SYcard>
+      <SYcardHeader
         title={data.data.titleName}
-        //sheetProgress[data.data.id - 1]} /{" "}{data.data.problemCount
-
         subheader={
           sheetProgress[data.data.id - 1] +
           " / " +
           data.data.problemCount +
           " solved"
         }
-        sx={{
-          "& .MuiCardHeader-title": {
-            fontFamily: "Poppins",
-            fontSize: "1.5rem",
-            fontWeight: "500",
-          },
-          ".MuiCardHeader-subheader": {
-            fontFamily: "Poppins",
-            fontSize: "1.1rem",
-            fontWeight: "500",
-          },
-        }}
       />
       <CardMedia
         component="img"
@@ -102,25 +89,34 @@ const CardComponent = (data: CardData) => {
         onClick={() => {
           setClickName(data.data.titleName);
         }}
-        sx={{ cursor: "pointer" }}
+        sx={{
+          cursor: "pointer",
+          "@media (max-width: 700px)": {
+            height: "100%",
+            width: "100%",
+          },
+        }}
       />
-      <CardContent>
-        <Typography
+      <SYcardContent>
+        <CardText variant="body2">{data.data.summary}</CardText>
+        <CardText
           sx={{
-            fontFamily: "Poppins",
+            fontWeight: "600",
           }}
-          variant="body2"
         >
-          {data.data.summary}
-        </Typography>
-        <Typography fontWeight={600}>Credits: </Typography>
-        <Typography fontFamily="Poppins" variant="body2">
+          Credits:{" " + data.data.credits}
+        </CardText>
+        <CardText variant="body2">
           <Link href={data.data.Links.link1} underline="none" target={"_blank"}>
             {data.data.Links.link1info}
             <OpenInNewIcon
               sx={{
                 width: "1rem",
                 height: "1rem",
+                "@media (max-width: 700px)": {
+                  width: "0.7rem",
+                  height: "0.7rem",
+                },
               }}
             />
           </Link>{" "}
@@ -131,11 +127,15 @@ const CardComponent = (data: CardData) => {
               sx={{
                 width: "1rem",
                 height: "1rem",
+                "@media (max-width: 700px)": {
+                  width: "0.7rem",
+                  height: "0.7rem",
+                },
               }}
             />
           </Link>
-        </Typography>
-      </CardContent>
+        </CardText>
+      </SYcardContent>
       {/* <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           {heart ? (
@@ -173,7 +173,7 @@ const CardComponent = (data: CardData) => {
           </Typography>
         </CardContent>
       </Collapse> */}
-    </Card>
+    </SYcard>
   );
 };
 

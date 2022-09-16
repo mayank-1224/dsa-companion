@@ -31,9 +31,12 @@ import {
   SYcontestName,
   SYstackTextB,
   SYbutton,
+  SYimage,
 } from "../styles/StyledComponents/ContestTrackerCSS";
 
 const ContestTracker = () => {
+  require("typeface-poppins");
+
   const handleDate = (dateItem: string) => {
     const newDate = new Date(dateItem);
     return date.format(newDate, "DD.MM.YY");
@@ -117,14 +120,17 @@ const ContestTracker = () => {
   };
 
   return (
-    <Box>
+    <>
+      <TopNavBar />
       <SideBar />
       <Box
         sx={{
           padding: "0 20vw",
+          "@media (max-width: 700px)": {
+            padding: "0 0.1rem",
+          },
         }}
       >
-        <TopNavBar />
         <SYmainContainer>
           <SYheaderBox>
             <SYheaderText variant="h1">Contest Tracker</SYheaderText>
@@ -134,6 +140,9 @@ const ContestTracker = () => {
               sx={{
                 "&:hover": {
                   backgroundColor: "#fafafd",
+                },
+                "@media (max-width: 700px)": {
+                  display: "none",
                 },
               }}
             >
@@ -148,6 +157,9 @@ const ContestTracker = () => {
                 sx={{
                   minWidth: "4rem",
                   paddingLeft: "0.8rem",
+                  "@media (max-width: 700px)": {
+                    minWidth: "2rem",
+                  },
                 }}
               >
                 Date
@@ -156,6 +168,9 @@ const ContestTracker = () => {
                 sx={{
                   minWidth: "5rem",
                   paddingLeft: "0.8rem",
+                  "@media (max-width: 700px)": {
+                    minWidth: "2rem",
+                  },
                 }}
               >
                 Start
@@ -164,6 +179,9 @@ const ContestTracker = () => {
               <SYstackTextB
                 sx={{
                   paddingLeft: "4rem",
+                  "@media (max-width: 700px)": {
+                    paddingLeft: "0.8rem",
+                  },
                 }}
               >
                 Name
@@ -173,58 +191,99 @@ const ContestTracker = () => {
               if (checkValid(contest.start, contest.host))
                 return (
                   <SYstack>
-                    <Link
-                      href={"https://" + contest.host}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        src={handleImage(contest.host)}
-                        width="48px"
-                        height="40px"
-                      />
-                    </Link>
-                    <SYstackText>{handleDate(contest.start)}</SYstackText>
-                    <SYstackText
+                    <Box
                       sx={{
-                        minWidth: "5rem",
+                        "@media (max-width: 700px)": {
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        },
                       }}
                     >
-                      {handleTime(contest.start)}
-                    </SYstackText>
-                    <SYstackText
+                      <SYimage
+                        onClick={() => {
+                          window.open(
+                            "https://" + contest.host,
+                            "_blank",
+                            "noopener,noreferrer"
+                          );
+                        }}
+                      >
+                        <Image
+                          src={handleImage(contest.host)}
+                          width="48px"
+                          height="40px"
+                        />
+                      </SYimage>
+                    </Box>
+                    <Box
                       sx={{
-                        minWidth: "5rem",
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        "@media (max-width: 700px)": {
+                          flexDirection: "column",
+                        },
                       }}
                     >
-                      {contest.hr_duration + " hr"}
-                    </SYstackText>
-                    <SYcontestName
-                      href={contest.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      underline="none"
+                      <SYstackText
+                        sx={{
+                          "@media (max-width: 700px)": {
+                            minWidth: "5rem",
+                          },
+                        }}
+                      >
+                        {handleDate(contest.start)}
+                      </SYstackText>
+                      <SYstackText
+                        sx={{
+                          minWidth: "5rem",
+                        }}
+                      >
+                        {handleTime(contest.start)}
+                      </SYstackText>
+                      <SYstackText
+                        sx={{
+                          minWidth: "5rem",
+                        }}
+                      >
+                        {contest.hr_duration + " hr"}
+                      </SYstackText>
+                    </Box>
+                    <Box
                       sx={{
                         flexGrow: 1,
+                        display: "flex",
+                        flexDirection: "row",
                       }}
                     >
-                      {contest.title}
-                    </SYcontestName>
-                    <SYbutton
-                      title="Add to Google Calendar"
-                      onClick={() => {
-                        handleEventCreation(contest);
-                      }}
-                    >
-                      <EventAvailableIcon />
-                    </SYbutton>
+                      <SYcontestName
+                        href={contest.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        underline="none"
+                      >
+                        {contest.title}
+                      </SYcontestName>
+                    </Box>
+                    <Box>
+                      <SYbutton
+                        title="Add to Google Calendar"
+                        onClick={() => {
+                          handleEventCreation(contest);
+                        }}
+                      >
+                        <EventAvailableIcon />
+                      </SYbutton>
+                    </Box>
                   </SYstack>
                 );
             })}
           </SYlistBox>
         </SYmainContainer>
       </Box>
-    </Box>
+    </>
   );
 };
 

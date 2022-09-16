@@ -1,9 +1,34 @@
 import { Typography } from "@mui/material";
+import TopNavBar from "../components/TopNavBar";
+import SideBar from "../components/SideBar";
+import {
+  SYmainContainer,
+  SYouterBox,
+  SYheaderStack,
+  SYheaderText,
+  SYsubheaderText,
+  SYbutton,
+  SYbuttonText,
+  SYcollapsibleStack,
+  SYdataGrid,
+} from "../styles/StyledComponents/StyledComponents";
 const GfgSheet = () => {
   return (
     <>
-      <Typography variant="h1">Geeks For Geeks Sheet</Typography>
-      <Typography variant="h3">Coming Soon</Typography>
+      <TopNavBar />
+      <SideBar />
+      <SYmainContainer>
+        <SYouterBox>
+          <SYheaderStack
+            sx={{
+              backgroundColor: "#267138",
+            }}
+          >
+            <SYheaderText>GeeksForGeeks SDE Sheet</SYheaderText>
+            <SYsubheaderText>Coming Soon!</SYsubheaderText>
+          </SYheaderStack>
+        </SYouterBox>
+      </SYmainContainer>
     </>
   );
 };

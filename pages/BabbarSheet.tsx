@@ -8,7 +8,7 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import lbJSON from "../hooks/BabbarJSON.json";
 import { ThemeProvider } from "@mui/material";
-import { BabbarDataGridTheme } from "../components/StyledDataGrid";
+import { BabbarDataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -18,7 +18,8 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-} from "../components/StyledComponents";
+  SYmainContainer,
+} from "../styles/StyledComponents/StyledComponents";
 
 const BabbarSheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
@@ -27,7 +28,7 @@ const BabbarSheet = () => {
     {
       field: "id",
       headerName: "S. No",
-      maxWidth: 80,
+      maxWidth: 40,
       align: "center",
       flex: 1,
       headerAlign: "center",
@@ -36,12 +37,12 @@ const BabbarSheet = () => {
       field: "name",
       headerName: "Problem Name",
       flex: 1,
-      minWidth: 400,
+      minWidth: 200,
     },
     {
       field: "difficulty",
       headerName: "Difficulty",
-      width: 150,
+      minWidth: 100,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -49,6 +50,7 @@ const BabbarSheet = () => {
     {
       field: "link1",
       headerName: "Link 1",
+      minWidth: 60,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -66,6 +68,7 @@ const BabbarSheet = () => {
     {
       field: "link2",
       headerName: "Link 2",
+      minWidth: 100,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -84,13 +87,9 @@ const BabbarSheet = () => {
   // #154c79
   return (
     <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
+      <SYmainContainer>
         <SYouterBox>
           <SYheaderStack
             sx={{
@@ -171,7 +170,7 @@ const BabbarSheet = () => {
             })}
           </Box>
         </SYouterBox>
-      </Box>
+      </SYmainContainer>
     </>
   );
 };

@@ -1,51 +1,36 @@
-import SideBar from "../components/SideBar";
+import { Typography } from "@mui/material";
 import TopNavBar from "../components/TopNavBar";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-
-const EverythingDSA = () => {
+import SideBar from "../components/SideBar";
+import {
+  SYmainContainer,
+  SYouterBox,
+  SYheaderStack,
+  SYheaderText,
+  SYsubheaderText,
+  SYbutton,
+  SYbuttonText,
+  SYcollapsibleStack,
+  SYdataGrid,
+} from "../styles/StyledComponents/StyledComponents";
+const ArshGoyalSheet = () => {
   return (
-    <Box>
+    <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
-        <Box
-          sx={{
-            marginTop: "17rem",
-          }}
-        >
-          <Typography
-            variant="h1"
+      <SYmainContainer>
+        <SYouterBox>
+          <SYheaderStack
             sx={{
-              fontFamily: "Kollektif",
-              fontSize: "10rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
-              color: "white",
+              backgroundColor: "#e28743",
             }}
           >
-            Arsh Goyal Sheet
-          </Typography>
-          <Typography
-            variant="h2"
-            sx={{
-              fontFamily: "Kollektif",
-              fontSize: "6rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
-              color: "black",
-            }}
-          >
-            Coming Soon!
-          </Typography>
-        </Box>
-      </Box>
-    </Box>
+            <SYheaderText>Arsh Goyal SDE Sheet</SYheaderText>
+            <SYsubheaderText>Coming Soon!</SYsubheaderText>
+          </SYheaderStack>
+        </SYouterBox>
+      </SYmainContainer>
+    </>
   );
 };
 
-export default EverythingDSA;
+export default ArshGoyalSheet;

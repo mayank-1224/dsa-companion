@@ -8,7 +8,7 @@ import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import GrindJSON from "../hooks/GrindJSON.json";
 import { ThemeProvider } from "@mui/material";
-import { Grind169DataGridTheme } from "../components/StyledDataGrid";
+import { Grind169DataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYouterBox,
   SYheaderStack,
@@ -18,7 +18,8 @@ import {
   SYbuttonText,
   SYcollapsibleStack,
   SYdataGrid,
-} from "../components/StyledComponents";
+  SYmainContainer,
+} from "../styles/StyledComponents/StyledComponents";
 
 const Grind169Sheet = () => {
   const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
@@ -27,7 +28,7 @@ const Grind169Sheet = () => {
       field: "id",
       headerName: "S. No",
       flex: 1,
-      maxWidth: 80,
+      maxWidth: 40,
       align: "center",
       headerAlign: "center",
     },
@@ -35,10 +36,12 @@ const Grind169Sheet = () => {
       field: "name",
       headerName: "Problem Name",
       flex: 1,
+      minWidth: 200,
     },
     {
       field: "difficulty",
       headerName: "Difficulty",
+      minWidth: 100,
       flex: 1,
       align: "center",
       headerAlign: "center",
@@ -46,6 +49,7 @@ const Grind169Sheet = () => {
     {
       field: "link",
       headerName: "Link",
+      minWidth: 100,
       flex: 1,
       headerAlign: "center",
       align: "center",
@@ -71,13 +75,9 @@ const Grind169Sheet = () => {
   // #7766e4
   return (
     <>
+      <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-        }}
-      >
-        <TopNavBar />
+      <SYmainContainer>
         <SYouterBox>
           <SYheaderStack
             sx={{
@@ -158,7 +158,7 @@ const Grind169Sheet = () => {
             })}
           </Box>
         </SYouterBox>
-      </Box>
+      </SYmainContainer>
     </>
   );
 };
