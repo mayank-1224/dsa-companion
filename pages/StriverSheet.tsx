@@ -28,7 +28,7 @@ const columns: GridColDef[] = [
   {
     field: "id",
     headerName: "S. No",
-    maxWidth: 80,
+    maxWidth: 50,
     align: "center",
     flex: 1,
     headerAlign: "center",
@@ -75,7 +75,7 @@ const columns: GridColDef[] = [
       if (cellValues.value != "")
         return (
           <Link href={`${cellValues.value}`} target={"_blank"}>
-            GeeksForGeeks
+            GfG
           </Link>
         );
     },

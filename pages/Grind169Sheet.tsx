@@ -29,7 +29,7 @@ const Grind169Sheet = () => {
       field: "id",
       headerName: "S. No",
       flex: 1,
-      maxWidth: 40,
+      maxWidth: 50,
       align: "center",
       headerAlign: "center",
     },
