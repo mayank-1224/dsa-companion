@@ -96,14 +96,14 @@ export const GfGDataGridTheme = createTheme({
       styleOverrides: {
         row: {
           "&:hover": {
-            backgroundColor: "#f0cad6",
+            backgroundColor: "#c7dacc",
             cursor: "pointer",
           },
 
           "&.Mui-selected": {
-            backgroundColor: "#f0cad6",
+            backgroundColor: "#c7dacc",
             "&:hover": {
-              backgroundColor: "#f0cad6",
+              backgroundColor: "#c7dacc",
             },
           },
         },
@@ -118,14 +118,14 @@ export const ArshDataGridTheme = createTheme({
       styleOverrides: {
         row: {
           "&:hover": {
-            backgroundColor: "#f0cad6",
+            backgroundColor: "#f6dbc7",
             cursor: "pointer",
           },
 
           "&.Mui-selected": {
-            backgroundColor: "#f0cad6",
+            backgroundColor: "#f6dbc7",
             "&:hover": {
-              backgroundColor: "#f0cad6",
+              backgroundColor: "#f6dbc7",
             },
           },
         },

@@ -6,6 +6,7 @@ import MoreTimeIcon from "@mui/icons-material/MoreTime";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import StorageIcon from "@mui/icons-material/Storage";
 import AltRouteIcon from "@mui/icons-material/AltRoute";
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import { Scrollchor } from "react-scrollchor";
@@ -73,6 +74,21 @@ const SideBar = () => {
             <li
               className="NavListItem"
               onClick={() => {
+                Router.push("/JobTracker");
+              }}
+            >
+              <a className="has-subnav">
+                <WorkHistoryIcon
+                  className="navIcon"
+                  fontSize="large"
+                  sx={{ width: "70px !important", height: "40px !important" }}
+                />
+                <span className="nav-text">Job Tracker</span>
+              </a>
+            </li>
+            <li
+              className="NavListItem"
+              onClick={() => {
                 Router.push("/SystemDesign");
               }}
             >
@@ -115,6 +131,7 @@ const SideBar = () => {
                 <span className="nav-text">Everything DSA</span>
               </a>
             </li>
+
             <li className="NavListItem">
               <a className="has-subnav">
                 <SupportAgentIcon
@@ -163,6 +180,13 @@ const SideBar = () => {
           }}
         >
           <MoreTimeIcon className="topIcon" />
+        </Button>
+        <Button
+          onClick={() => {
+            Router.push("/JobTracker");
+          }}
+        >
+          <WorkHistoryIcon className="topIcon" />
         </Button>
         <Button
           onClick={() => {

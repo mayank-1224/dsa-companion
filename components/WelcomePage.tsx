@@ -64,7 +64,7 @@ const WelcomePage = () => {
             onClick={() => Router.push("/SDEsheets")}
           >
             <SYalertText variant="h6">
-              SDE Sheets are now live. Go Check!
+              ALL SDE Sheets are now live. Go Check!
             </SYalertText>
           </SYalertButton>
           <SYalertButton

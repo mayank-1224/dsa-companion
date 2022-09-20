@@ -20,6 +20,7 @@ import newton from "../public/icons/newtonSchool.jpg";
 import topCoder from "../public/icons/topcoder.png";
 import yukiCoder from "../public/icons/yuriCoder.png";
 import Image from "next/image";
+import axios from "axios";
 
 import {
   SYmainContainer,
@@ -33,9 +34,19 @@ import {
   SYbutton,
   SYimage,
 } from "../styles/StyledComponents/ContestTrackerCSS";
+import { useEffect } from "react";
 
 const ContestTracker = () => {
   require("typeface-poppins");
+
+  const getContests = async () => {
+    const res = await axios.get(
+      "https://clist.by/api/v2/json/contest/?username=MayankPatel&api_key=1de0871c2b89ffcaae1b7664c6e0f61a44ad07db&limit=20&with_problems=false&upcoming=true&order_by=end"
+    );
+    console.log(res);
+  };
+
+  // getContests();
 
   const handleDate = (dateItem: string) => {
     const newDate = new Date(dateItem);
