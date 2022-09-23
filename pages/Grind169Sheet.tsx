@@ -23,6 +23,8 @@ import {
 } from "../styles/StyledComponents/StyledComponents";
 
 const Grind169Sheet = () => {
+  require("typeface-poppins");
+
   const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
   const columns: GridColDef[] = [
     {

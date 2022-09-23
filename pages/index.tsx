@@ -7,7 +7,6 @@ import { Box } from "@mui/material";
 
 const Home: NextPage = () => {
   require("typeface-poppins");
-
   return (
     <>
       <Box>

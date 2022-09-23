@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Footer from "../components/Footer";
 
 const SQL = () => {
+  require("typeface-poppins");
+
   return (
     <>
       <TopNavBar />

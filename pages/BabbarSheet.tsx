@@ -23,6 +23,8 @@ import {
 } from "../styles/StyledComponents/StyledComponents";
 
 const BabbarSheet = () => {
+  require("typeface-poppins");
+
   const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
     useProblems();
   const columns: GridColDef[] = [
