@@ -134,16 +134,6 @@ const SideBar = () => {
 
             <li className="NavListItem">
               <a className="has-subnav">
-                <SupportAgentIcon
-                  className="navIcon"
-                  fontSize="large"
-                  sx={{ width: "70px !important", height: "40px !important" }}
-                />
-                <span className="nav-text">Support</span>
-              </a>
-            </li>
-            <li className="NavListItem">
-              <a className="has-subnav">
                 <DraftsIcon
                   className="navIcon"
                   fontSize="large"

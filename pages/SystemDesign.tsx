@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 const SystemDesign = () => {
+  require("typeface-poppins");
+
   return (
     <>
       <TopNavBar />

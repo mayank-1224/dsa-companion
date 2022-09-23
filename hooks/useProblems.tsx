@@ -28,13 +28,13 @@ const useProblems = () => {
         ArshGoyal: [],
       };
       localStorage.setItem("problemTrack", JSON.stringify(newObj));
-      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
+      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "[]");
       setSheetProgress([0, 0, 0, 0, 0, 0, 0]);
       // console.log("setting for 1st time");
 
       setProblemTrack(proTrack);
     } else {
-      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "{}");
+      var proTrack = JSON.parse(localStorage.getItem("problemTrack") || "[]");
       // console.log("local storage alredy exists");
       setProblemTrack(proTrack);
       setSheetProgress([

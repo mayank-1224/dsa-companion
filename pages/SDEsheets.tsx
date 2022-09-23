@@ -15,6 +15,8 @@ import {
 } from "../styles/StyledComponents/SDEsheetsCSS";
 
 const SDEsheets = () => {
+  require("typeface-poppins");
+
   console.log(cardData);
   const sliderSettings = {
     dots: true,
