@@ -1,22 +1,19 @@
 import {
+  styled,
   Box,
   Stack,
   Typography,
   Button,
-  styled,
-  Card,
-  CardHeader,
-  CardContent,
   TextField,
-  Select,
 } from "@mui/material";
-
-import DatePicker from "@mui/x-date-pickers";
 
 export const MainContainer = styled(Box)({
   padding: "0 20vw",
   height: "100%",
   marginBottom: "25rem",
+  "@media (max-width: 700px)": {
+    padding: "0rem",
+  },
 });
 
 export const HeaderBox = styled(Box)({
@@ -24,12 +21,16 @@ export const HeaderBox = styled(Box)({
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
-  //   border: "1px solid black",
-  backgroundColor: "#6D597A",
+  backgroundColor: "#5e548e",
   marginBottom: "1rem",
   padding: "0.5rem",
   borderRadius: "1rem",
   boxShadow: "0px 0px 10px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    padding: "0.3rem",
+    marginBottom: "0.5rem",
+    boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  },
 });
 
 export const StyledTitle = styled(Typography)({
@@ -38,10 +39,10 @@ export const StyledTitle = styled(Typography)({
   fontWeight: "800",
   color: "white",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+  alignSelf: "flex-start",
   "@media (max-width: 700px)": {
     fontSize: "3rem",
   },
-  alignSelf: "flex-start",
 });
 
 export const StyledStats = styled(Typography)({
@@ -50,7 +51,7 @@ export const StyledStats = styled(Typography)({
   fontWeight: "800",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
   "@media (max-width: 700px)": {
-    fontSize: "1.5rem",
+    fontSize: "1rem",
   },
 });
 
@@ -60,7 +61,7 @@ export const StyledStatsCount = styled(Typography)({
   fontWeight: "800",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
   "@media (max-width: 700px)": {
-    fontSize: "1.5rem",
+    fontSize: "1.1rem",
   },
 });
 
@@ -80,6 +81,11 @@ export const FormBox = styled(Box)({
   padding: "0.5rem",
   borderRadius: "1rem",
   boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    padding: "0.15rem",
+    marginBottom: "0.5rem",
+    boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  },
 });
 
 export const FormDivs = styled(Box)({
@@ -88,7 +94,9 @@ export const FormDivs = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
-  //   border: "1px solid black",
+  "@media (max-width: 700px)": {
+    flexDirection: "column",
+  },
 });
 
 export const StyledTextField = styled(TextField)({
@@ -100,21 +108,36 @@ export const StyledTextField = styled(TextField)({
       borderRadius: "0.6rem",
     },
     "&:hover fieldset": {
-      borderColor: "white",
+      borderColor: "white  ",
     },
     "&.Mui-focused fieldset": {
       borderColor: "white",
     },
   },
-  "& .MuiInputBase-input": {
-    fontFamily: "Poppins",
-    fontSize: "1.2rem",
-    color: "white",
-  },
+
   "& .MuiInputLabel-root": {
     fontFamily: "Poppins",
+    fontSize: "1rem",
+    color: "white !important",
+  },
+  "& .MuiInputBase-input": {
     fontSize: "1.1rem",
     color: "white",
+  },
+
+  "@media (max-width: 700px)": {
+    margin: "0.15rem",
+    "& fieldset": {
+      borderRadius: "0.2rem",
+      // height: "1.5rem",
+    },
+
+    "& .MuiInputLabel-root": {
+      fontSize: "0.9rem",
+    },
+    "& .MuiInputBase-input": {
+      fontSize: "0.9rem",
+    },
   },
 });
 
@@ -131,29 +154,29 @@ export const StyledJobTextField = styled(StyledTextField)({
     },
   },
   "& .MuiInputBase-input": {
-    fontSize: "1.1rem",
     color: "black",
   },
   "& .MuiInputLabel-root": {
-    fontSize: "1.1rem",
-    color: "black",
+    color: "black !important",
   },
-});
 
-export const StyledSelect = styled(Select)({
-  width: "100%",
-  borderRadius: "5px",
-  padding: "5px",
-  margin: "5px",
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "white",
+  "@media (max-width: 700px)": {
+    height: "2.5rem",
+    textOverflow: "none",
+
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderRadius: "0.6rem",
+        height: "2.5rem",
+      },
     },
-    "&:hover fieldset": {
-      borderColor: "white",
+
+    "& .MuiInputLabel-root": {
+      fontSize: "0.7rem",
     },
-    "&.Mui-focused fieldset": {
-      borderColor: "white",
+    "& .MuiInputBase-input": {
+      padding: "0.5rem",
+      fontSize: "0.9rem",
     },
   },
 });
@@ -163,6 +186,7 @@ export const StyledButton = styled(Button)({
   height: "4rem",
   margin: "0.4rem",
   borderRadius: "0.9rem",
+  padding: "0rem",
   "& .MuiButton-label": {
     color: "white",
   },
@@ -173,16 +197,25 @@ export const StyledButton = styled(Button)({
       color: "black",
     },
   },
-  padding: "0rem",
+
+  "@media (max-width: 700px)": {
+    borderRadius: "0.6rem",
+    margin: "0.2rem",
+    height: "3rem",
+  },
 });
 
 export const StyledStack = styled(Stack)({
   width: "100%",
   backgroundColor: "#355070",
   marginBottom: "1rem",
-  padding: "0.5rem 0.5rem",
+  padding: "0.5rem",
   borderRadius: "1rem",
   boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    marginBottom: "0.5rem",
+    boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  },
 });
 
 export const JobContainer = styled(Box)({
@@ -196,6 +229,11 @@ export const JobContainer = styled(Box)({
   padding: "0.2rem",
   borderRadius: "1rem",
   boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+  "@media (max-width: 700px)": {
+    marginBottom: "0.5rem",
+    boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.6)",
+    padding: "0.1rem",
+  },
 });
 
 export const JobText = styled(Typography)({
@@ -203,10 +241,6 @@ export const JobText = styled(Typography)({
   fontSize: "1.1rem",
   fontFamily: "Poppins",
   fontWeight: "400",
-  //   textShadow: "1px 1px 1px rgba(0,0,0,0.3)",
-  "@media (max-width: 700px)": {
-    fontSize: "1.5rem",
-  },
   alignSelf: "center",
   justifySelf: "center",
   width: "100%",
@@ -214,4 +248,7 @@ export const JobText = styled(Typography)({
   textOverflow: "ellipsis",
   overflow: "hidden",
   whiteSpace: "nowrap",
+  "@media (max-width: 700px)": {
+    fontSize: "0.8rem",
+  },
 });

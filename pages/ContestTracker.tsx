@@ -35,6 +35,7 @@ import {
   SYimage,
 } from "../styles/StyledComponents/ContestTrackerCSS";
 import { useEffect } from "react";
+import { Typography } from "@mui/material";
 
 const ContestTracker = () => {
   require("typeface-poppins");
@@ -137,6 +138,7 @@ const ContestTracker = () => {
       <Box
         sx={{
           padding: "0 20vw",
+          marginBottom: "2rem",
           "@media (max-width: 700px)": {
             padding: "0 0.1rem",
           },
@@ -292,6 +294,13 @@ const ContestTracker = () => {
                 );
             })}
           </SYlistBox>
+          <SYcontestName
+            href="https://clist.by"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contest Tracker powered by clist.by
+          </SYcontestName>
         </SYmainContainer>
       </Box>
       <Footer />

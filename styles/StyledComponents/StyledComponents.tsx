@@ -107,7 +107,7 @@ export const SYdataGrid = styled(DataGrid)({
   border: "none",
   alignContent: "space-around",
   "& .MuiDataGrid-checkboxInput": {
-    color: "#a72e54",
+    color: "#a72e54 !important",
     width: "0.5rem",
     height: "0.5rem",
   },
@@ -115,7 +115,7 @@ export const SYdataGrid = styled(DataGrid)({
     color: "#a72e54",
   },
   "& .MuiDataGrid-cellCheckbox": {
-    color: "#a72e54",
+    color: "#a72e54 !important",
     width: "0.5rem",
     height: "0.5rem",
   },
