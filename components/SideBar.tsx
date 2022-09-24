@@ -199,9 +199,9 @@ const SideBar = () => {
         >
           <AltRouteIcon className="topIcon" />
         </Button>
-        <Button>
+        {/* <Button>
           <DraftsIcon className="topIcon" />
-        </Button>
+        </Button> */}
       </Box>
     </>
   );
