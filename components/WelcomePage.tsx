@@ -75,6 +75,14 @@ const WelcomePage = () => {
               Contest Tracker is now live. Go Check!
             </SYalertText>
           </SYalertButton>
+          <SYalertButton
+            variant="contained"
+            onClick={() => Router.push("/JobTracker")}
+          >
+            <SYalertText variant="h6">
+              Job Tracker is now live. Go Check!
+            </SYalertText>
+          </SYalertButton>
         </SYtitleStack>
       </SYinnerBox>
     </SYmainBox>
