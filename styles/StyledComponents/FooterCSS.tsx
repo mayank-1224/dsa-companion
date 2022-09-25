@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Link } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const FooterContainer = styled(Box)({
@@ -15,6 +15,7 @@ export const FooterContainer = styled(Box)({
   bottom: "0",
   "@media (max-width: 700px)": {
     padding: "0.1rem 0.2rem",
+    height: "160px",
   },
 });
 
@@ -26,14 +27,12 @@ export const InnerBox = styled(Box)({
   alignItems: "flex-start",
 });
 
-export const FooterText = styled(Typography)({
+export const FooterText = styled(Link)({
   fontFamily: "Poppins",
   fontSize: "1rem",
   color: "white",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
-  "&:hover": {
-    cursor: "pointer",
-  },
+
   "@media (max-width: 700px)": {
     fontSize: "0.8rem",
   },

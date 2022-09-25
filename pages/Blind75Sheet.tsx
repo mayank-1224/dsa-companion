@@ -1,14 +1,11 @@
 import Footer from "../components/Footer";
 import TopNavBar from "../components/TopNavBar";
-import { Box } from "@mui/material";
+import { Box, Link, Paper, ThemeProvider, Typography } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import bJSON from "../hooks/BlindJSON.json";
 import SideBar from "../components/SideBar";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
-import { ThemeProvider } from "@mui/material";
 import { Blind75DataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYmainContainer,
@@ -87,20 +84,80 @@ const Blind75Sheet = () => {
                 {sheetProgress[2]} / {bJSON.problemCount} problems solved
               </SYsubheaderText>
             </Box>
-            <SYbutton
-              variant="contained"
-              onClick={() => {
-                setProblemTrack({
-                  ...problemTrack,
-                  Blind75: [],
-                });
-              }}
+            <Box
               sx={{
-                color: "#a72e54",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "right",
+                fontFamily: "Poppins",
               }}
             >
-              <SYbuttonText>Clear Progress</SYbuttonText>
-            </SYbutton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Poppins",
+                    fontWeight: "500",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Sheet Credits: <br />
+                  Team Blind
+                </Typography>
+                <Link
+                  underline="hover"
+                  href="https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Original Blind75
+                </Link>{" "}
+                <br />
+                <Link
+                  underline="hover"
+                  href="https://www.teamblind.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Team Blind Website
+                </Link>
+              </Box>
+              <SYbutton
+                variant="contained"
+                onClick={() => {
+                  setProblemTrack({
+                    ...problemTrack,
+                    Blind75: [],
+                  });
+                }}
+                sx={{
+                  color: "#a72e54",
+                }}
+              >
+                <SYbuttonText>Clear Progress</SYbuttonText>
+              </SYbutton>
+            </Box>
           </SYheaderStack>
           {/* <CollapsibleTable division={bJSON.divisions} /> */}
           <Box>

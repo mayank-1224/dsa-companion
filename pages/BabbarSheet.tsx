@@ -1,14 +1,11 @@
 import TopNavBar from "../components/TopNavBar";
-import { Box } from "@mui/material";
+import { Box, Link, Paper, ThemeProvider, Typography } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import SideBar from "../components/SideBar";
 import Footer from "../components/Footer";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
 import lbJSON from "../hooks/BabbarJSON.json";
-import { ThemeProvider } from "@mui/material";
 import { BabbarDataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYouterBox,
@@ -25,13 +22,12 @@ import {
 const BabbarSheet = () => {
   require("typeface-poppins");
 
-  const { problemTrack, setProblemTrack, sheetProgress, setSheetProgress } =
-    useProblems();
+  const { problemTrack, setProblemTrack, sheetProgress } = useProblems();
   const columns: GridColDef[] = [
     {
       field: "id",
       headerName: "S. No",
-      maxWidth: 50,
+      maxWidth: 55,
       align: "center",
       flex: 1,
       headerAlign: "center",
@@ -106,20 +102,80 @@ const BabbarSheet = () => {
                 {sheetProgress[1]} / {lbJSON.problemCount} problems solved
               </SYsubheaderText>
             </Box>
-            <SYbutton
-              variant="contained"
-              onClick={() => {
-                setProblemTrack({
-                  ...problemTrack,
-                  Babbar: [],
-                });
-              }}
+            <Box
               sx={{
-                color: "#154c79",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "right",
+                fontFamily: "Poppins",
               }}
             >
-              <SYbuttonText>Clear Progress</SYbuttonText>
-            </SYbutton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Poppins",
+                    fontWeight: "500",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Sheet Credits: <br />
+                  Love Babbar
+                </Typography>
+                <Link
+                  underline="hover"
+                  href="https://www.thecodehelp.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  CodeHelp Website
+                </Link>{" "}
+                <br />
+                <Link
+                  underline="hover"
+                  href="https://www.youtube.com/c/LoveBabbar1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Love Babbar YouTube
+                </Link>
+              </Box>
+              <SYbutton
+                variant="contained"
+                onClick={() => {
+                  setProblemTrack({
+                    ...problemTrack,
+                    Babbar: [],
+                  });
+                }}
+                sx={{
+                  color: "#154c79",
+                }}
+              >
+                <SYbuttonText>Clear Progress</SYbuttonText>
+              </SYbutton>
+            </Box>
           </SYheaderStack>
           {/* <CollapsibleTable division={lbJSON.divisions} /> */}
           <Box>

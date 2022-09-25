@@ -394,6 +394,7 @@ const JobTracker = () => {
                         sx={{
                           width: "50%",
                           fontWeight: "500",
+                          marginRight: "0.5rem",
                           "@media (max-width: 700px)": {
                             alignSelf: "flex-start",
                             width: "100%",
@@ -412,7 +413,14 @@ const JobTracker = () => {
                           },
                         }}
                       >
-                        <JobText variant="h6">{job.position}</JobText>
+                        <JobText
+                          sx={{
+                            fontSize: "1rem",
+                          }}
+                          variant="h6"
+                        >
+                          {job.position}
+                        </JobText>
                         <JobText variant="h6">{job.package} LPA</JobText>
                       </Box>
                     </Box>

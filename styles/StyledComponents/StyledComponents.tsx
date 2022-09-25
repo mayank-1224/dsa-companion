@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 
 export const SYmainContainer = styled(Box)({
   padding: "0 20vw",
+  marginBottom: "5vh",
   "@media (max-width: 700px)": {
     padding: "0 0.2rem",
   },

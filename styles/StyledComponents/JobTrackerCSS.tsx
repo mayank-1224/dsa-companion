@@ -11,6 +11,11 @@ export const MainContainer = styled(Box)({
   padding: "0 20vw",
   height: "100%",
   marginBottom: "25rem",
+  "@media (max-width: 1500px)": {
+    padding: "0rem",
+    paddingLeft: "5rem",
+    paddingRight: "1rem",
+  },
   "@media (max-width: 700px)": {
     padding: "0rem",
   },
@@ -50,6 +55,9 @@ export const StyledStats = styled(Typography)({
   fontFamily: "Kollektif",
   fontWeight: "800",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
+  "@media (max-width: 1500px)": {
+    fontSize: "2rem",
+  },
   "@media (max-width: 700px)": {
     fontSize: "1rem",
   },
@@ -238,7 +246,7 @@ export const JobContainer = styled(Box)({
 
 export const JobText = styled(Typography)({
   color: "black",
-  fontSize: "1.1rem",
+  fontSize: "1rem",
   fontFamily: "Poppins",
   fontWeight: "400",
   alignSelf: "center",
@@ -247,7 +255,9 @@ export const JobText = styled(Typography)({
   margin: "2px",
   textOverflow: "ellipsis",
   overflow: "hidden",
-  whiteSpace: "nowrap",
+  overflowWrap: "break-word",
+
+  // whiteSpace: "nowrap",
   "@media (max-width: 700px)": {
     fontSize: "0.8rem",
   },

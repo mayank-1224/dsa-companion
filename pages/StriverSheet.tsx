@@ -1,15 +1,11 @@
 /* eslint-disable react/jsx-key */
-import Typography from "@mui/material/Typography";
 import TopNavBar from "../components/TopNavBar";
-import { Box } from "@mui/material";
+import { Box, Link, Paper, ThemeProvider, Typography } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import sJSON from "../hooks/StriverJSON.json";
 import SideBar from "../components/SideBar";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
-import { ThemeProvider } from "@mui/material";
 import { StriverDataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYmainContainer,
@@ -121,20 +117,80 @@ const StriverSheet = () => {
                 {sheetProgress[0]} / {sJSON.problemCount} problems solved
               </SYsubheaderText>
             </Box>
-            <SYbutton
-              variant="contained"
-              onClick={() => {
-                setProblemTrack({
-                  ...problemTrack,
-                  Striver: [],
-                });
-              }}
+            <Box
               sx={{
-                color: "#be2535",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "right",
+                fontFamily: "Poppins",
               }}
             >
-              <SYbuttonText>Clear Progress</SYbuttonText>
-            </SYbutton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Poppins",
+                    fontWeight: "500",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Sheet Credits: <br />
+                  Raj Vikramaditya(Striver)
+                </Typography>
+                <Link
+                  underline="hover"
+                  href="https://takeuforward.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  takeUforward Website
+                </Link>{" "}
+                <br />
+                <Link
+                  underline="hover"
+                  href="https://www.youtube.com/c/takeUforward"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  takeUforward YouTube
+                </Link>
+              </Box>
+              <SYbutton
+                variant="contained"
+                onClick={() => {
+                  setProblemTrack({
+                    ...problemTrack,
+                    Striver: [],
+                  });
+                }}
+                sx={{
+                  color: "#be2535",
+                }}
+              >
+                <SYbuttonText>Clear Progress</SYbuttonText>
+              </SYbutton>
+            </Box>
           </SYheaderStack>
           {/* <CollapsibleTable division={sJSON.divisions} /> */}
           <Box>
