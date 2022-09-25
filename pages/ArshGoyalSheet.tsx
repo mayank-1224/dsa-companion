@@ -1,14 +1,11 @@
 import Footer from "../components/Footer";
 import TopNavBar from "../components/TopNavBar";
-import { Box } from "@mui/material";
+import { Box, Link, Paper, ThemeProvider, Typography } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import ArshGoyalJSON from "../hooks/ArshGoyalJSON.json";
 import SideBar from "../components/SideBar";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
-import { ThemeProvider } from "@mui/material";
 import { ArshDataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYmainContainer,
@@ -116,20 +113,80 @@ const ArshGoyalSheet = () => {
                 solved
               </SYsubheaderText>
             </Box>
-            <SYbutton
-              variant="contained"
-              onClick={() => {
-                setProblemTrack({
-                  ...problemTrack,
-                  ArshGoyal: [],
-                });
-              }}
+            <Box
               sx={{
-                color: "#e27743",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "right",
+                fontFamily: "Poppins",
               }}
             >
-              <SYbuttonText>Clear Progress</SYbuttonText>
-            </SYbutton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Poppins",
+                    fontWeight: "500",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Sheet Credits: <br />
+                  Arsh Goyal
+                </Typography>
+                <Link
+                  underline="hover"
+                  href="https://www.codekickstart.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  CodeKickStart Website
+                </Link>{" "}
+                <br />
+                <Link
+                  underline="hover"
+                  href="https://www.youtube.com/c/ArshGoyal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Arsh Goyal YouTube
+                </Link>
+              </Box>
+              <SYbutton
+                variant="contained"
+                onClick={() => {
+                  setProblemTrack({
+                    ...problemTrack,
+                    ArshGoyal: [],
+                  });
+                }}
+                sx={{
+                  color: "#e27743",
+                }}
+              >
+                <SYbuttonText>Clear Progress</SYbuttonText>
+              </SYbutton>
+            </Box>
           </SYheaderStack>
           {/* <CollapsibleTable division={ArshGoyalJSON.divisions} /> */}
           <Box>

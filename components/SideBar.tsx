@@ -155,6 +155,7 @@ const SideBar = () => {
           justifyContent: "space-around",
           alignItems: "center",
           backgroundColor: "white",
+          zIndex: "100",
         }}
       >
         <Button

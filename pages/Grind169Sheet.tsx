@@ -1,14 +1,11 @@
 import TopNavBar from "../components/TopNavBar";
 import Footer from "../components/Footer";
-import { Box } from "@mui/material";
+import { Box, Link, Paper, ThemeProvider, Typography } from "@mui/material";
 import useProblems from "../hooks/useProblems";
 import SideBar from "../components/SideBar";
 import Collapsible from "react-collapsible";
 import { GridColDef } from "@mui/x-data-grid";
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
 import GrindJSON from "../hooks/GrindJSON.json";
-import { ThemeProvider } from "@mui/material";
 import { Grind169DataGridTheme } from "../styles/StyledComponents/StyledDataGrid";
 import {
   SYouterBox,
@@ -94,20 +91,80 @@ const Grind169Sheet = () => {
                 {sheetProgress[3]} / {GrindJSON.problemCount} problems solved
               </SYsubheaderText>
             </Box>
-            <SYbutton
-              variant="contained"
-              onClick={() => {
-                setProblemTrack({
-                  ...problemTrack,
-                  Grind169: [],
-                });
-              }}
+            <Box
               sx={{
-                color: "#7766e4",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "right",
+                fontFamily: "Poppins",
               }}
             >
-              <SYbuttonText>Clear Progress</SYbuttonText>
-            </SYbutton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Poppins",
+                    fontWeight: "500",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Sheet Credits: <br />
+                  Technical Interview Handbook
+                </Typography>
+                <Link
+                  underline="hover"
+                  href="https://www.techinterviewhandbook.org/grind75"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Original Grind75
+                </Link>{" "}
+                <br />
+                <Link
+                  underline="hover"
+                  href="https://www.techinterviewhandbook.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "white",
+                    fontSize: "0.8rem",
+                    "@media (max-width: 700px)": {
+                      fontSize: "0.6rem",
+                    },
+                  }}
+                >
+                  Main Website
+                </Link>
+              </Box>
+              <SYbutton
+                variant="contained"
+                onClick={() => {
+                  setProblemTrack({
+                    ...problemTrack,
+                    Grind169: [],
+                  });
+                }}
+                sx={{
+                  color: "#7766e4",
+                }}
+              >
+                <SYbuttonText>Clear Progress</SYbuttonText>
+              </SYbutton>
+            </Box>
           </SYheaderStack>
           {/* <CollapsibleTable division={GrindJSON.divisions} /> */}
           <Box>
