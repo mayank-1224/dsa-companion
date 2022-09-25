@@ -27,12 +27,14 @@ const columns: GridColDef[] = [
     maxWidth: 50,
     align: "center",
     flex: 1,
+    sortable: false,
     headerAlign: "center",
   },
   {
     field: "name",
     headerName: "Problem Name",
     flex: 1,
+    sortable: false,
     minWidth: 150,
   },
   {
@@ -41,6 +43,7 @@ const columns: GridColDef[] = [
     minWidth: 100,
     flex: 1,
     align: "center",
+    sortable: false,
     headerAlign: "center",
   },
   {
@@ -130,6 +133,8 @@ const StriverSheet = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "flex-end",
                 }}
               >
                 <Typography
