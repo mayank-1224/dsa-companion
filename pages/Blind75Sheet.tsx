@@ -31,12 +31,14 @@ const Blind75Sheet = () => {
       maxWidth: 50,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "name",
       headerName: "Problem Name",
       flex: 1,
       minWidth: 200,
+      sortable: false,
     },
     {
       field: "difficulty",
@@ -45,6 +47,7 @@ const Blind75Sheet = () => {
       flex: 1,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "link",

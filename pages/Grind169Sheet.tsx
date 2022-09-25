@@ -31,12 +31,14 @@ const Grind169Sheet = () => {
       maxWidth: 50,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "name",
       headerName: "Problem Name",
       flex: 1,
       minWidth: 200,
+      sortable: false,
     },
     {
       field: "difficulty",
@@ -45,6 +47,7 @@ const Grind169Sheet = () => {
       flex: 1,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "link",
@@ -71,7 +74,6 @@ const Grind169Sheet = () => {
       problem.id = vall++;
     });
   });
-  console.log(loll);
   // #7766e4
   return (
     <>

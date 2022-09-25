@@ -42,12 +42,14 @@ const ArshGoyalSheet = () => {
       maxWidth: 50,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "name",
       headerName: "Problem Name",
       flex: 1,
       minWidth: 200,
+      sortable: false,
     },
     {
       field: "difficulty",
@@ -56,6 +58,7 @@ const ArshGoyalSheet = () => {
       flex: 1,
       align: "center",
       headerAlign: "center",
+      sortable: false,
     },
     {
       field: "link1",

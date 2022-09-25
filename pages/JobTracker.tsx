@@ -66,9 +66,6 @@ const JobTracker = () => {
         var d: any = new Date(b.date);
         return d - c;
       });
-      jobData.map((job: any) => {
-        console.log(job.date);
-      });
 
       localStorage.setItem("jobData", JSON.stringify(jobData));
       setFormData({
