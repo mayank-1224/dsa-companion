@@ -96,7 +96,7 @@ export const SYtitleText = styled(Typography)({
 
 export const SYalertButton = styled(Button)({
   backgroundColor: "white",
-  height: "5rem",
+  height: "3.5rem",
   margin: "1rem",
   padding: "0 1rem",
   borderTopLeftRadius: "3rem",
@@ -108,7 +108,7 @@ export const SYalertButton = styled(Button)({
     backgroundColor: "black",
   },
   "@media (max-width: 700px)": {
-    height: "3rem",
+    height: "2.5rem",
     margin: "0.5rem",
     padding: "0 0.5rem",
     borderTopLeftRadius: "1.5rem",

@@ -89,21 +89,6 @@ const SideBar = () => {
             <li
               className="NavListItem"
               onClick={() => {
-                Router.push("/SystemDesign");
-              }}
-            >
-              <a className="has-subnav">
-                <SettingsSuggestIcon
-                  className="navIcon"
-                  fontSize="large"
-                  sx={{ width: "70px !important", height: "40px !important" }}
-                />
-                <span className="nav-text">System Design</span>
-              </a>
-            </li>
-            <li
-              className="NavListItem"
-              onClick={() => {
                 Router.push("/SQL");
               }}
             >
@@ -114,6 +99,21 @@ const SideBar = () => {
                   sx={{ width: "70px !important", height: "40px !important" }}
                 />
                 <span className="nav-text">SQL</span>
+              </a>
+            </li>
+            <li
+              className="NavListItem"
+              onClick={() => {
+                Router.push("/SystemDesign");
+              }}
+            >
+              <a className="has-subnav">
+                <SettingsSuggestIcon
+                  className="navIcon"
+                  fontSize="large"
+                  sx={{ width: "70px !important", height: "40px !important" }}
+                />
+                <span className="nav-text">System Design</span>
               </a>
             </li>
             <li
@@ -181,17 +181,17 @@ const SideBar = () => {
         </Button>
         <Button
           onClick={() => {
-            Router.push("/SystemDesign");
-          }}
-        >
-          <SettingsSuggestIcon className="topIcon" />
-        </Button>
-        <Button
-          onClick={() => {
             Router.push("/SQL");
           }}
         >
           <StorageIcon className="topIcon" />
+        </Button>
+        <Button
+          onClick={() => {
+            Router.push("/SystemDesign");
+          }}
+        >
+          <SettingsSuggestIcon className="topIcon" />
         </Button>
         <Button
           onClick={() => {
