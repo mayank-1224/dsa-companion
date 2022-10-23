@@ -3,6 +3,15 @@ import TopNavBar from "../components/TopNavBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Footer from "../components/Footer";
+import SQLjson from "../hooks/SQLjson.json";
+import Stack from "@mui/material/Stack";
+import {
+  HeadingText,
+  StyledHeading,
+  SYlistBox,
+  SYstack,
+  SYstackText,
+} from "../styles/StyledComponents/SQLstyle";
 
 const SQL = () => {
   require("typeface-poppins");
@@ -19,45 +28,84 @@ const SQL = () => {
           },
         }}
       >
-        <Box
-          sx={{
-            marginTop: "18rem",
-            "@media (max-width: 700px)": {
-              marginTop: "10rem",
-            },
-          }}
-        >
-          <Typography
-            variant="h1"
+        <StyledHeading>
+          <HeadingText>All About SQL</HeadingText>
+          <SYstackText
             sx={{
-              fontFamily: "Kollektif",
-              fontSize: "10rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
               color: "white",
-              "@media (max-width: 700px)": {
-                fontSize: "5rem",
-              },
+              fontSize: "1.5rem",
             }}
           >
-            All about SQL
-          </Typography>
-          <Typography
-            variant="h2"
-            sx={{
-              fontFamily: "Kollektif",
-              fontSize: "6rem",
-              fontWeight: "800",
-              letterSpacing: "-3px",
-              color: "black",
-              "@media (max-width: 700px)": {
-                fontSize: "3rem",
-              },
-            }}
-          >
-            Coming Soon!
-          </Typography>
-        </Box>
+            {SQLjson.description}
+          </SYstackText>
+        </StyledHeading>
+        <SYlistBox>
+          {SQLjson.topics.map((topic) => (
+            <Box>
+              <HeadingText
+                sx={{
+                  fontSize: "3.5rem",
+                }}
+              >
+                {topic.name}
+              </HeadingText>
+              {topic.divisions.map((division) => (
+                <Box>
+                  <HeadingText
+                    sx={{
+                      fontSize: "2.5rem",
+                    }}
+                  >
+                    {division.name}
+                  </HeadingText>
+                  <SYstackText
+                    sx={{
+                      color: "white",
+                    }}
+                  >
+                    {division.description}
+                  </SYstackText>
+                  <Box>
+                    {division.items.map((item) => (
+                      <SYstack
+                        sx={{
+                          flexDirection: "row",
+                        }}
+                      >
+                        <SYstackText
+                          sx={{
+                            width: "12%",
+                            marginRight: "1%",
+                          }}
+                        >
+                          {item.name}
+                        </SYstackText>
+                        <SYstackText
+                          sx={{
+                            width: "42%",
+                            marginRight: "1%",
+
+                            size: "0.5rem",
+                          }}
+                        >
+                          {item.description}
+                        </SYstackText>
+                        <code
+                          style={{
+                            width: "42%",
+                            fontSize: "1rem",
+                          }}
+                        >
+                          {item.example}
+                        </code>
+                      </SYstack>
+                    ))}
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          ))}
+        </SYlistBox>
       </Box>
       <Footer />
     </>

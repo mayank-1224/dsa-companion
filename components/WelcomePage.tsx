@@ -83,6 +83,14 @@ const WelcomePage = () => {
               Job Tracker is now live. Go Check!
             </SYalertText>
           </SYalertButton>
+          <SYalertButton
+            variant="contained"
+            onClick={() => Router.push("/SQL")}
+          >
+            <SYalertText variant="h6">
+              Everything SQL is now live. Go Check!
+            </SYalertText>
+          </SYalertButton>
         </SYtitleStack>
       </SYinnerBox>
     </SYmainBox>
