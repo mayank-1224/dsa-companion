@@ -1,6 +1,6 @@
 {
   "name": "Everything about SQL",
-  "description": "This is a collection of all the SQL queries required to crack that coding interview",
+  "description": "Collection of all the important SQL queries & LeetCode problems",
   "topics": [
     {
       "name": "SQL Keywords",
