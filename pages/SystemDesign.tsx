@@ -14,6 +14,7 @@ const SystemDesign = () => {
       <Box
         sx={{
           padding: "0 20vw",
+          height: "90vh",
           "@media (max-width: 700px)": {
             padding: "0 5vw",
           },

@@ -118,6 +118,13 @@ const SQL = () => {
                 </ProgressBox>
               </Box>
             </Box>
+            <ProgressText
+              sx={{
+                fontSize: "1.2rem",
+              }}
+            >
+              LeetCode SQL problems coming soon!
+            </ProgressText>
           </StyledHeading>
           <SYstackText>Tap on the topic name to expand</SYstackText>
           <SYlistBox>
@@ -137,7 +144,7 @@ const SQL = () => {
                           fontSize: "2.5rem",
                           fontWeight: "800",
                           letterSpacing: "-1px",
-                          color: "#de8500",
+                          color: "#355070",
                           textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
                         }}
                       >
@@ -150,7 +157,7 @@ const SQL = () => {
                         </SYstackText>
                         <Box
                           sx={{
-                            backgroundColor: "#de8500",
+                            backgroundColor: "#355070",
                           }}
                         >
                           {division.items.map((item) => (

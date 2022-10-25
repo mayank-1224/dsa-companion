@@ -27,7 +27,7 @@ export const ContainerBox = styled(Box)({
 });
 
 export const StyledHeading = styled(Box)({
-  backgroundColor: "#de8500",
+  backgroundColor: "#355070",
   marginBottom: "1rem",
   padding: "0.5rem",
   borderRadius: "1rem",
@@ -54,7 +54,7 @@ export const HeadingText = styled(Typography)({
 });
 
 export const SYlistBox = styled(Box)({
-  backgroundColor: "#de8500",
+  backgroundColor: "#355070",
   padding: "0.5rem",
   borderRadius: "1rem",
   marginBottom: "1rem",
@@ -65,7 +65,7 @@ export const SYlistBox = styled(Box)({
 });
 
 export const TopicBox = styled(Box)({
-  // backgroundColor: "#de8500",
+  // backgroundColor: "#355070",
   backgroundColor: "#fafafd",
   borderRadius: "1rem",
   margin: "0.2rem 0 0.8rem 0",
@@ -79,7 +79,7 @@ export const TopicText = styled(Typography)({
   fontSize: "3.5rem",
   fontWeight: "800",
   letterSpacing: "-2px",
-  color: "#de8500",
+  color: "#355070",
   textShadow: "2px 1px 2px rgba(0,0,0,0.5)",
   "@media (max-width: 700px)": {
     fontSize: "2rem",

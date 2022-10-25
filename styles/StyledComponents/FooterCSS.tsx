@@ -9,7 +9,7 @@ export const FooterContainer = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
   paddingTop: "0.7rem",
-  height: "200px",
+  height: "100px",
   zIndex: 1000,
   //   position: "fixed",
   bottom: "0",

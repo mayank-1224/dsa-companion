@@ -147,6 +147,15 @@ const ContestTracker = () => {
         <SYmainContainer>
           <SYheaderBox>
             <SYheaderText variant="h1">Contest Tracker</SYheaderText>
+            <SYstackText
+              sx={{
+                color: "#fff",
+                fontSize: "1.5rem",
+              }}
+            >
+              Click on calendar icon to add the contest to your Google Calendar
+              automatically!
+            </SYstackText>
           </SYheaderBox>
           <SYlistBox>
             <SYstack

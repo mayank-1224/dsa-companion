@@ -5,7 +5,7 @@ export const NavContainer = styled(Box)({
   padding: "0 20vw",
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
+  // justifyContent: "space-between",
   alignItems: "center",
   paddingTop: "0.7rem",
   "@media (max-width: 700px)": {
@@ -20,9 +20,7 @@ export const NavText = styled(Typography)({
   letterSpacing: "-3px",
   color: "white",
   textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
-  "&:hover": {
-    cursor: "pointer",
-  },
+
   "@media (max-width: 700px)": {
     fontSize: "2.5rem",
   },
@@ -59,7 +57,7 @@ export const LoginText = styled(Typography)({
 // STYLED WELCOME PAGE-------------
 export const SYmainBox = styled(Stack)({
   // border: "4px solid black",
-  height: "100vh",
+  height: "90vh",
   padding: "0 20vw",
   "@media (max-width: 700px)": {
     padding: "0",
@@ -119,16 +117,24 @@ export const SYalertButton = styled(Button)({
 });
 
 export const SYalertText = styled(Typography)({
-  fontFamily: "Poppins",
-  fontWeight: "500",
-  fontSize: "1.5rem",
-  // fontSize: "3vh",
-  textTransform: "none",
-  color: "#7a54a7",
-  lineHeight: "0.8",
-  textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
+  fontFamily: "Kollektif",
+  fontWeight: "600",
+  fontSize: "2.1rem",
+  color: "#fafafd",
+  margin: "0.5rem 3rem",
+  lineHeight: "1.2",
+  textShadow: "4px 3px 4px rgba(0,0,0,0.5)",
   "@media (max-width: 700px)": {
     fontSize: "1rem",
+    textAlign: "center",
+  },
+});
+
+export const SYa = styled("a")({
+  textDecoration: "none",
+  "&:hover": {
+    color: "black",
+    textDecoration: "underline",
   },
 });
 
