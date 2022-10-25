@@ -12,6 +12,7 @@ import {
   InnerBox,
   SYtitleText,
   SYsubText,
+  CardText,
 } from "../styles/StyledComponents/SDEsheetsCSS";
 
 const SDEsheets = () => {
@@ -54,7 +55,17 @@ const SDEsheets = () => {
           }}
         >
           <SYtitleText variant="h2">All your DSA sheets</SYtitleText>
-          <SYsubText variant="h2">in 'ONE' place!</SYsubText>
+          <SYsubText variant="h2">at 'ONE' place!</SYsubText>
+          <CardText
+            sx={{
+              fontSize: "1.2rem",
+            }}
+          >
+            Track progress of all your SDE sheets. At 'ONE' palce. <br />
+            The progress is saved locally on your device. No need to login!{" "}
+            <br />
+            Tap on a sheet to begin.
+          </CardText>
         </InnerBox>
         <InnerBox>
           <Slider {...sliderSettings}>

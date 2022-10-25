@@ -13,14 +13,14 @@ import CardMedia from "@mui/material/CardMedia";
 export const MainBox = styled(Box)({
   //   border: "1px solid black",
   padding: "0 20vw",
-  height: "92vh",
+  height: "90vh",
   "@media (max-width: 700px)": {
     padding: "0 0.1rem",
   },
 });
 
 export const InnerBox = styled(Box)({
-  marginTop: "3rem",
+  marginTop: "1.8rem",
   "@media (max-width: 700px)": {
     marginTop: "1rem",
   },

@@ -17,7 +17,7 @@ export const SYheaderBox = styled(Box)({
   padding: "0.5rem",
   borderRadius: "1rem",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   justifyContent: "space-between",
   boxShadow: "0px 0px 10px 1px rgba(0,0,0,0.6)",
   "@media (max-width: 700px)": {

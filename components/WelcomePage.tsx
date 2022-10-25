@@ -10,6 +10,7 @@ import {
   SYalertText,
   SYtitleText,
   SYalertButton,
+  SYa,
 } from "../styles/StyledComponents/WelcomeNavBarsCSS";
 
 const WelcomePage = () => {
@@ -59,38 +60,23 @@ const WelcomePage = () => {
           </SYtitleText>
         </SYtitleStack>
         <SYtitleStack>
-          <SYalertButton
-            variant="contained"
-            onClick={() => Router.push("/SDEsheets")}
-          >
-            <SYalertText variant="h6">
-              ALL SDE Sheets are now live. Go Check!
-            </SYalertText>
-          </SYalertButton>
-          <SYalertButton
-            variant="contained"
-            onClick={() => Router.push("/ContestTracker")}
-          >
-            <SYalertText variant="h6">
-              Contest Tracker is now live. Go Check!
-            </SYalertText>
-          </SYalertButton>
-          <SYalertButton
-            variant="contained"
-            onClick={() => Router.push("/JobTracker")}
-          >
-            <SYalertText variant="h6">
-              Job Tracker is now live. Go Check!
-            </SYalertText>
-          </SYalertButton>
-          <SYalertButton
-            variant="contained"
-            onClick={() => Router.push("/SQL")}
-          >
-            <SYalertText variant="h6">
-              Everything SQL is now live. Go Check!
-            </SYalertText>
-          </SYalertButton>
+          <SYalertText>
+            Check out All the SDE Sheets <SYa href="/SDEsheets">here</SYa>.
+          </SYalertText>
+          <br />
+          <SYalertText>
+            Or mark your calendars with upcoming contests{" "}
+            <SYa href="/ContestTracker">here</SYa>!{" "}
+          </SYalertText>
+          <br />
+          <SYalertText>
+            Track all your applied Job Applications{" "}
+            <SYa href="/JobTracker">here</SYa>.
+          </SYalertText>
+          <br />
+          <SYalertText>
+            Practice SQL <SYa href="/SQL">here</SYa>.
+          </SYalertText>
         </SYtitleStack>
       </SYinnerBox>
     </SYmainBox>

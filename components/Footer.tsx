@@ -12,51 +12,6 @@ import EmailIcon from "@mui/icons-material/Email";
 const Footer = () => {
   return (
     <FooterContainer>
-      <InnerBox sx={{}}>
-        <FooterText underline="none">SDE Sheets Sources:</FooterText>
-        <FooterText
-          href="https://www.youtube.com/c/takeUforward"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Striver
-        </FooterText>
-        <FooterText
-          href="https://www.youtube.com/c/LoveBabbar1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Love Babbar
-        </FooterText>
-        <FooterText
-          underline="hover"
-          href="https://www.teamblind.com/"
-          target="_blank"
-        >
-          Blind75
-        </FooterText>
-        <FooterText
-          href="https://www.techinterviewhandbook.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Grind 169
-        </FooterText>
-        <FooterText
-          href="https://www.geeksforgeeks.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GeeksForGeeks
-        </FooterText>
-        <FooterText
-          href="https://www.youtube.com/c/ArshGoyal"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Arsh Goyal
-        </FooterText>
-      </InnerBox>
       <InnerBox>
         <FooterText
           underline="none"
@@ -82,10 +37,16 @@ const Footer = () => {
           fontFamily: "Poppins",
         }}
       >
-        <Box>
-          <FooterText underline="none">Created with</FooterText> <br />
-          <FavoriteIcon sx={{ color: "red", marginTop: "4px" }} /> <br />
-          <FooterText underline="none">by Mayank Patel</FooterText>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <FooterText underline="none">Created with </FooterText>&nbsp;
+          <FavoriteIcon sx={{ color: "red" }} />
+          &nbsp;
+          <FooterText underline="none"> by Mayank Patel</FooterText>
         </Box>
         <Box
           sx={{
