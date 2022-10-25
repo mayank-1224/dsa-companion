@@ -1,112 +1,199 @@
 import SideBar from "../components/SideBar";
 import TopNavBar from "../components/TopNavBar";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Footer from "../components/Footer";
 import SQLjson from "../hooks/SQLjson.json";
-import Stack from "@mui/material/Stack";
+import Collapsible from "react-collapsible";
+import { useState, useEffect } from "react";
 import {
+  ContainerBox,
   HeadingText,
+  MainBox,
+  ProgressBox,
+  ProgressCheck,
+  ProgressText,
   StyledHeading,
   SYlistBox,
   SYstack,
   SYstackText,
+  TopicBox,
 } from "../styles/StyledComponents/SQLstyle";
 
 const SQL = () => {
   require("typeface-poppins");
 
+  const [checked, setChecked] = useState([false, false, false, false, false]);
+
+  useEffect(() => {
+    if (localStorage.getItem("sqlProgress") !== null) {
+      var sqlProgress = JSON.parse(localStorage.getItem("sqlProgress") || "[]");
+      setChecked(sqlProgress);
+    } else {
+      localStorage.setItem("sqlProgress", JSON.stringify(checked));
+    }
+  }, []);
+
+  const handleProgressCheck = (n: any) => {
+    setChecked((prev) => {
+      var newChecked = [...prev];
+      newChecked[n] = !newChecked[n];
+      localStorage.setItem("sqlProgress", JSON.stringify(newChecked));
+      return newChecked;
+    });
+    // localStorage.setItem("sqlProgress", JSON.stringify(checked));
+  };
+
   return (
     <>
       <TopNavBar />
       <SideBar />
-      <Box
-        sx={{
-          padding: "0 20vw",
-          "@media (max-width: 700px)": {
-            padding: "0 5vw",
-          },
-        }}
-      >
-        <StyledHeading>
-          <HeadingText>All About SQL</HeadingText>
-          <SYstackText
-            sx={{
-              color: "white",
-              fontSize: "1.5rem",
-            }}
-          >
-            {SQLjson.description}
-          </SYstackText>
-        </StyledHeading>
-        <SYlistBox>
-          {SQLjson.topics.map((topic) => (
+      <MainBox>
+        <ContainerBox>
+          <StyledHeading>
+            <HeadingText>All About SQL</HeadingText>
+            <ProgressText
+              sx={{
+                color: "white",
+                fontSize: "2rem",
+              }}
+            >
+              {SQLjson.description}
+            </ProgressText>
             <Box>
-              <HeadingText
+              <ProgressText>
+                Topics Completed:{" "}
+                {checked.filter((item) => item === true).length} / 5
+              </ProgressText>
+              <Box
                 sx={{
-                  fontSize: "3.5rem",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
                 }}
               >
-                {topic.name}
-              </HeadingText>
-              {topic.divisions.map((division) => (
-                <Box>
-                  <HeadingText
-                    sx={{
-                      fontSize: "2.5rem",
+                <ProgressBox>
+                  <ProgressText>Keywords</ProgressText>{" "}
+                  <ProgressCheck
+                    checked={checked[0]}
+                    onChange={(e) => {
+                      handleProgressCheck(0);
                     }}
-                  >
-                    {division.name}
-                  </HeadingText>
-                  <SYstackText
-                    sx={{
-                      color: "white",
+                  />
+                </ProgressBox>
+                <ProgressBox>
+                  <ProgressText>All Data Types</ProgressText>{" "}
+                  <ProgressCheck
+                    checked={checked[1]}
+                    onChange={(e) => {
+                      handleProgressCheck(1);
                     }}
-                  >
-                    {division.description}
-                  </SYstackText>
+                  />
+                </ProgressBox>
+                <ProgressBox>
+                  <ProgressText>All Operators</ProgressText>{" "}
+                  <ProgressCheck
+                    checked={checked[2]}
+                    onChange={(e) => {
+                      handleProgressCheck(2);
+                    }}
+                  />
+                </ProgressBox>
+                <ProgressBox>
+                  <ProgressText>String Functions</ProgressText>{" "}
+                  <ProgressCheck
+                    checked={checked[3]}
+                    onChange={(e) => {
+                      handleProgressCheck(3);
+                    }}
+                  />
+                </ProgressBox>
+                <ProgressBox>
+                  <ProgressText>Numeric Functions</ProgressText>{" "}
+                  <ProgressCheck
+                    checked={checked[4]}
+                    onChange={(e) => {
+                      handleProgressCheck(4);
+                    }}
+                  />
+                </ProgressBox>
+              </Box>
+            </Box>
+          </StyledHeading>
+          <SYstackText>Tap on the topic name to expand</SYstackText>
+          <SYlistBox>
+            {SQLjson.topics.map((topic) => (
+              <Box>
+                {topic.divisions.map((division) => (
                   <Box>
-                    {division.items.map((item) => (
-                      <SYstack
-                        sx={{
-                          flexDirection: "row",
+                    <TopicBox>
+                      <Collapsible
+                        trigger={division.name}
+                        transitionTime={250}
+                        open={false}
+                        triggerStyle={{
+                          cursor: "pointer",
+                          fontFamily: "Kollektif",
+                          lineHeight: "1.2",
+                          fontSize: "2.5rem",
+                          fontWeight: "800",
+                          letterSpacing: "-1px",
+                          color: "#de8500",
+                          textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
                         }}
                       >
                         <SYstackText
                           sx={{
-                            width: "12%",
-                            marginRight: "1%",
+                            margin: "0",
                           }}
                         >
-                          {item.name}
+                          {division.description}
                         </SYstackText>
-                        <SYstackText
+                        <Box
                           sx={{
-                            width: "42%",
-                            marginRight: "1%",
-
-                            size: "0.5rem",
+                            backgroundColor: "#de8500",
                           }}
                         >
-                          {item.description}
-                        </SYstackText>
-                        <code
-                          style={{
-                            width: "42%",
-                            fontSize: "1rem",
-                          }}
-                        >
-                          {item.example}
-                        </code>
-                      </SYstack>
-                    ))}
+                          {division.items.map((item) => (
+                            <SYstack>
+                              <SYstackText
+                                sx={{
+                                  width: "12%",
+                                  marginRight: "1%",
+                                  fontWeight: "600",
+                                }}
+                              >
+                                {item.name}
+                              </SYstackText>
+                              <SYstackText
+                                sx={{
+                                  width: "42%",
+                                  size: "0.5rem",
+                                }}
+                              >
+                                {item.description}
+                              </SYstackText>
+                              <code
+                                style={{
+                                  width: "42%",
+                                  fontSize: "1rem",
+                                  color: "#fafafd",
+                                  backgroundColor: "black",
+                                }}
+                              >
+                                {item.example}
+                              </code>
+                            </SYstack>
+                          ))}
+                        </Box>
+                      </Collapsible>
+                    </TopicBox>
                   </Box>
-                </Box>
-              ))}
-            </Box>
-          ))}
-        </SYlistBox>
-      </Box>
+                ))}
+              </Box>
+            ))}
+          </SYlistBox>
+        </ContainerBox>
+      </MainBox>
       <Footer />
     </>
   );
