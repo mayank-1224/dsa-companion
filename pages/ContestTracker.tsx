@@ -41,10 +41,27 @@ const ContestTracker = () => {
   require("typeface-poppins");
 
   const getContests = async () => {
-    const res = await axios.get(
-      "https://clist.by/api/v2/json/contest/?username=MayankPatel&api_key=1de0871c2b89ffcaae1b7664c6e0f61a44ad07db&limit=20&with_problems=false&upcoming=true&order_by=end"
-    );
-    console.log(res);
+    const resdata = axios({
+      method: "get",
+      url: `https://clist.by:443/api/v2/contest/?username=MayankPatel&api_key=1de0871c2b89ffcaae1b7664c6e0f61a44ad07db&limit=2&with_problems=false&upcoming=true`,
+      withCredentials: false,
+    });
+
+    console.log(resdata);
+
+    //   const res = await axios
+    //     .get(
+    //       "https://clist.by:443/api/v2/contest/?username=MayankPatel&api_key=1de0871c2b89ffcaae1b7664c6e0f61a44ad07db&limit=2&with_problems=false&upcoming=true",
+    //       {
+    //         headers: {
+    //           // "Access-Control-Allow-Origin": "*",
+    //           "Access-Control-Allow-Credentials": false,
+    //         },
+    //       }
+    //     )
+    //     .then((res) => console.log(res.data.objects))
+    //     .catch((err) => console.log(err));
+    //   // console.log(res);
   };
 
   // getContests();
